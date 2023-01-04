@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const About = () => {
+const Info = () => {
   return (
     <div className='w-full py-16 px-4 mx-auto' >
       <h1 className='max-w-[1240px] mx-auto hidden md:flex text-4xl justify-center font-bold py-2 text-transparent bg-clip-text bg-gradient-to-b from-[#382AC3] to-[#02AFE5]'>Why choose us?</h1>
@@ -24,4 +24,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Info
