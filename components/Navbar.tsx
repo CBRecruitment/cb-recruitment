@@ -42,10 +42,13 @@ const Navbar = () => {
           <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600'>
             <Link href="/candidates">Candidates</Link>
           </li>
-          <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600'>
+           <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600'>
+            <Link href="/partners">Partners</Link>
+          </li>
+          <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex'>
             <Link href="/wenjob?">Wen Job?</Link>
           </li>
-           <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex'>
+           <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden lg:flex'>
             <Link href="/contact">Contact</Link>
           </li>
             <ConnectButton/>
@@ -72,12 +75,15 @@ const Navbar = () => {
               <Link href="/candidates">Candidates</Link>
             </li>
             <li className='p-4 text-2xl hover:text-blue-500'>
+            <Link href="/partners">Partners</Link>
+            </li>
+            <li className='p-4 text-2xl hover:text-blue-500'>
               <Link href="/wenjob?">Wen Job?</Link>
             </li>
             <li className='p-4 text-2xl hover:text-blue-500'>
               <Link href="/contact">Contact</Link>
             </li>
-             <li className='p-4 text-2xl mb-5 hover:text-blue-500'>
+             <li className='p-4 text-2xl mb-6 hover:text-blue-500'>
               <Link href="/blog">Blog</Link>
             </li>
             <ConnectButton/>
