@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+.custom-img-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("https://media.istockphoto.com/id/1009749402/photo/digital-abstract-blue-color-wave-particles-flow-background.jpg?s=612x612&w=0&k=20&c=C289shLqh6KXLLK6BQAd1a6o3QMhwD4OXoTlSF8F42s=");
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+  background-size: cover;
+}
+
+.custom-img-footer {
+  background: linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("https://media.istockphoto.com/id/1009749402/photo/digital-abstract-blue-color-wave-particles-flow-background.jpg?s=612x612&w=0&k=20&c=C289shLqh6KXLLK6BQAd1a6o3QMhwD4OXoTlSF8F42s=");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: cover;
+}
+
+.mobile-font {
+  font-size: 2.5rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+}
