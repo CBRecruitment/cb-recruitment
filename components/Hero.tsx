@@ -5,8 +5,8 @@ import React from "react"
 const Hero = () => {
   return (
     <>
-      <div className="flex items-center text-center justify-center h-screen custom-img-hero">
-        <div className="text-white z-[2] w-full">
+      <div className="flex text-center items-center custom-img-hero h-screen">
+        <div className="text-white z-[2] w-full mt-[-12.5rem]">
           <div className="animate-in slide-in-from-top duration-700">
             <h1 className=" inline-flex justify-center items-center text-center font-medium mobile-font min-[400px]:text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-white">
               CB

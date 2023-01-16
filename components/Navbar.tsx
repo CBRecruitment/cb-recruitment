@@ -6,7 +6,7 @@ import ConnectButton from "./ConnectButton"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const [color, setColor] = useState("transparent")
+  const [color, setColor] = useState("black")
   const [textColor, setTextColor] = useState("#ffffff")
 
   const handleNav = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
         setColor("#000205")
         setTextColor("#ffffff")
       } else {
-        setColor("transparent")
+        setColor("black")
         setTextColor("#ffffff")
       }
     }
@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div style={{ backgroundColor: `${color}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+    <div style={{ backgroundColor: `${color}` }} className="sticky left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <Image
@@ -52,19 +52,18 @@ const Navbar = () => {
           <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600">
             <Link href="/candidates">Candidates</Link>
           </li>
-          <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600">
-            <Link href="/partners">Partners</Link>
-          </li>
           <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex">
             <Link href="/about">About</Link>
           </li>
-          <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex">
+          {/* <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600">
+            <Link href="/partners">Partners</Link>
+          </li> */}
+          {/* <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex">
             <Link href="/wenjob?">Wen Job?</Link>
-          </li>
+          </li> */}
           <li className="p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden lg:flex">
             <Link href="/contact">Contact</Link>
           </li>
-          <ConnectButton />
           <Image
             className="ml-5 m-auto hover:animate-bounce"
             src={"/assets/search-white.png"}
@@ -73,7 +72,6 @@ const Navbar = () => {
             height={25}
           />
         </ul>
-        {/* <Image src={"/moon-white.png"} alt="" width={20} height={20} /> */}
 
         {/* Mobile Button */}
         <div className="block sm:hidden z-10" onClick={handleNav} style={{ color: `${textColor}` }}>
@@ -116,7 +114,6 @@ const Navbar = () => {
             <li className="p-4 text-2xl mb-6 hover:text-blue-500">
               <Link href="/blog">Blog</Link>
             </li>
-            <ConnectButton />
             <div className="flex mx-auto justify-center mt-20 space-x-5">
               <Link href="https://t.me/CBR_Jobs" target="_blank">
                 <Image

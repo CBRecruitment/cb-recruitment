@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react"
+import Form from "../components/Form"
 
 const clients = () => {
   return (
-    <div className= 'flex items-center text-center justify-center h-screen custom-img-hero'>
-        <h1 className='flex justify-center text-white text-6xl'>Clients</h1>
+    <div className="flex justify-center py-20 bg-blue-400 h-screen">
+      <Form />
     </div>
   )
 }
