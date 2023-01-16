@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import CVUpload from "../components/CVUpload";
 
 const candidates = () => {
   return (
-    <div className= 'flex items-center text-center justify-center h-screen custom-img-hero'>
-        <h1 className='flex justify-center text-white text-6xl'>Candidates</h1>
+    <div className='flex justify-center items-center bg-gray-900'>
+      <CVUpload />
     </div>
-  )
-}
+  );
+};
 
-export default candidates
+export default candidates;
