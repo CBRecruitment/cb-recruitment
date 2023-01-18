@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Request, FormData } from 'node-fetch';
 import fetch from 'node-fetch';
-const BhRestToken = "22753_7066847_be039362-7fa4-43e8-8997-660b0d151ae9"
-
+const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
+const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 
 export const config = {
   api: {
@@ -16,33 +16,46 @@ export default async function handler(nextReq: NextApiRequest, res: NextApiRespo
     method: nextReq.method,
     body: nextReq
   });
-
+  
+  // cvResponse formats an uploaded CV as form-data
   const formData = await req.formData();
   const cvForm = new FormData();
   cvForm.append("file", formData.get("cv"));
-  const cvResponse = await fetch(`https://rest21.bullhornstaffing.com/rest-services/8k8341/resume/parseToCandidate?format=docx`, {
+  const cvResponse = await fetch(`${BullhornUrl}/resume/parseToCandidate?format=docx`, {
     method: "post",
     headers: {
       'BhRestToken': BhRestToken,
     },
     body: cvForm 
   });
-//   console.log(await cvResponse.json());
-
-  const json = await cvResponse.json();
-  const Candidate = JSON.stringify(json.candidate)
+  const cvFormJson = await cvResponse.json();
+  console.log(cvFormJson)
+  const Candidate = JSON.stringify(cvFormJson.candidate)
   
-  const parseToCandidate = await fetch(`https://rest21.bullhornstaffing.com/rest-services/8k8341/entity/Candidate`, {
+  // parseToCandidate creates a candidate with the candidate section of the body response from cvResponse
+  const parseToCandidate = await fetch(`${BullhornUrl}/entity/Candidate`, {
     method: "put",
     headers: {
       'BhRestToken': BhRestToken,
     },
     body: Candidate
   });
-//   console.log(await parseToCandidate.json());
 
-  const json2 = await parseToCandidate.json();
-  console.log(json2.changedEntityId);
+  const parseToCandidateJson = await parseToCandidate.json();
+  console.log(parseToCandidateJson)
+  const CandidateId = parseToCandidateJson.changedEntityId;
+
+  // attachFileToCandidate attaches a file to a specific candidateId
+  const attachFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=SAMPLE&externalID=portfolio`, {
+    method: "put",
+    headers: {
+      'BhRestToken': BhRestToken,
+    },
+    body: cvForm
+  });
+  console.log(await attachFileToCandidate.json());
+
+  res.redirect(301, "/thank-you")
 }
 
 
