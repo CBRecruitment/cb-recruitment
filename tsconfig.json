@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Animations/AnimatedTextWord2.js", "components/Animations/AnimatedTextWord.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Animations/AnimatedTextWord2.js", "components/Animations/AnimatedTextWord.js", "pages/job/[id].jsx", "pages/clients.jsx"],
   "exclude": ["node_modules"]
 }

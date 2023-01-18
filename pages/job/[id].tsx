@@ -5,14 +5,14 @@ const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const { id } = params;
+  const id = params;
   const res = await fetch(
     `${BullhornUrl}/entity/JobOrder/${id}?fields=id,title,categories,skills,employmentType,customText12,customText14,description&BhRestToken=${BhRestToken}`
   );
   return { props: { data: await res.json() } };
 };
 
-const job = ({ data }) => {
+const job = (data: { data: any }) => {
   const job = data.data;
   const skills = job.skills.data;
   console.log(job);
@@ -32,14 +32,29 @@ const job = ({ data }) => {
             <p className='text-sm rounded-md border border-[#1885E0] p-2 text-[#1885E0]'>
               {job.customText14}
             </p>
-            {skills.map((skill) => (
-              <p
-                key={job.id}
-                className='text-sm rounded-md border border-[#1885E0] p-2 text-[#1885E0]'
-              >
-                {skill.name}
-              </p>
-            ))}
+            {skills.map(
+              (skill: {
+                name:
+                  | string
+                  | number
+                  | boolean
+                  | React.ReactElement<
+                      any,
+                      string | React.JSXElementConstructor<any>
+                    >
+                  | React.ReactFragment
+                  | React.ReactPortal
+                  | null
+                  | undefined;
+              }) => (
+                <p
+                  key={job.id}
+                  className='text-sm rounded-md border border-[#1885E0] p-2 text-[#1885E0]'
+                >
+                  {skill.name}
+                </p>
+              )
+            )}
           </div>
           <div
             className='mt-10 space-y-5'
