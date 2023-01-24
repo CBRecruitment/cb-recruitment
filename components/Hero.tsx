@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 const Hero = () => {
   return (
@@ -15,8 +15,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className='italic text-white mt-2 max-w-[80%] mx-auto min-[500px]:max-w-[60%]'>
-              Number one business partner, for all your{" "}
-              <span className='text-blue-600'>Crypto</span> and{" "}
+              Number one business partner, for all your{' '}
+              <span className='text-blue-600'>Crypto</span> and{' '}
               <span className='text-blue-600'>Blockchain</span> needs.
             </p>
           </div>
@@ -26,8 +26,8 @@ const Hero = () => {
           <div className='absolute bottom-0 w-full flex justify-center space-x-8 mb-10'>
             <Link href='https://t.me/CBR_Jobs' target='_blank'>
               <Image
-                className='hover:scale-110 ease-in-out duration-200 w-auto'
-                src={"/assets/telegram-white.png"}
+                className='hover:scale-110 ease-in-out duration-200'
+                src={'/assets/telegram-white.png'}
                 alt='Telegram logo'
                 width={35}
                 height={35}
@@ -36,16 +36,19 @@ const Hero = () => {
             <Link href='https://twitter.com/cb_recruitment_' target='_blank'>
               <Image
                 className='hover:scale-110 ease-in-out duration-200'
-                src={"/assets/twitter-white.png"}
+                src={'/assets/twitter-white.png'}
                 alt='Twitter logo'
                 width={35}
                 height={35}
               />
             </Link>
-            <Link href='https://www.linkedin.com/company/80659134' target='_blank'>
+            <Link
+              href='https://www.linkedin.com/company/80659134'
+              target='_blank'
+            >
               <Image
                 className='hover:scale-110 ease-in-out duration-200'
-                src={"/assets/linkedin-white.png"}
+                src={'/assets/linkedin-white.png'}
                 alt='LinkedIn logo'
                 width={35}
                 height={35}
@@ -54,7 +57,7 @@ const Hero = () => {
             <Link href='mailto:info@cbrecruitment.com' target='_blank'>
               <Image
                 className='hover:scale-110 ease-in-out duration-200'
-                src={"/assets/email-white.png"}
+                src={'/assets/email-white.png'}
                 alt='Email logo'
                 width={35}
                 height={35}

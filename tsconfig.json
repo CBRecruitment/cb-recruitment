@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Animations/AnimatedTextWord2.js", "components/Animations/AnimatedTextWord.js", "pages/job/[id].jsx", "pages/clients.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Animations/AnimatedTextWord2.js", "components/Animations/AnimatedTextWord.js", "pages/job/[id].jsx", "pages/companies.tsx", "pages/api/jobapplicationform.js", "pages/api/uploadcvform.js"],
   "exclude": ["node_modules"]
 }
