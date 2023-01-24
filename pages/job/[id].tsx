@@ -52,7 +52,7 @@ const job = (props: any) => {
                         }}
                     />
                 </div>
-                <div className=''>
+                <div className='w-[35%]'>
                     <JobApplicationForm id={props.id} />
                 </div>
             </div>

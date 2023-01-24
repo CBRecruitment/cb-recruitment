@@ -20,8 +20,12 @@ export default async function handler(nextReq, res) {
   
   // cvResponse formats an uploaded CV as form-data
   const formData = await req.formData();
+
+  const courseCertForm = new FormData();
   const cvForm = new FormData();
+  courseCertForm.append("file", formData.get("courseCertificate"));
   cvForm.append("file", formData.get("cv"));
+
   const cvResponse = await fetch(`${BullhornUrl}/resume/parseToCandidate?format=docx&populateDescription=text`, {
     method: "post",
     headers: {
@@ -34,8 +38,6 @@ export default async function handler(nextReq, res) {
     const Candidate = cvFormJson.candidate
     const CandidateDescription = Candidate.description
 
-
-
   // parseToCandidate creates a candidate with the candidate section of the body response from cvResponse
   const parseToCandidate = await fetch(`${BullhornUrl}/entity/Candidate`, {
     method: "put",
@@ -47,17 +49,27 @@ export default async function handler(nextReq, res) {
   const parseToCandidateJson = await parseToCandidate.json();
   const CandidateId = parseToCandidateJson.changedEntityId;
 
-  // attachFileToCandidate attaches a file to a specific candidateId
-  const attachFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=SAMPLE&externalID=portfolio`, {
+  //  Attaches a CV file to a specific candidateId
+  const attachCVFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=CV&externalID=portfolio`, {
     method: "put",
     headers: {
       'BhRestToken': BhRestToken,
     },
     body: cvForm
   });
+  // console.log(await attachCVFileToCandidate.json());
+  await attachCVFileToCandidate.json();
+
+  //  Attaches a file to a specific candidateId
+  const attachFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=References&externalID=portfolio`, {
+    method: "put",
+    headers: {
+      'BhRestToken': BhRestToken,
+    },
+    body: courseCertForm
+  });
   // console.log(await attachFileToCandidate.json());
   await attachFileToCandidate.json();
-
 
   // update a candidate details
   const updateCandidate = await fetch(`${BullhornUrl}/entity/Candidate/${CandidateId}?BhRestToken=${BhRestToken}`, {
@@ -67,6 +79,8 @@ export default async function handler(nextReq, res) {
     body: JSON.stringify({
         "email": formData.get("email"),
         "comments": formData.get("message"),
+        "source": formData.get("source"),
+        "customText16": formData.get("radio")
     })
   });
   // console.log(await updateCandidate.json());
@@ -92,7 +106,9 @@ export default async function handler(nextReq, res) {
   await applyToJob.json();
 
 
-  res.redirect(301, "/thank-you")
+
+
+  res.redirect(301, `/thankyou`)
 }
 
 
