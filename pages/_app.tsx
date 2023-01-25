@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <Component {...pageProps} />
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }
