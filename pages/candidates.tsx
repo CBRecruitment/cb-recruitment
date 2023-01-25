@@ -36,7 +36,6 @@ const candidates = ({ data }: any) => {
                                             {result.title}
                                         </p>
                                         <p>{result.categories.data[0].name}</p>
-                                        {/* <p>{result.dateAdded}</p> */}
                                     </div>
                                     <div className='flex flex-row space-x-5'>
                                         {skills.map((skill: any) => (
