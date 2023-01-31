@@ -16,14 +16,14 @@ export default async function handler(nextReq, res) {
     body: nextReq
   });
 
-
   const formData = await req.formData();
   const courseCertForm = new FormData();
   const cvForm = new FormData();
+  const JobId = formData.get("id");
   courseCertForm.append("file", formData.get("courseCertificate"));
   cvForm.append("file", formData.get("cv"));
   
-  // cvResponse formats an uploaded CV as form-data
+  // 'cvResponse' formats an uploaded CV as form-data
   const cvResponse = await fetch(`${BullhornUrl}/resume/parseToCandidate?format=docx&populateDescription=text`, {
     method: "post",
     headers: {
@@ -36,7 +36,7 @@ export default async function handler(nextReq, res) {
     const Candidate = cvFormJson.candidate
     const CandidateDescription = Candidate.description
 
-  // parseToCandidate creates a candidate with the candidate section of the body response from cvResponse
+  // 'parseToCandidate' creates a candidate from the body response of cvResponse
   const parseToCandidate = await fetch(`${BullhornUrl}/entity/Candidate`, {
     method: "put",
     headers: {
@@ -46,25 +46,8 @@ export default async function handler(nextReq, res) {
     });
     const parseToCandidateJson = await parseToCandidate.json();
     const CandidateId = parseToCandidateJson.changedEntityId;
-
-    const CandidateWH = JSON.stringify(cvFormJson.candidateWorkHistory[0]);
-    const CandidateWH2 = CandidateWH.replace(/[{}]/g, "");
         
-    //     // parseToCandidateWH adds candidates work history to a specific candidate
-    //  const parseToCandidateWH = await fetch(`${BullhornUrl}/entity/CandidateWorkHistory`, {
-    //    method: "put",
-    //    headers: {
-    //      'BhRestToken': BhRestToken,
-    //    },
-    //    body: JSON.stringify({
-    //        "candidate": {"id": "14978"},     
-    //         CandidateWH2
-    //      }),
-    //  });
-    //  console.log(parseToCandidateWH);
-
-
-  //  Attaches a CV file to a specific candidateId
+  //  'attachCVFileToCandidate' attaches a CV file to a specific CandidateId
   const attachCVFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=CV&externalID=portfolio`, {
     method: "put",
     headers: {
@@ -72,10 +55,9 @@ export default async function handler(nextReq, res) {
     },
     body: cvForm
   });
-  // console.log(await attachCVFileToCandidate.json());
   await attachCVFileToCandidate.json();
 
-  //  Attaches a file to a specific candidateId
+  //  'attachFileToCandidate' attaches a file to a specific candidateId
   const attachFileToCandidate = await fetch(`${BullhornUrl}/file/Candidate/${CandidateId}/raw?filetype=References&externalID=portfolio`, {
     method: "put",
     headers: {
@@ -83,10 +65,9 @@ export default async function handler(nextReq, res) {
     },
     body: courseCertForm
   });
-  // console.log(await attachFileToCandidate.json());
   await attachFileToCandidate.json();
 
-  // update a candidate details
+  // 'updateCandidate' updates a specific candidates details
   const updateCandidate = await fetch(`${BullhornUrl}/entity/Candidate/${CandidateId}?BhRestToken=${BhRestToken}`, {
     method: "post",
     headers: {
@@ -98,11 +79,9 @@ export default async function handler(nextReq, res) {
         "customText16": formData.get("radio")
       })
     });
-    // console.log(await updateCandidate.json());
     await updateCandidate.json();
 
-  const JobId = formData.get("id");
-  // apply to a specific jobId
+  // 'applyToJob' applies to a specific JobId
   const applyToJob = await fetch(`${BullhornUrl}/entity/JobSubmission`, {
     method: "put",
     headers: {
@@ -114,7 +93,6 @@ export default async function handler(nextReq, res) {
       "status": "New Lead",
     }),
   })
-  // console.log(await applyToJob.json());
   await applyToJob.json();
 
   res.redirect(301, `/thankyou`)

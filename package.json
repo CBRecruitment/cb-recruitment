@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.8",
     "axios": "^1.2.2",
     "connectkit": "^1.1.1",
     "dotenv": "^16.0.3",

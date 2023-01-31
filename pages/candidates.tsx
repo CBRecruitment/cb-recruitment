@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -17,49 +19,55 @@ export async function getServerSideProps() {
 const candidates = ({ data }: any) => {
     const results = data.data;
     return (
-        <div className='bg-gray-900 text-white h-full py-10'>
-            <h1 className='text-4xl flex justify-center underline text-[#1885E0]'>
-                Job Openings
-            </h1>
-            <div className='w-[60%] mx-auto'>
-                <div>
-                    {results.map((result: any) => {
-                        const skills = result.skills.data;
-                        return (
-                            <Link href={`/job/${result.id}`}>
-                                <div
-                                    key={result.id}
-                                    className='mt-6 flex justify-between items-center py-5 border border-white px-5 rounded-md hover:bg-gray-700'
-                                >
-                                    <div>
-                                        <p className='text-2xl text-[#1885E0]'>
-                                            {result.title}
-                                        </p>
-                                        <p>{result.categories.data[0].name}</p>
-                                    </div>
-                                    <div className='flex flex-row space-x-5'>
-                                        {skills.map((skill: any) => (
-                                            <p
-                                                key={skill.id}
-                                                className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'
-                                            >
-                                                {skill.name}
+        <>
+            <Navbar />
+            <div className='bg-gray-900 text-white h-full py-10'>
+                <h1 className='text-4xl flex justify-center underline text-[#1885E0]'>
+                    Job Openings
+                </h1>
+                <div className='w-[60%] mx-auto'>
+                    <div>
+                        {results.map((result: any) => {
+                            const skills = result.skills.data;
+                            return (
+                                <Link href={`/job/${result.id}`}>
+                                    <div
+                                        key={result.id}
+                                        className='mt-6 flex justify-between items-center py-5 border border-white px-5 rounded-md hover:bg-gray-700'
+                                    >
+                                        <div>
+                                            <p className='text-2xl text-[#1885E0]'>
+                                                {result.title}
                                             </p>
-                                        ))}
-                                        <p className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'>
-                                            {result.customText12}
-                                        </p>
-                                        <p className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'>
-                                            {result.customText14}
-                                        </p>
+                                            <p>
+                                                {result.categories.data[0].name}
+                                            </p>
+                                        </div>
+                                        <div className='flex flex-row space-x-5'>
+                                            {skills.map((skill: any) => (
+                                                <p
+                                                    key={skill.id}
+                                                    className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'
+                                                >
+                                                    {skill.name}
+                                                </p>
+                                            ))}
+                                            <p className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'>
+                                                {result.customText12}
+                                            </p>
+                                            <p className='text-sm rounded-md border border-blue-600 p-2 hover:bg-[#1885E0]'>
+                                                {result.customText14}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        );
-                    })}
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
-        </div>
+            <Footer />
+        </>
     );
 };
 

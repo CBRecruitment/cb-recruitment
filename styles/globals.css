@@ -13,14 +13,10 @@ html {
 }
 
 .custom-img-hero {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.8)
-    ),
-    url("https://media.istockphoto.com/id/1009749402/photo/digital-abstract-blue-color-wave-particles-flow-background.jpg?s=612x612&w=0&k=20&c=C289shLqh6KXLLK6BQAd1a6o3QMhwD4OXoTlSF8F42s=");
+  background: url('/assets/herobanner.jpg');
   background-repeat: no-repeat;
-  background-position: 70% 0;
+  background-position: center; 
+  background-attachment: fixed; 
   background-size: cover;
 }
 
@@ -41,18 +37,172 @@ html {
   line-height: 2.5rem /* 40px */;
 }
 
-strong {
-  color: #1885E0
+.search-btn {
+    border-radius: 0 15px 15px 0;
 }
 
-ul {
-  margin-top: 1.5rem;
-  padding-left: 3rem;
+.search-bar {
+  border-radius: 15px 0 0 15px;
 }
 
-li {
-  padding: 0;
-  list-style-position: inside;
-  list-style: disc;
-  margin-top: 0.5rem;
+
+/*******************
+    LANDING PAGE
+********************/
+.custom-img-landing {
+  background: url('/assets/landingpagebg.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.left-dim:hover {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('/assets/landingpagebg.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.right-dim:hover {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('/assets/landingpagebg.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed; 
+  background-size: cover;
+
+}
+
+.right-side-chain:hover {
+  background: url("/assets/rightsidechainlink.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 21.44cm;
+  background-size: 11.69cm;
+}
+
+
+ .left-side-chain:hover {
+  background: url("/assets/leftsidechainlink.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 17.675cm;
+  background-size: 11.69cm
+}
+
+/*
+.right-side-chain:hover {
+  background: url("/assets/rightsidechainlink.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 21.44cm;
+  background-size: 11.69cm;
+} */
+
+/* 
+.right-side-chain {
+  background: url("/assets/leftsidechainlink.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 21.44cm;
+  background-size: 11.69cm;
+} */
+
+/*   background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), */
+
+
+
+/*******************
+        FONTS
+********************/
+@font-face {
+  font-family: 'Anton', sans-serif;
+  src: url(/public/fonts/Anton-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Magnify', sans-serif;
+  src: url(/public/fonts/Magnify-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Magnify', sans-serif;
+  src: url(/public/fonts/Magnify-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(/public/fonts/Roboto-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(/public/fonts/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(/public/fonts/Roboto-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(/public/fonts/Roboto-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+.Anton-Regular {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 95px;
+  line-height: 1.2;
+}
+
+.Magnify-Regular {
+  font-family: 'Magnify', sans-serif;
+  font-weight: 400;
+}
+
+.Magnify-Bold {
+  font-family: 'Magnify', sans-serif;
+  font-weight: 700;
+}
+
+.Roboto-Light {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.Roboto-Regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.Roboto-Medium {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.Roboto-Bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }

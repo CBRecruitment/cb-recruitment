@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='w-full mx-auto py-8 px-6 text-gray-300 custom-img-footer'>
+        <footer className='w-full mx-auto py-8 px-6 text-gray-300 custom-img-footer'>
             <div className='xl:grid-cols-2 grid xl:max-w-[80%] mx-auto'>
                 <div className=''>
                     <Link href='/'>
@@ -131,7 +131,7 @@ const Footer = () => {
                     Copyright 2022 CBRecruitment. All Rights Reserved.
                 </p>
             </div>
-        </div>
+        </footer>
     );
 };
 

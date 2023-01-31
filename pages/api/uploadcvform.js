@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import { Request, FormData } from 'node-fetch';
 import fetch from 'node-fetch';
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;

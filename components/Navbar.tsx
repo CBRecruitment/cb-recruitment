@@ -5,91 +5,103 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    const [color, setColor] = useState('black');
-    const [textColor, setTextColor] = useState('#ffffff');
+    // const [color, setColor] = useState('#4b5e67');
+    // const [textColor, setTextColor] = useState('#ffffff');
+
+    // useEffect(() => {
+    //     const changeColor = () => {
+    //         if (window.scrollY >= 90) {
+    //             setColor('##4b5e67');
+    //             setTextColor('#ffffff');
+    //         } else {
+    //             setColor('#4b5e67');
+    //             setTextColor('#ffffff');
+    //         }
+    //     };
+    //     window.addEventListener('scroll', changeColor);
+
+    //     return () => {
+    //         window.removeEventListener('scroll', changeColor);
+    //     };
+    // }, []);
 
     const handleNav = () => {
         setNav(!nav);
     };
 
-    useEffect(() => {
-        const changeColor = () => {
-            if (window.scrollY >= 90) {
-                setColor('#000205');
-                setTextColor('#ffffff');
-            } else {
-                setColor('black');
-                setTextColor('#ffffff');
-            }
-        };
-        window.addEventListener('scroll', changeColor);
-
-        return () => {
-            window.removeEventListener('scroll', changeColor);
-        };
-    }, []);
-
     return (
-        <div
-            style={{ backgroundColor: `${color}` }}
-            className='sticky left-0 top-0 w-full z-10 ease-in duration-300'
+        <header
+            // style={{ backgroundColor: `${color}` }}
+            className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[#4b5e67]'
         >
-            <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
-                <Link href='/'>
+            <div className='max-w-[1400px] m-auto flex justify-between items-center  h-[10vh]'>
+                <Link href='/home'>
                     <Image
                         src={'/assets/cblogo.png'}
                         alt='CBR Logo'
-                        width={55}
+                        width={90}
                         height={50}
-                        className='hover:animate-pulse duration-200'
+                        className='ml-10 hover:animate-pulse duration-200'
                     />
                 </Link>
                 <ul
-                    style={{ color: `${textColor}` }}
-                    className='hidden sm:flex list-none'
+                    // style={{ color: `${textColor}` }}
+                    className='hidden sm:flex list-none text-white Magnify-Bold'
                 >
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 list-none'>
-                        <Link href='/'>Home</Link>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white '>
+                        <Link href='/home'>Home</Link>
                     </li>
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 list-none'>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
                         <Link href='/candidates'>For Candidates</Link>
                     </li>
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 list-none'>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
                         <Link href='/companies'>For Companies</Link>
                     </li>
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden md:flex list-none'>
-                        <Link href='/blog'>Blog</Link>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                        <Link href='/about'>About</Link>
                     </li>
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden lg:flex list-none'>
-                        <Link href='/contactus'>Contact Us</Link>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                        <Link href='/cbracademy'>CBR Academy</Link>
                     </li>
-                    <li className='p-4 hover:text-blue-600 ease-in duration-100 hover:underline underline-offset-8 decoration-blue-600 hidden lg:flex list-none'>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                        <Link href='/contact'>Contact</Link>
+                    </li>
+                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
                         <Link href='/faqs'>FAQs</Link>
                     </li>
-                    <Image
-                        className='ml-5 m-auto hover:animate-bounce'
-                        src={'/assets/search-white.png'}
-                        alt='Search button'
-                        width={20}
-                        height={25}
-                    />
+                    <div className='flex justify-center items-center cursor-pointer pl-2'>
+                        <input
+                            className='text-sm text-black p-1 pl-3 w-[70%] search-bar'
+                            type='text'
+                        />
+                        <button className='bg-white p-1 border-none search-btn'>
+                            {' '}
+                            <Image
+                                className='p-1'
+                                src={'/assets/search-orange.png'}
+                                alt='Search button'
+                                width={20}
+                                height={20}
+                            />
+                        </button>
+                    </div>
                 </ul>
 
                 {/* Mobile Button */}
                 <div
-                    className='block sm:hidden z-10'
+                    className='block sm:hidden z-10 text-white'
                     onClick={handleNav}
-                    style={{ color: `${textColor}` }}
+                    // style={{ color: `${textColor}` }}
                 >
                     {nav ? (
                         <AiOutlineClose
                             size={25}
-                            style={{ color: `${textColor}` }}
+                            // style={{ color: `${textColor}` }}
                         />
                     ) : (
                         <AiOutlineMenu
                             size={25}
-                            style={{ color: `${textColor}` }}
+                            // style={{ color: `${textColor}` }}
                         />
                     )}
                 </div>
@@ -100,7 +112,7 @@ const Navbar = () => {
                         nav ? 'left-0' : 'left-full'
                     } right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black border-gray-400 text-center ease-in duration-300`}
                 >
-                    <ul className='list-none'>
+                    <ul className='text-white'>
                         <Image
                             className='mx-auto pb-16'
                             src={'/assets/cblogo.png'}
@@ -108,29 +120,32 @@ const Navbar = () => {
                             width={75}
                             height={50}
                         />
-                        <li className='p-4 text-2xl hover:text-blue-500 list-none'>
-                            <Link href='/'>Home</Link>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                            <Link href='/home'>Home</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 list-none'>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
                             <Link href='/candidates'>For Candidates</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 list-none'>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
                             <Link href='/companies'>For Companies</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 list-none'>
-                            <Link href='/blog'>Blog</Link>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                            <Link href='/about'>About</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 list-none'>
-                            <Link href='/contact'>Contact Us</Link>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                            <Link href='/cbracademy'>CBR Academy</Link>
                         </li>
-                        <li className='p-4 text-2xl mb-6 hover:text-blue-500 list-none'>
+                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                            <Link href='/contact'>Contact</Link>
+                        </li>
+                        <li className='p-4 text-2xl mb-6 hover:text-blue-500 '>
                             <Link href='/faqs'>FAQs</Link>
                         </li>
                         <div className='flex mx-auto justify-center mt-20 space-x-5'>
                             <Link href='https://t.me/CBR_Jobs' target='_blank'>
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/telegram-white.png'}
+                                    src={'/assets/telegram-orange.png'}
                                     alt='Telegram logo'
                                     width={30}
                                     height={30}
@@ -142,7 +157,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/twitter-white.png'}
+                                    src={'/assets/twitter-orange.png'}
                                     alt='Twitter logo'
                                     width={30}
                                     height={30}
@@ -154,7 +169,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/linkedin-white.png'}
+                                    src={'/assets/linkedin-orange.png'}
                                     alt='LinkedIn logo'
                                     width={30}
                                     height={30}
@@ -166,7 +181,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/email-white.png'}
+                                    src={'/assets/email-orange.png'}
                                     alt='Email logo'
                                     width={30}
                                     height={30}
@@ -176,7 +191,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
