@@ -16,7 +16,7 @@ const Hero = () => {
                         </span>
                         <div className='flex w-full justify-between '>
                             <input
-                                className='2xl:w-[60%] xl:w-[55%] rounded-lg pl-2'
+                                className='2xl:w-[60%] xl:w-[5%] rounded-lg pl-2'
                                 placeholder='e.g "Full Stack Developer"'
                             ></input>
                             <button className='px-8 py-1.5 bg-[#ec9b3c] rounded-lg text-white font-bold'>

@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className='max-w-[1400px] m-auto flex justify-between items-center  h-[10vh]'>
                 <Link href='/home'>
                     <Image
-                        src={'/assets/cblogo.png'}
+                        src={'/assets/cblogo-white.svg'}
                         alt='CBR Logo'
                         width={90}
                         height={50}
@@ -115,7 +115,7 @@ const Navbar = () => {
                     <ul className='text-white'>
                         <Image
                             className='mx-auto pb-16'
-                            src={'/assets/cblogo.png'}
+                            src={'/assets/cblogo-white.svg'}
                             alt='CBR Logo'
                             width={75}
                             height={50}

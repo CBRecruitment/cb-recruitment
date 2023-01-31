@@ -12,7 +12,7 @@ const Partners = () => {
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo.png'}
+                        src={'/assets/cblogo-white.svg'}
                         alt=''
                         width={80}
                         height={200}
@@ -24,7 +24,7 @@ const Partners = () => {
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo.png'}
+                        src={'/assets/cblogo-white.svg'}
                         alt=''
                         width={80}
                         height={200}
@@ -36,7 +36,7 @@ const Partners = () => {
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo.png'}
+                        src={'/assets/cblogo-white.svg'}
                         alt=''
                         width={80}
                         height={200}
