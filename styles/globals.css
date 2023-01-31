@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/*******************
+      GENERAL
+********************/
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,13 +16,21 @@ html {
   }
 }
 
+/*******************
+       HERO
+********************/
+
 .custom-img-hero {
-  background: url('/assets/herobanner.jpg');
+  background: url('/assets/herobannerv2.jpg');
   background-repeat: no-repeat;
   background-position: center; 
-  background-attachment: fixed; 
+  background-attachment:local; 
   background-size: cover;
 }
+
+/*******************
+      FOOTER
+********************/
 
 .custom-img-footer {
   background: linear-gradient(
@@ -32,10 +44,9 @@ html {
   background-size: cover;
 }
 
-.mobile-font {
-  font-size: 2.5rem /* 36px */;
-  line-height: 2.5rem /* 40px */;
-}
+/*******************
+      NAVBAR
+********************/
 
 .search-btn {
     border-radius: 0 15px 15px 0;
@@ -90,7 +101,6 @@ html {
   background-size: 11.69cm;
 }
 
-
  .left-side-chain:hover {
   background: url("/assets/leftsidechainlink.svg");
   background-repeat: no-repeat;
@@ -116,14 +126,6 @@ html {
   background-position: 21.44cm;
   background-size: 11.69cm;
 } */
-
-/*   background: linear-gradient(
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2)
-  ), */
-
-
 
 /*******************
         FONTS
@@ -205,4 +207,9 @@ html {
 .Roboto-Bold {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+}
+
+.mobile-font {
+  font-size: 2.5rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
 }

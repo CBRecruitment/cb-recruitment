@@ -6,20 +6,20 @@ const Hero = () => {
     return (
         <>
             <div className='custom-img-hero h-[72.5vh]'>
-                <div className='ml-40 max-w-[40%] pt-12'>
-                    <h1 className='text-[#ec9b3c] max-w-[40%] text-left Anton-Regular'>
+                <div className='ml-40 max-w-[35%] pt-12'>
+                    <h1 className='text-[#ec9b3c] max-w-[45%] text-left Anton-Regular'>
                         Making Web3 Work
                     </h1>
-                    <div className='bg-[#3b444b] p-6 rounded-2xl mt-10 w-[85%] flex flex-col '>
+                    <div className='bg-[#3b444b] p-6 rounded-2xl mt-10 flex flex-col '>
                         <span className='text-white mb-2 font-bold text-lg'>
                             Find a job you'll love
                         </span>
-                        <div className='flex w-full justify-between '>
+                        <div className='flex flex-col w-full justify-between xl:flex-row'>
                             <input
-                                className='2xl:w-[60%] xl:w-[5%] rounded-lg pl-2'
+                                className='2xl:w-[65%] xl:w-[60%] lg:w-[50%] rounded-lg pl-2'
                                 placeholder='e.g "Full Stack Developer"'
                             ></input>
-                            <button className='px-8 py-1.5 bg-[#ec9b3c] rounded-lg text-white font-bold'>
+                            <button className='px-6 py-1.5 bg-[#ec9b3c] rounded-lg text-white font-bold'>
                                 GET STARTED
                             </button>
                         </div>

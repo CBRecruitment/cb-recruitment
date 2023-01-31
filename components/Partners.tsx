@@ -8,40 +8,40 @@ const Partners = () => {
             <h1 className='text-[#3b444b] text-2xl tracking-wide flex justify-center pt-4 pb-5'>
                 PARTNERING WITH:
             </h1>
-            <div className='flex justify-between max-w-[90%] mx-auto opacity-60'>
+            <div className='flex justify-between max-w-[90%] mx-auto'>
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo-white.svg'}
+                        src={'/assets/cblogo-whitev2.png'}
                         alt=''
                         width={80}
                         height={200}
                     />
-                    <h1 className='text-gray-600 text-4xl flex items-center'>
+                    <h1 className='text-gray-400 text-4xl flex items-center'>
                         CB Recruitment
                     </h1>
                 </div>
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo-white.svg'}
+                        src={'/assets/cblogo-whitev2.png'}
                         alt=''
                         width={80}
                         height={200}
                     />
-                    <h1 className='text-gray-600 text-4xl flex items-center'>
+                    <h1 className='text-gray-400 text-4xl flex items-center'>
                         CB Recruitment
                     </h1>
                 </div>
                 <div className='flex'>
                     <Image
                         className='mr-5'
-                        src={'/assets/cblogo-white.svg'}
+                        src={'/assets/cblogo-whitev2.png'}
                         alt=''
                         width={80}
                         height={200}
                     />
-                    <h1 className='text-gray-600 text-4xl flex items-center'>
+                    <h1 className='text-gray-400 text-4xl flex items-center'>
                         CB Recruitment
                     </h1>
                 </div>

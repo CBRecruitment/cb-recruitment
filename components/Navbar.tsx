@@ -32,44 +32,44 @@ const Navbar = () => {
     return (
         <header
             // style={{ backgroundColor: `${color}` }}
-            className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[#4b5e67]'
+            className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[#3b444b]'
         >
-            <div className='max-w-[1400px] m-auto flex justify-between items-center  h-[10vh]'>
+            <div className='m-auto flex justify-between items-center h-[10vh]'>
                 <Link href='/home'>
                     <Image
-                        src={'/assets/cblogo-white.svg'}
+                        src={'/assets/cblogo-whitev2.png'}
                         alt='CBR Logo'
                         width={90}
                         height={50}
-                        className='ml-10 hover:animate-pulse duration-200'
+                        className='ml-40 hover:animate-pulse duration-200'
                     />
                 </Link>
                 <ul
                     // style={{ color: `${textColor}` }}
-                    className='hidden sm:flex list-none text-white Magnify-Bold'
+                    className='hidden sm:flex 2xl:mr-32 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'
                 >
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex'>
                         <Link href='/home'>Home</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
                         <Link href='/candidates'>For Candidates</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
                         <Link href='/companies'>For Companies</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
                         <Link href='/about'>About</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
                         <Link href='/cbracademy'>CBR Academy</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
                         <Link href='/contact'>Contact</Link>
                     </li>
-                    <li className='p-6 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
                         <Link href='/faqs'>FAQs</Link>
                     </li>
-                    <div className='flex justify-center items-center cursor-pointer pl-2'>
+                    <div className='flex justify-center items-center cursor-pointer pl-2 lg:flex'>
                         <input
                             className='text-sm text-black p-1 pl-3 w-[70%] search-bar'
                             type='text'
