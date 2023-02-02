@@ -4,13 +4,13 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className='w-full mx-auto py-8 px-6 text-gray-300 custom-img-footer'>
+        <footer className='w-full mx-auto p-5 text-gray-300 bg-[var(--gray)]'>
             <div className='xl:grid-cols-2 grid xl:max-w-[80%] mx-auto'>
                 <div className=''>
                     <Link href='/'>
                         <Image
                             className='flex mx-auto mb-2'
-                            src={'/assets/cblogo.png'}
+                            src={'/assets/cblogo-whitev2.png'}
                             alt='CBR Logo'
                             width={60}
                             height={50}
@@ -26,7 +26,7 @@ const Footer = () => {
                         <Link href='https://t.me/CBR_Jobs' target='_blank'>
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/telegram-white.png'}
+                                src={'/assets/telegram-orange.png'}
                                 alt='Telegram logo'
                                 width={30}
                                 height={30}
@@ -38,7 +38,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/twitter-white.png'}
+                                src={'/assets/twitter-orange.png'}
                                 alt='Twitter logo'
                                 width={30}
                                 height={30}
@@ -50,7 +50,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/linkedin-white.png'}
+                                src={'/assets/linkedin-orange.png'}
                                 alt='LinkedIn logo'
                                 width={30}
                                 height={30}
@@ -62,7 +62,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/email-white.png'}
+                                src={'/assets/email-orange.png'}
                                 alt='Email logo'
                                 width={30}
                                 height={30}
@@ -73,7 +73,7 @@ const Footer = () => {
                 <div className='xl:my-auto '>
                     <div className='flex justify-around py-3 mx-auto md:max-w-[70%] lg:max-w-[60%]'>
                         <div>
-                            <h6 className='font-medium text-md md:text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#382AC3] to-[#02AFE5]'>
+                            <h6 className='font-medium text-md md:text-lg text-[var(--orange)]'>
                                 Services
                             </h6>
                             <ul className='list-none pl-0'>
@@ -89,7 +89,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div>
-                            <h6 className='font-medium text-md md:text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#382AC3] to-[#02AFE5]'>
+                            <h6 className='font-medium text-md md:text-lg text-[var(--orange)]'>
                                 Get in touch
                             </h6>
                             <ul className='list-none pl-0'>
@@ -102,7 +102,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div>
-                            <h6 className='font-medium text-md md:text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#382AC3] to-[#02AFE5]'>
+                            <h6 className='font-medium text-md md:text-lg text-[var(--orange)]'>
                                 Learn
                             </h6>
                             <ul className='list-none pl-0'>
@@ -128,7 +128,7 @@ const Footer = () => {
                     height={0}
                 />
                 <p className='flex text-center'>
-                    Copyright 2022 CBRecruitment. All Rights Reserved.
+                    Copyright 2023 CBRecruitment. All Rights Reserved.
                 </p>
             </div>
         </footer>

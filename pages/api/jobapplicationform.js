@@ -15,7 +15,7 @@ export default async function handler(nextReq, res) {
     method: nextReq.method,
     body: nextReq
   });
-//
+
   const formData = await req.formData();
   const courseCertForm = new FormData();
   const cvForm = new FormData();

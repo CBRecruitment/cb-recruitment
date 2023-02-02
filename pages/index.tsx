@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Landing() {
+const LandingPage = () => {
     return (
         <div className='h-screen w-screen grid lg:grid-cols-2 custom-img-landing'>
             <div className='left-dim'>
@@ -15,7 +15,7 @@ export default function Landing() {
                         </h1>
                         <h1 className='text-3xl tracking-wider'>space</h1>
                         <Link href='/home'>
-                            <button className='bg-[#ec9b3c] text-white border border-white px-20 py-3 mt-4 hover:scale-105 ease-in-out duration-75'>
+                            <button className='bg-[var(--orange)] text-white border border-white px-20 py-3 mt-4 hover:scale-105 ease-in-out duration-75'>
                                 SEE OPEN POSITIONS
                             </button>
                         </Link>
@@ -84,4 +84,6 @@ export default function Landing() {
             </div>
         </div>
     );
-}
+};
+
+export default LandingPage;

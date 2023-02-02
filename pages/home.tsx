@@ -3,9 +3,9 @@ import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Partners from '../components/Partners';
 
-const home = () => {
+const Home = () => {
     return (
-        <div className=''>
+        <div className='flex flex-col h-screen'>
             <Navbar />
             <Hero />
             <Partners />
@@ -13,4 +13,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;

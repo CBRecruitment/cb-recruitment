@@ -6,6 +6,15 @@
       GENERAL
 ********************/
 
+:root {
+  --orange: #ec9b3c;
+  --yellow: #f7d717;
+  --cream: #efebe0;
+  --gray: #3b444b;
+  --darkgray: #282828;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -49,7 +58,7 @@ html {
 ********************/
 
 .search-btn {
-    border-radius: 0 15px 15px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .search-bar {
@@ -212,4 +221,35 @@ html {
 .mobile-font {
   font-size: 2.5rem /* 36px */;
   line-height: 2.5rem /* 40px */;
+}
+
+/*******************
+    PAGINATION
+********************/
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  width: 30px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 10px;
+  border: solid 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-color: white;
+}
+
+.pagination button.active {
+  font-weight: 600;
+  border-color: var(--gray);
+  background: var(--orange);
+  color: #101010;
 }

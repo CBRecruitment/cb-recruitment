@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
-const thankyou = () => {
+const ThankYou = () => {
     return (
         <>
             <Navbar />
@@ -16,4 +16,4 @@ const thankyou = () => {
     );
 };
 
-export default thankyou;
+export default ThankYou;

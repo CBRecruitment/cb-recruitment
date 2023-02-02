@@ -5,7 +5,7 @@ const JobApplicationForm = ({ id }: any) => {
     const [course, setCourse] = useState('');
 
     return (
-        <div className='w-full mx-auto bg-blue-500 border-white rounded-md border-4 text-black font-medium py-5 '>
+        <div className='w-full mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5 '>
             <form
                 className='flex flex-col w-[90%] mx-auto'
                 action='/api/jobapplicationform'
@@ -13,7 +13,7 @@ const JobApplicationForm = ({ id }: any) => {
                 encType='multipart/form-data'
             >
                 <input type='hidden' name='id' value={id} />
-                <h1 className='text-2xl mb-3 flex justify-center'>
+                <h1 className='text-2xl mb-3 flex justify-center text-[var(--orange)]'>
                     Job Application Form
                 </h1>
                 <fieldset className='p-2 min-w-full text-left mb-1 block'>
@@ -24,7 +24,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='firstname'
                             name='firstname'
                             required
-                            className='px-4 py-1 w-full text-black font-medium'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md'
                         />
                     </label>
                 </fieldset>
@@ -36,7 +36,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='lastname'
                             name='lastname'
                             required
-                            className='px-4 py-1 w-full text-black font-medium'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md'
                         />
                     </label>
                 </fieldset>
@@ -48,7 +48,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='email'
                             name='email'
                             required
-                            className='px-4 py-1 w-full text-black font-medium'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md'
                         />
                     </label>
                 </fieldset>
@@ -59,14 +59,14 @@ const JobApplicationForm = ({ id }: any) => {
                             id='message'
                             name='message'
                             placeholder='Your cover letter/message sent to the employer'
-                            className='w-full p-3 text-black font-medium text-xs'
+                            className='w-full p-3 text-black font-medium rounded-md text-xs'
                         />
                     </label>
                 </fieldset>
                 <fieldset className='p-2 min-w-full text-left mb-1'>
                     <p className='mb-2'>How did you hear about us?</p>
                     <select
-                        className='p-2 min-w-full text-black'
+                        className='p-2 min-w-full text-black rounded-md'
                         onChange={(e) => setSource(e.target.value)}
                         name='source'
                         required
@@ -153,7 +153,7 @@ const JobApplicationForm = ({ id }: any) => {
                     ''
                 )}
                 <button
-                    className='border-2 border-black rounded-md p-2 w-[80%] mx-auto font-bold mt-4 bg-white hover:bg-[#126eb9] hover:text-white'
+                    className='border-2 border-black rounded-md p-2 w-[80%] mx-auto font-bold mt-4 bg-[var(--orange)] hover:text-black'
                     type='submit'
                 >
                     Send Application

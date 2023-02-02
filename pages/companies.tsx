@@ -1,16 +1,18 @@
 import React from 'react';
-import Modal from '../components/Modal';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import UploadCVModal from '../components/UploadCVModal';
 
-export default function companies() {
+const CompaniesPage = () => {
     return (
-        <>
+        <div className='flex flex-col h-screen'>
             <Navbar />
-            <div className='flex justify-center h-full bg-gray-900 text-white'>
-                <div className='h-[90vh] pt-10'>
-                    <Modal />
-                </div>
+            <div className='flex flex-col flex-grow justify-around items-center bg-[var(--cream)]'>
+                <UploadCVModal />
             </div>
-        </>
+            <Footer />
+        </div>
     );
-}
+};
+
+export default CompaniesPage;

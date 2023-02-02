@@ -1,53 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    // const [color, setColor] = useState('#4b5e67');
-    // const [textColor, setTextColor] = useState('#ffffff');
-
-    // useEffect(() => {
-    //     const changeColor = () => {
-    //         if (window.scrollY >= 90) {
-    //             setColor('##4b5e67');
-    //             setTextColor('#ffffff');
-    //         } else {
-    //             setColor('#4b5e67');
-    //             setTextColor('#ffffff');
-    //         }
-    //     };
-    //     window.addEventListener('scroll', changeColor);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', changeColor);
-    //     };
-    // }, []);
 
     const handleNav = () => {
         setNav(!nav);
     };
 
     return (
-        <header
-            // style={{ backgroundColor: `${color}` }}
-            className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[#3b444b]'
-        >
-            <div className='m-auto flex justify-between items-center h-[10vh]'>
+        <header className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[var(--gray)] p-3'>
+            <div className='m-auto flex justify-between items-center'>
                 <Link href='/home'>
                     <Image
                         src={'/assets/cblogo-whitev2.png'}
                         alt='CBR Logo'
                         width={90}
-                        height={50}
+                        height={90}
                         className='ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
-                <ul
-                    // style={{ color: `${textColor}` }}
-                    className='hidden sm:flex 2xl:mr-32 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'
-                >
+                <ul className='hidden sm:flex sm:mr-4 2xl:mr-32 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex'>
                         <Link href='/home'>Home</Link>
                     </li>
@@ -71,13 +46,13 @@ const Navbar = () => {
                     </li>
                     <div className='flex justify-center items-center cursor-pointer pl-2 lg:flex'>
                         <input
-                            className='text-sm text-black p-1 pl-3 w-[70%] search-bar'
-                            type='text'
+                            className='text-sm font-normal text-black p-1 pl-3 w-[70%] search-bar'
+                            type='search'
                         />
-                        <button className='bg-white p-1 border-none search-btn'>
+                        <button className='bg-white p-1 border-none w-[20%] flex justify-center search-btn'>
                             {' '}
                             <Image
-                                className='p-1'
+                                className='p-[0.15rem]'
                                 src={'/assets/search-orange.png'}
                                 alt='Search button'
                                 width={20}
@@ -91,18 +66,11 @@ const Navbar = () => {
                 <div
                     className='block sm:hidden z-10 text-white'
                     onClick={handleNav}
-                    // style={{ color: `${textColor}` }}
                 >
                     {nav ? (
-                        <AiOutlineClose
-                            size={25}
-                            // style={{ color: `${textColor}` }}
-                        />
+                        <AiOutlineClose size={25} />
                     ) : (
-                        <AiOutlineMenu
-                            size={25}
-                            // style={{ color: `${textColor}` }}
-                        />
+                        <AiOutlineMenu size={25} />
                     )}
                 </div>
 
@@ -115,30 +83,30 @@ const Navbar = () => {
                     <ul className='text-white'>
                         <Image
                             className='mx-auto pb-16'
-                            src={'/assets/cblogo-white.svg'}
+                            src={'/assets/cblogo-whitev2.png'}
                             alt='CBR Logo'
                             width={75}
-                            height={50}
+                            height={75}
                         />
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/home'>Home</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/candidates'>For Candidates</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/companies'>For Companies</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/about'>About</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/cbracademy'>CBR Academy</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-blue-500 '>
+                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/contact'>Contact</Link>
                         </li>
-                        <li className='p-4 text-2xl mb-6 hover:text-blue-500 '>
+                        <li className='p-4 text-2xl mb-6 hover:text-[var(--orange)] '>
                             <Link href='/faqs'>FAQs</Link>
                         </li>
                         <div className='flex mx-auto justify-center mt-20 space-x-5'>
