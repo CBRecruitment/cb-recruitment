@@ -23,8 +23,8 @@ html {
 .custom-img-hero {
   background: url('/assets/herobannerv2.jpg');
   background-repeat: no-repeat;
-  background-position: center; 
-  background-attachment:local; 
+  background-position: center right; 
+  background-attachment: local; 
   background-size: cover;
 }
 

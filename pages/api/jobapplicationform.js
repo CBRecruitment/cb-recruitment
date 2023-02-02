@@ -15,11 +15,10 @@ export default async function handler(nextReq, res) {
     method: nextReq.method,
     body: nextReq
   });
-
+//
   const formData = await req.formData();
   const courseCertForm = new FormData();
   const cvForm = new FormData();
-  const JobId = formData.get("id");
   courseCertForm.append("file", formData.get("courseCertificate"));
   cvForm.append("file", formData.get("cv"));
   
@@ -81,6 +80,7 @@ export default async function handler(nextReq, res) {
     });
     await updateCandidate.json();
 
+  const JobId = formData.get("id");
   // 'applyToJob' applies to a specific JobId
   const applyToJob = await fetch(`${BullhornUrl}/entity/JobSubmission`, {
     method: "put",

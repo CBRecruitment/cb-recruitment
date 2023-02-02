@@ -41,7 +41,7 @@ const Navbar = () => {
                         alt='CBR Logo'
                         width={90}
                         height={50}
-                        className='ml-40 hover:animate-pulse duration-200'
+                        className='ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
                 <ul

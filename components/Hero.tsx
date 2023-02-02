@@ -6,25 +6,25 @@ const Hero = () => {
     return (
         <>
             <div className='custom-img-hero h-[72.5vh]'>
-                <div className='ml-40 max-w-[35%] pt-12'>
+                <div className='ml-20 xl:ml-28 max-w-[35%] h-full pt-5 xl:pt-10'>
                     <h1 className='text-[#ec9b3c] max-w-[45%] text-left Anton-Regular'>
                         Making Web3 Work
                     </h1>
-                    <div className='bg-[#3b444b] p-6 rounded-2xl mt-10 flex flex-col '>
+                    <div className='bg-[#3b444b] p-6 rounded-2xl mt-8 xl:mt-10 flex flex-col '>
                         <span className='text-white mb-2 font-bold text-lg'>
                             Find a job you'll love
                         </span>
-                        <div className='flex flex-col w-full justify-between xl:flex-row'>
+                        <div className='flex flex-col space-y-3 w-full justify-between xl:flex-row xl:space-y-0'>
                             <input
-                                className='2xl:w-[65%] xl:w-[60%] lg:w-[50%] rounded-lg pl-2'
+                                className='rounded-lg pl-2 px-6 py-1.5 xl:w-[55%] 2xl:w-[65%]'
                                 placeholder='e.g "Full Stack Developer"'
                             ></input>
-                            <button className='px-6 py-1.5 bg-[#ec9b3c] rounded-lg text-white font-bold'>
+                            <button className='bg-[#ec9b3c] px-6 py-1.5 rounded-lg text-white font-bold'>
                                 GET STARTED
                             </button>
                         </div>
                     </div>
-                    <div className='flex space-x-5 mt-10'>
+                    <div className='flex space-x-5 mt-6 xl:mt-10'>
                         <Link href='https://t.me/CBR_Jobs' target='_blank'>
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
