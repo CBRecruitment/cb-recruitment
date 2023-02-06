@@ -29,7 +29,7 @@ const Info = () => {
                         </h1>
                         <Image
                             className='flex justify-center items-center mx-auto md:w-[500px]'
-                            src={'/assets/characters-looking-job.png'}
+                            src={'/assets/branding/characters-looking-job.png'}
                             alt=''
                             width={450}
                             height={50}

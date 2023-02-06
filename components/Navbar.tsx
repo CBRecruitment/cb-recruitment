@@ -113,7 +113,7 @@ const Navbar = () => {
                             <Link href='https://t.me/CBR_Jobs' target='_blank'>
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/telegram-orange.png'}
+                                    src={'/assets/branding/telegram-orange.png'}
                                     alt='Telegram logo'
                                     width={30}
                                     height={30}
@@ -125,7 +125,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/twitter-orange.png'}
+                                    src={'/assets/branding/twitter-orange.png'}
                                     alt='Twitter logo'
                                     width={30}
                                     height={30}
@@ -137,7 +137,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/linkedin-orange.png'}
+                                    src={'/assets/branding/linkedin-orange.png'}
                                     alt='LinkedIn logo'
                                     width={30}
                                     height={30}
@@ -149,7 +149,7 @@ const Navbar = () => {
                             >
                                 <Image
                                     className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/email-orange.png'}
+                                    src={'/assets/branding/email-orange.png'}
                                     alt='Email logo'
                                     width={30}
                                     height={30}

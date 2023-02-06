@@ -10,7 +10,7 @@ const Footer = () => {
                     <Link href='/'>
                         <Image
                             className='flex mx-auto mb-2'
-                            src={'/assets/cblogo-whitev2.png'}
+                            src={'/assets/branding/cblogo-whitev2.png'}
                             alt='CBR Logo'
                             width={60}
                             height={50}
@@ -26,7 +26,7 @@ const Footer = () => {
                         <Link href='https://t.me/CBR_Jobs' target='_blank'>
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/telegram-orange.png'}
+                                src={'/assets/branding/telegram-orange.png'}
                                 alt='Telegram logo'
                                 width={30}
                                 height={30}
@@ -38,7 +38,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/twitter-orange.png'}
+                                src={'/assets/branding/twitter-orange.png'}
                                 alt='Twitter logo'
                                 width={30}
                                 height={30}
@@ -50,7 +50,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/linkedin-orange.png'}
+                                src={'/assets/branding/linkedin-orange.png'}
                                 alt='LinkedIn logo'
                                 width={30}
                                 height={30}
@@ -62,7 +62,7 @@ const Footer = () => {
                         >
                             <Image
                                 className='hover:scale-110 ease-in-out duration-200'
-                                src={'/assets/email-orange.png'}
+                                src={'/assets/branding/email-orange.png'}
                                 alt='Email logo'
                                 width={30}
                                 height={30}
@@ -122,7 +122,7 @@ const Footer = () => {
             <div className='flex flex-col justify-center items-center mt-5 mx-auto lg:flex-row sm:max-w-[80%] md:max-w-[70%] lg:max-w-[65%] lg:justify-around'>
                 <Image
                     className='mb-5 opacity-70 lg:mb-0'
-                    src={'/assets/dark-mode-logo-01.svg'}
+                    src={'/assets/branding/dark-mode-logo-01.svg'}
                     alt='Coin Bureau Logo'
                     width={200}
                     height={0}

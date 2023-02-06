@@ -20,7 +20,7 @@ const SearchBar = () => {
                 {' '}
                 <Image
                     className='search-btn-img'
-                    src={'/assets/search-orange.png'}
+                    src={'/assets/branding/search-orange.png'}
                     alt='Search button'
                     width={20}
                     height={20}
