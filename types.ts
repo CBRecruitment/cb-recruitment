@@ -27,3 +27,14 @@ export type SkillAPIResponse = {
     }[];
 };
 
+export type SearchResponse = {
+    total: number;
+    start: number;
+    count: number;
+    data: Job[];
+};
+
+export type Props = {
+    data: SearchResponse;
+};
+
