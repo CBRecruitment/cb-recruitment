@@ -24,7 +24,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='firstname'
                             name='firstname'
                             required
-                            className='px-4 py-1 w-full text-black font-medium rounded-md'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
                         />
                     </label>
                 </fieldset>
@@ -36,7 +36,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='lastname'
                             name='lastname'
                             required
-                            className='px-4 py-1 w-full text-black font-medium rounded-md'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
                         />
                     </label>
                 </fieldset>
@@ -48,7 +48,7 @@ const JobApplicationForm = ({ id }: any) => {
                             id='email'
                             name='email'
                             required
-                            className='px-4 py-1 w-full text-black font-medium rounded-md'
+                            className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
                         />
                     </label>
                 </fieldset>
@@ -59,14 +59,14 @@ const JobApplicationForm = ({ id }: any) => {
                             id='message'
                             name='message'
                             placeholder='Your cover letter/message sent to the employer'
-                            className='w-full p-3 text-black font-medium rounded-md text-xs'
+                            className='w-full p-3 text-black font-medium rounded-md text-sm'
                         />
                     </label>
                 </fieldset>
-                <fieldset className='p-2 min-w-full text-left mb-1'>
+                <fieldset className='p-2 min-w-full text-left mb-1 '>
                     <p className='mb-2'>How did you hear about us?</p>
                     <select
-                        className='p-2 min-w-full text-black rounded-md'
+                        className='p-2 min-w-full text-black rounded-md text-sm'
                         onChange={(e) => setSource(e.target.value)}
                         name='source'
                         required

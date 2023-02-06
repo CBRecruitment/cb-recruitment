@@ -13,18 +13,18 @@ const Navbar = () => {
     return (
         <header className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[var(--gray)] p-3'>
             <div className='m-auto flex justify-between items-center'>
-                <Link href='/home'>
+                <Link href='/'>
                     <Image
-                        src={'/assets/cblogo-whitev2.png'}
+                        src={'/assets/branding/cblogo-whitev2.png'}
                         alt='CBR Logo'
                         width={90}
                         height={90}
-                        className='ml-20 xl:ml-28 hover:animate-pulse duration-200'
+                        className='sm:ml-4 md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
                 <ul className='hidden sm:flex sm:mr-4 2xl:mr-32 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex'>
-                        <Link href='/home'>Home</Link>
+                        <Link href='/'>Home</Link>
                     </li>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
                         <Link href='/candidates'>For Candidates</Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
                         <Link href='/about'>About</Link>
                     </li>
-                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                    {/* <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
                         <Link href='/cbracademy'>CBR Academy</Link>
                     </li>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
@@ -43,13 +43,13 @@ const Navbar = () => {
                     </li>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
                         <Link href='/faqs'>FAQs</Link>
-                    </li>
+                    </li> */}
                     <div className='flex justify-center items-center cursor-pointer pl-2 lg:flex'>
                         <input
-                            className='text-sm font-normal text-black p-1 pl-3 w-[70%] search-bar'
+                            className='text-sm font-normal text-black p-1 pl-3 w-[70%] search-bar-nav'
                             type='search'
                         />
-                        <button className='bg-white p-1 border-none w-[20%] flex justify-center search-btn'>
+                        <button className='bg-white p-1 border-none w-[20%] flex justify-center search-btn-nav'>
                             {' '}
                             <Image
                                 className='p-[0.15rem]'
@@ -89,7 +89,7 @@ const Navbar = () => {
                             height={75}
                         />
                         <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/home'>Home</Link>
+                            <Link href='/'>Home</Link>
                         </li>
                         <li className='p-4 text-2xl hover:text-[var(--orange)] '>
                             <Link href='/candidates'>For Candidates</Link>

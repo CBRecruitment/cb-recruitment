@@ -30,17 +30,17 @@ const job = (props: any) => {
                                 {jobData.title}
                             </p>
                             <p className=''>
-                                {jobData.categories.data[0].name}
+                                {jobData.categories?.data[0]?.name}
                             </p>
                         </div>
                         <div className='mt-5 flex space-x-4'>
                             <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)] cursor-pointer'>
                                 {/* Location */}
-                                {jobData.customText12}
+                                {jobData?.customText12}
                             </p>
                             <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)] cursor-pointer'>
                                 {/* Industry */}
-                                {jobData.customText14}
+                                {jobData?.customText14}
                             </p>
                             {skills.map((skill: any) => (
                                 <p
@@ -54,7 +54,7 @@ const job = (props: any) => {
                         <div
                             className='text-white mt-10'
                             dangerouslySetInnerHTML={{
-                                __html: jobData.description,
+                                __html: jobData?.description,
                             }}
                         />
                     </div>
@@ -63,7 +63,7 @@ const job = (props: any) => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

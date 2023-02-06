@@ -4,15 +4,15 @@ import Navbar from '../components/Navbar';
 
 const ThankYou = () => {
     return (
-        <>
+        <div className='flex flex-col h-screen'>
             <Navbar />
-            <div className='flex justify-center bg-gray-900 h-full'>
-                <h1 className='flex justify-center items-center py-56 text-white text-3xl'>
+            <div className='flex justify-center bg-[var(--darkgray)] h-full'>
+                <h1 className='flex items-center text-[var(--orange)] text-4xl'>
                     Your CV was successfully uploaded, thank you for applying!
                 </h1>
             </div>
             <Footer />
-        </>
+        </div>
     );
 };
 

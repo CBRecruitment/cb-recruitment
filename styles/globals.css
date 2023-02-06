@@ -30,7 +30,7 @@ html {
 ********************/
 
 .custom-img-hero {
-  background: url('/assets/herobannerv2.jpg');
+  background: url('/assets/branding/herobannerv2.jpg');
   background-repeat: no-repeat;
   background-position: center right; 
   background-attachment: local; 
@@ -57,20 +57,66 @@ html {
       NAVBAR
 ********************/
 
-.search-btn {
-  border-radius: 0 15px 15px 0;
+.search-bar {
+  border-radius: 15px 0 0 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  min-height: 28px;
+  padding: 4px;
+  padding-left: 12px;
+  width: 75%;
 }
 
-.search-bar {
+.search-btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+  border-style: none;
+  background: white;
+  min-height: 28px;
+  padding: 4px;
+  width: 25%;
+}
+
+.search-btn-img {
+  padding: 2.4px;
+}
+
+.search-bar-nav {
   border-radius: 15px 0 0 15px;
 }
 
+.search-btn-nav {
+  border-radius: 0 15px 15px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .search-btn {
+    padding-left: 1em;
+  }
+}
+
+
+@media only screen and (min-width: 1280px) {
+  .search-btn {
+    padding-left: 2em;
+  }
+}
+
+
+@media only screen and (min-width: 1536px) {
+  .search-btn {
+    padding-left: 3em;
+  }
+}
 
 /*******************
     LANDING PAGE
 ********************/
 .custom-img-landing {
-  background: url('/assets/landingpagebg.jpg');
+  background: url('/assets/branding/landingpagebg.jpg');
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: fixed; 
@@ -82,7 +128,7 @@ html {
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
-  ), url('/assets/landingpagebg.jpg');
+  ), url('/assets/branding/landingpagebg.jpg');
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: fixed; 
@@ -94,7 +140,7 @@ html {
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
-  ), url('/assets/landingpagebg.jpg');
+  ), url('/assets/branding/landingpagebg.jpg');
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: fixed; 
@@ -103,7 +149,7 @@ html {
 }
 
 .right-side-chain:hover {
-  background: url("/assets/rightsidechainlink.svg");
+  background: url("/assets/branding/rightsidechainlink.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 21.44cm;
@@ -111,7 +157,7 @@ html {
 }
 
  .left-side-chain:hover {
-  background: url("/assets/leftsidechainlink.svg");
+  background: url("/assets/branding/leftsidechainlink.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 17.675cm;

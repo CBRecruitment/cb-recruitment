@@ -23,7 +23,7 @@ export default async function handler(nextReq, res) {
   cvForm.append("file", formData.get("cv"));
   
   // 'cvResponse' formats an uploaded CV as form-data
-  const cvResponse = await fetch(`${BullhornUrl}/resume/parseToCandidate?format=docx&populateDescription=text`, {
+  const cvResponse = await fetch(`${BullhornUrl}/resume/parseToCandidate?format=text&populateDescription=html`, {
     method: "post",
     headers: {
       'BhRestToken': BhRestToken,
@@ -33,7 +33,7 @@ export default async function handler(nextReq, res) {
     const cvFormJson = await cvResponse.json();
     const CandidateJson = JSON.stringify(cvFormJson.candidate)
     const Candidate = cvFormJson.candidate
-    const CandidateDescription = Candidate.description
+    const CandidateDescription = Candidate?.description
 
   // 'parseToCandidate' creates a candidate from the body response of cvResponse
   const parseToCandidate = await fetch(`${BullhornUrl}/entity/Candidate`, {
