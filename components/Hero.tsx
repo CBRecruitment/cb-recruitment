@@ -27,7 +27,7 @@ const Hero = () => {
                     <Link href='https://t.me/CBR_Jobs' target='_blank'>
                         <Image
                             className='hover:scale-110 ease-in-out duration-200'
-                            src={'/assets/telegram-orange.png'}
+                            src={'/assets/branding/telegram-orange.png'}
                             alt='Telegram logo'
                             width={45}
                             height={45}
@@ -39,7 +39,7 @@ const Hero = () => {
                     >
                         <Image
                             className='hover:scale-110 ease-in-out duration-200'
-                            src={'/assets/twitter-orange.png'}
+                            src={'/assets/branding/twitter-orange.png'}
                             alt='Twitter logo'
                             width={45}
                             height={45}
@@ -51,7 +51,7 @@ const Hero = () => {
                     >
                         <Image
                             className='hover:scale-110 ease-in-out duration-200'
-                            src={'/assets/linkedin-orange.png'}
+                            src={'/assets/branding/linkedin-orange.png'}
                             alt='LinkedIn logo'
                             width={45}
                             height={45}
@@ -60,7 +60,7 @@ const Hero = () => {
                     <Link href='mailto:info@cbrecruitment.com' target='_blank'>
                         <Image
                             className='hover:scale-110 ease-in-out duration-200'
-                            src={'/assets/email-orange.png'}
+                            src={'/assets/branding/email-orange.png'}
                             alt='Email logo'
                             width={45}
                             height={45}
