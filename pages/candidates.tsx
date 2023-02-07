@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import SearchBar from '../components/SearchBar';
 import JobOpenings from '../components/JobOpenings';
 import { GetServerSideProps } from 'next';
 import { Job } from '../types';
+import SearchBar from '../components/SearchBar';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -35,7 +35,6 @@ const CandidatesPage = ({ searchResults }: Props) => {
                 <h1 className='text-4xl flex justify-center underline text-[var(--orange)]'>
                     Job Openings
                 </h1>
-                <SearchBar />
                 <JobOpenings jobs={searchResults.data} />
             </div>
         </div>

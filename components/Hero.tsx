@@ -5,12 +5,12 @@ import React from 'react';
 const Hero = () => {
     return (
         <div className='custom-img-hero flex-grow'>
-            <div className='ml-20 xl:ml-28 max-w-[35%] h-full pt-5 xl:pt-10'>
+            <div className='ml-24 xl:ml-28 max-w-[35%] h-full pt-5 xl:pt-10'>
                 <h1 className='text-[var(--orange)] max-w-[45%] text-left Anton-Regular'>
                     Making Web3 Work
                 </h1>
-                <div className='bg-[var(--gray)] p-6 rounded-2xl mt-8 xl:mt-10 flex flex-col '>
-                    <span className='text-white mb-2 font-bold text-lg'>
+                <div className='flex flex-col bg-[var(--gray)] p-6 rounded-2xl mt-6 xl:mt-10'>
+                    <span className='text-white mb-1 font-bold text-lg'>
                         Find a job you'll love
                     </span>
                     <div className='flex flex-col space-y-3 w-full justify-between xl:flex-row xl:space-y-0'>
@@ -23,7 +23,7 @@ const Hero = () => {
                         </button>
                     </div>
                 </div>
-                <div className='flex space-x-5 mt-6 xl:mt-10'>
+                <div className='flex space-x-5 mt-6 xl:mt-10 mb-4'>
                     <Link href='https://t.me/CBR_Jobs' target='_blank'>
                         <Image
                             className='hover:scale-110 ease-in-out duration-200'

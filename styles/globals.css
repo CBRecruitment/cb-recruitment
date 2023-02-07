@@ -72,11 +72,12 @@ html {
 .search-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 0 15px 15px 0;
   border-style: none;
   background: white;
+  color: orange;
   min-height: 28px;
-  padding: 4px;
   width: 25%;
 }
 
@@ -98,7 +99,6 @@ html {
   }
 }
 
-
 @media only screen and (min-width: 1280px) {
   .search-btn {
     padding-left: 2em;
@@ -111,6 +111,46 @@ html {
     padding-left: 3em;
   }
 }
+
+/******** JobOpenings Search Bar ********/
+
+.dataResult {
+  position: absolute;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  width: 280px;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.dataItem:hover {
+  background-color: var(--orange);
+}
+
+#clearBtn {
+  cursor: pointer;
+}
+
 
 /*******************
     LANDING PAGE
@@ -145,7 +185,6 @@ html {
   background-position: center; 
   background-attachment: fixed; 
   background-size: cover;
-
 }
 
 .right-side-chain:hover {
@@ -163,24 +202,6 @@ html {
   background-position: 17.675cm;
   background-size: 11.69cm
 }
-
-/*
-.right-side-chain:hover {
-  background: url("/assets/rightsidechainlink.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 21.44cm;
-  background-size: 11.69cm;
-} */
-
-/* 
-.right-side-chain {
-  background: url("/assets/leftsidechainlink.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 21.44cm;
-  background-size: 11.69cm;
-} */
 
 /*******************
         FONTS
@@ -230,7 +251,7 @@ html {
 .Anton-Regular {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  font-size: 95px;
+  font-size: 96px;
   line-height: 1.2;
 }
 

@@ -22,44 +22,19 @@ const Navbar = () => {
                         className='sm:ml-4 md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
-                <ul className='hidden sm:flex sm:mr-4 2xl:mr-32 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'>
-                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex'>
+                <ul className='hidden sm:flex sm:mr-4 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden sm:flex'>
                         <Link href='/'>Home</Link>
                     </li>
-                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
                         <Link href='/candidates'>For Candidates</Link>
                     </li>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
                         <Link href='/companies'>For Companies</Link>
                     </li>
                     <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
-                        <Link href='/about'>About</Link>
+                        <Link href='/blog'>Blog</Link>
                     </li>
-                    {/* <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
-                        <Link href='/cbracademy'>CBR Academy</Link>
-                    </li>
-                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
-                        <Link href='/contact'>Contact</Link>
-                    </li>
-                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
-                        <Link href='/faqs'>FAQs</Link>
-                    </li> */}
-                    <div className='flex justify-center items-center cursor-pointer pl-2 lg:flex'>
-                        <input
-                            className='text-sm font-normal text-black p-1 pl-3 w-[70%] search-bar-nav'
-                            type='search'
-                        />
-                        <button className='bg-white p-1 border-none w-[20%] flex justify-center search-btn-nav'>
-                            {' '}
-                            <Image
-                                className='p-[0.15rem]'
-                                src={'/assets/search-orange.png'}
-                                alt='Search button'
-                                width={20}
-                                height={20}
-                            />
-                        </button>
-                    </div>
                 </ul>
 
                 {/* Mobile Button */}
@@ -164,3 +139,34 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+    /* <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                        <Link href='/cbracademy'>CBR Academy</Link>
+                    </li>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
+                        <Link href='/contact'>Contact</Link>
+                    </li>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden 2xl:flex '>
+                        <Link href='/faqs'>FAQs</Link>
+                    </li> */
+}
+
+{
+    /* <div className='flex justify-center items-center cursor-pointer pl-2 lg:flex'>
+                        <input
+                            className='text-sm font-normal text-black p-1 pl-3 w-[70%] search-bar-nav'
+                            type='search'
+                        />
+                        <button className='bg-white p-1 border-none w-[20%] flex justify-center search-btn-nav'>
+                            {' '}
+                            <Image
+                                className='p-[0.15rem]'
+                                src={'/assets/search-orange.png'}
+                                alt='Search button'
+                                width={20}
+                                height={20}
+                            />
+                        </button>
+                    </div> */
+}

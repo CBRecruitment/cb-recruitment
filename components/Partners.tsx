@@ -13,7 +13,7 @@ const Partners = () => {
                         className='mr-3'
                         src={'/assets/branding/cblogo-whitev2.png'}
                         alt=''
-                        width={80}
+                        width={85}
                         height={80}
                     />
                     <h1 className='text-gray-400 text-3xl flex items-center'>
@@ -25,7 +25,7 @@ const Partners = () => {
                         className='mr-3'
                         src={'/assets/branding/cblogo-whitev2.png'}
                         alt=''
-                        width={80}
+                        width={85}
                         height={80}
                     />
                     <h1 className='text-gray-400 text-3xl flex items-center'>
@@ -37,7 +37,7 @@ const Partners = () => {
                         className='mr-3'
                         src={'/assets/branding/cblogo-whitev2.png'}
                         alt=''
-                        width={80}
+                        width={85}
                         height={80}
                     />
                     <h1 className='text-gray-400 text-3xl flex items-center'>

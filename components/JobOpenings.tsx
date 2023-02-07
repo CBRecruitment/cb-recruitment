@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Job } from '../types';
+import SearchBar from './SearchBar';
 
 interface Props {
     jobs: Job[];
@@ -10,6 +11,7 @@ interface Props {
 const JobOpenings = ({ jobs }: Props) => {
     return (
         <>
+            <SearchBar jobs={jobs} />
             <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%]'>
                 {jobs.map((job) => {
                     const categories = job.categories.data;
