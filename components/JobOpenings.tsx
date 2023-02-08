@@ -3,7 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Job } from '../interfaces/types';
 import SearchIcon from '@mui/icons-material/Search';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import { useRouter } from 'next/router';
+import Pagination from './Pagination';
 
 interface Props {
     jobs: Job[];
@@ -11,34 +13,43 @@ interface Props {
 
 const JobOpenings = ({ jobs }: Props) => {
     const [search, setSearch] = useState('');
+    const [value, setValue] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(6);
     const router = useRouter();
 
-    function findJob(search: any) {
-        return jobs.filter((job) => job.includes(search));
-    }
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        router.push(`candidates/?search=${search}`);
+    };
 
     return (
         <>
-            <div className='search flex justify-center mb-10 mx-auto'>
-                <div className='mt-[40px] flex text-black'>
+            <div className='search justify-center flex mb-10'>
+                <form
+                    className='mt-[40px] flex text-black'
+                    onSubmit={handleSubmit}
+                >
                     <input
-                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none '
+                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none search-bar-nav'
                         placeholder='Search here...'
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <button
-                        className='p-[3px] h-fit w-fit bg-white grid place-items-center text-[25px] text-[var(--orange)]'
-                        onClick={() => {
-                            router.push(`/candidates/?search=${search}`);
-                        }}
+                        className='p-[3px] h-fit w-fit bg-white grid place-items-center text-[25px] text-[var(--orange)] search-btn-nav'
+                        type='submit'
                     >
                         <SearchIcon />
                     </button>
-                </div>
+                </form>
             </div>
-            <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%]'>
-                {jobs.map((job) => {
+            <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%] mb-6'>
+                {currentPosts?.map((job) => {
                     const categories = job.categories.data;
                     return (
                         <Link href={`/job/${job.id}`} key={job.id}>
@@ -72,49 +83,28 @@ const JobOpenings = ({ jobs }: Props) => {
                     );
                 })}
             </div>
+            <div className='flex justify-center items-center'>
+                <button
+                    className='md:fixed md:bottom-[100px] md:w-full'
+                    onClick={() => {
+                        router.push(`/candidates`);
+                    }}
+                >
+                    <KeyboardReturnIcon className='text-[40px] text-[var(--orange)]' />
+                </button>
+            </div>
+            <footer className='md:fixed md:bottom-0 md:w-full md:mb-10'>
+                <Pagination
+                    totalPosts={jobs?.length}
+                    postsPerPage={postsPerPage}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                >
+                    {' '}
+                </Pagination>
+            </footer>
         </>
     );
 };
 
 export default JobOpenings;
-
-{
-    /* {skills.map((skill) => (
-        <p
-            className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)]'
-            key={skill.id}
-        >
-            {skill.name}
-        </p>
-    ))}
-        <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)]'>
-            {result?.customText12}
-        </p>
-        <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)]'>
-            {result?.customText14}
-        </p> */
-}
-
-// const [currentPage, setCurrentPage] = useState(1);
-// const [postsPerPage, setPostsPerPage] = useState(5);
-
-// const lastPostIndex = currentPage * postsPerPage;
-// const firstPostIndex = lastPostIndex - postsPerPage;
-// const currentPosts = results.slice(firstPostIndex, lastPostIndex);
-
-// .filter((job) => {
-//     return searchBar.toLowerCase() === ''
-//         ? job
-//         : job.title
-//               .toLowerCase()
-//               .includes(searchBar);
-// })
-
-{
-    /* <Pagination
-        totalPosts={results.length}
-        postsPerPage={postsPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-    > */
-}

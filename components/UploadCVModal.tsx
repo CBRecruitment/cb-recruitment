@@ -5,7 +5,7 @@ const UploadCVModal = () => {
     return (
         <>
             <button
-                className='bg-[var(--orange)] text-black font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1'
+                className='bg-[var(--orange)] text-black font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-fit w-fit'
                 type='button'
                 onClick={() => setShowModal(true)}
             >

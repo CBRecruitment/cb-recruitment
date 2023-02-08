@@ -1,8 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import router from 'next/router';
+import React, { useState } from 'react';
 
 const Hero = () => {
+    const [search, setSearch] = useState('');
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        router.push(`candidates/?search=${search}`);
+    };
+
     return (
         <div className='custom-img-hero flex-grow'>
             <div className='ml-24 xl:ml-28 max-w-[35%] h-full pt-5 xl:pt-10'>
@@ -13,15 +21,23 @@ const Hero = () => {
                     <span className='text-white mb-1 font-bold text-lg'>
                         Find a job you'll love
                     </span>
-                    <div className='flex flex-col space-y-3 w-full justify-between xl:flex-row xl:space-y-0'>
+                    <form
+                        className='flex flex-col space-y-3 w-full justify-between xl:flex-row xl:space-y-0'
+                        onSubmit={handleSubmit}
+                    >
                         <input
                             className='rounded-lg pl-2 px-6 py-1.5 xl:w-[55%] 2xl:w-[65%]'
                             placeholder='e.g "Full Stack Developer"'
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
                         ></input>
-                        <button className='bg-[var(--orange)] px-6 py-1.5 rounded-lg text-white font-bold'>
+                        <button
+                            className='bg-[var(--orange)] px-6 py-1.5 rounded-lg text-white font-bold'
+                            type='submit'
+                        >
                             GET STARTED
                         </button>
-                    </div>
+                    </form>
                 </div>
                 <div className='flex space-x-5 mt-6 xl:mt-10 mb-4'>
                     <Link href='https://t.me/CBR_Jobs' target='_blank'>
