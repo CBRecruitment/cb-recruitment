@@ -1,10 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import JobOpenings from '../components/JobOpenings';
 import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
-import router from 'next/router';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -18,6 +16,7 @@ type SearchResponse = {
 
 type Props = {
     searchResults: SearchResponse;
+    searchQuery: string;
 };
 
 export const getServerSideProps: GetServerSideProps = async (req) => {
@@ -27,10 +26,10 @@ export const getServerSideProps: GetServerSideProps = async (req) => {
         `${BullhornUrl}/search/JobOrder?fields=id,title,categories,skills,employmentType,customText14,customText15,customText12,dateAdded&count=500&query=isOpen:1 AND isDeleted:0 AND NOT status:archive ${search}&BhRestToken=${BhRestToken}&sort=-dateAdded`
     );
     const searchResults: Props = await res.json();
-    return { props: { searchResults } };
+    return { props: { searchResults, searchQuery: req.query.search || null } };
 };
 
-const CandidatesPage = ({ searchResults }: Props) => {
+const CandidatesPage = ({ searchResults, searchQuery }: Props) => {
     return (
         <div className='flex flex-col h-screen'>
             <Navbar />
@@ -40,7 +39,10 @@ const CandidatesPage = ({ searchResults }: Props) => {
                         Job Openings
                     </h1>
                 </div>
-                <JobOpenings jobs={searchResults.data} />
+                <JobOpenings
+                    jobs={searchResults.data}
+                    searchQuery={searchQuery}
+                />
             </div>
         </div>
     );

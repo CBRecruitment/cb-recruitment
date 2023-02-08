@@ -39,3 +39,7 @@ export type Props = {
     data: SearchResponse;
 };
 
+export type SearchQueryProps = {
+    searchQuery: string;
+}
+

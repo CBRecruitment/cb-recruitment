@@ -7,13 +7,13 @@ import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import { useRouter } from 'next/router';
 import Pagination from './Pagination';
 
-interface Props {
+type Props = {
     jobs: Job[];
-}
+    searchQuery: string;
+};
 
-const JobOpenings = ({ jobs }: Props) => {
-    const [search, setSearch] = useState('');
-    const [value, setValue] = useState('');
+const JobOpenings = ({ jobs, searchQuery }: Props) => {
+    const [search, setSearch] = useState(searchQuery ?? '');
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
     const router = useRouter();
@@ -22,7 +22,7 @@ const JobOpenings = ({ jobs }: Props) => {
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         router.push(`candidates/?search=${search}`);
     };
@@ -35,13 +35,13 @@ const JobOpenings = ({ jobs }: Props) => {
                     onSubmit={handleSubmit}
                 >
                     <input
-                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none search-bar-nav'
+                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none search-input'
                         placeholder='Search here...'
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <button
-                        className='p-[3px] h-fit w-fit bg-white grid place-items-center text-[25px] text-[var(--orange)] search-btn-nav'
+                        className='p-[3px] h-fit w-fit bg-white grid place-items-center text-[25px] text-[var(--orange)] search-btn'
                         type='submit'
                     >
                         <SearchIcon />

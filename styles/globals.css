@@ -19,11 +19,11 @@ html {
   scroll-behavior: smooth;
 }
 
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   .h-screen {
     height: -webkit-fill-available;
   }
-}
+} */
 
 /*******************
        HERO
@@ -54,101 +54,14 @@ html {
 }
 
 /*******************
-      NAVBAR
+      Search Bar
 ********************/
-
-.search-bar {
+.search-input {
   border-radius: 15px 0 0 15px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: black;
-  min-height: 28px;
-  padding: 4px;
-  padding-left: 12px;
-  width: 75%;
 }
 
 .search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 0 15px 15px 0;
-  border-style: none;
-  background: white;
-  color: orange;
-  min-height: 28px;
-  width: 25%;
-}
-
-.search-btn-img {
-  padding: 2.4px;
-}
-
-.search-bar-nav {
-  border-radius: 15px 0 0 15px;
-}
-
-.search-btn-nav {
-  border-radius: 0 15px 15px 0;
-}
-
-@media only screen and (min-width: 1024px) {
-  .search-btn {
-    padding-left: 1em;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .search-btn {
-    padding-left: 2em;
-  }
-}
-
-
-@media only screen and (min-width: 1536px) {
-  .search-btn {
-    padding-left: 3em;
-  }
-}
-
-/******** JobOpenings Search Bar ********/
-
-.dataResult {
-  position: absolute;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  width: 280px;
-  height: 200px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  overflow: hidden;
-  overflow-y: auto;
-}
-
-.dataResult::-webkit-scrollbar {
-  display: none;
-}
-
-.dataResult .dataItem {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
-.dataItem p {
-  margin-left: 10px;
-  font-size: 15px;
-}
-
-.dataItem:hover {
-  background-color: var(--orange);
-}
-
-#clearBtn {
-  cursor: pointer;
 }
 
 

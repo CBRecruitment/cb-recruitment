@@ -7,11 +7,11 @@ const CompaniesPage = () => {
     return (
         <div className='flex flex-col h-screen'>
             <Navbar />
-            <div className='flex flex-col flex-grow justify-around items-center bg-[var(--cream)] py-6'>
-                <h1 className='text-4xl text-[var(--orange)] mb-6'>
+            <div className='flex flex-grow flex-col justify-around items-center bg-[var(--darkgray)] py-10'>
+                <h1 className='md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-[var(--orange)]'>
                     Access top Talent in the Web3 Space
                 </h1>
-                <div className='max-w-6xl space-y-6 mb-10'>
+                <div className='md:max-w-3xl xl:max-w-5xl 2xl:max-w-7xl space-y-10 text-white text-center'>
                     <p>
                         Made up of a team with over 40 years' experience in
                         recruitment, we are committed to becoming the industry's
@@ -48,7 +48,7 @@ const CompaniesPage = () => {
                 </div>
                 <UploadCVModal />
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };
