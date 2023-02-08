@@ -1,17 +1,42 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Job } from '../types';
-import SearchBar from './SearchBar';
+import { Job } from '../interfaces/types';
+import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/router';
 
 interface Props {
     jobs: Job[];
 }
 
 const JobOpenings = ({ jobs }: Props) => {
+    const [search, setSearch] = useState('');
+    const router = useRouter();
+
+    function findJob(search: any) {
+        return jobs.filter((job) => job.includes(search));
+    }
+
     return (
         <>
-            <SearchBar jobs={jobs} />
+            <div className='search flex justify-center mb-10 mx-auto'>
+                <div className='mt-[40px] flex text-black'>
+                    <input
+                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none '
+                        placeholder='Search here...'
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <button
+                        className='p-[3px] h-fit w-fit bg-white grid place-items-center text-[25px] text-[var(--orange)]'
+                        onClick={() => {
+                            router.push(`/candidates/?search=${search}`);
+                        }}
+                    >
+                        <SearchIcon />
+                    </button>
+                </div>
+            </div>
             <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%]'>
                 {jobs.map((job) => {
                     const categories = job.categories.data;

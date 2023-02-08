@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import JobOpenings from '../components/JobOpenings';
 import { GetServerSideProps } from 'next';
-import { Job } from '../types';
+import { Job } from '../interfaces/types';
 import SearchBar from '../components/SearchBar';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
@@ -19,10 +19,11 @@ type Props = {
     searchResults: SearchResponse;
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (req) => {
     const res = await fetch(
         `${BullhornUrl}/search/JobOrder?fields=id,title,categories,skills,employmentType,customText14,customText15,customText12,dateAdded&count=500&query=isOpen:1 AND isDeleted:0 AND NOT status:archive&BhRestToken=${BhRestToken}&sort=-dateAdded`
     );
+    const search = req.query.search;
     const searchResults: Props = await res.json();
     return { props: { searchResults } };
 };

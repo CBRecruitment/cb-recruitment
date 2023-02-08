@@ -1,4 +1,5 @@
 export type Job = {
+    [x: string]: any;
     id: number;
     title: string;
     categories: CategoryAPIResponse;

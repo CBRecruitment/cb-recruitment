@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import React, { useState } from 'react';
-import { Props } from '../types';
+import { Props } from '../interfaces/types';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
