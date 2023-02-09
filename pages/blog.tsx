@@ -21,7 +21,7 @@ export default function Blog({ allPosts }: Props) {
             <Navbar />
             <Layout>
                 <Head>
-                    <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+                    <title>{`Read Up-To-Date Content on Everything Crypto`}</title>
                 </Head>
                 <Container>
                     <Intro />
