@@ -1,6 +1,6 @@
 ---
 title: '5 Excellent Hybrid Meetings Practices to Implement in 2023'
-excerpt: ''
+excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/hybrid-meetings-practices/cover.png'
 date: '2023-01-26T05:35:07.322Z'
 author:

@@ -1,6 +1,6 @@
 ---
 title: '5 Amazing Metaverse Careers that can Change your Life'
-excerpt: ''
+excerpt: 'Career Advice'
 coverImage: '/assets/blog/amazing-metaverse-careers/cover.jpeg'
 date: '2023-01-30T05:35:07.322Z'
 author:

@@ -1,6 +1,6 @@
 ---
 title: 'Are Web3 Companies a Better Career Option (2023)?'
-excerpt: ''
+excerpt: 'Career Advice'
 coverImage: '/assets/blog/web3_career_options/web3.jpg'
 date: '2023-02-03T05:35:07.322Z'
 author:

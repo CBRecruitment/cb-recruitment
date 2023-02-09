@@ -1,6 +1,6 @@
 ---
 title: '3 Fantastic Jobs that Pay 300k a Year in Web3'
-excerpt: ''
+excerpt: 'Career Advice'
 coverImage: '/assets/blog/jobs-that-pay-300k-a-year/cover.png'
 date: '2023-01-19T05:35:07.322Z'
 author:
