@@ -2,7 +2,7 @@
 title: 'I Hate My Job: Advice for Coping at Work (2023)'
 excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/i-hate-my-job/cover.jpeg'
-date: '2022-10-27T05:35:07.322Z'
+date: '2022-10-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

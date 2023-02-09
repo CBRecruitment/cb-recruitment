@@ -2,7 +2,7 @@
 title: 'Why aren’t there more Women in Crypto jobs?'
 excerpt: 'Staffing Trends'
 coverImage: '/assets/blog/women-in-crypto-jobs/cover.jpeg'
-date: '2022-07-04T05:35:07.322Z'
+date: '2022-07-04'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

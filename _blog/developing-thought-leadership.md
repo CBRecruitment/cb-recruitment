@@ -2,7 +2,7 @@
 title: 'Powerful Strategies for Developing Thought Leadership in the Workplace'
 excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/developing-thought-leadership/cover.jpeg'
-date: '2022-11-17T05:35:07.322Z'
+date: '2022-11-17'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

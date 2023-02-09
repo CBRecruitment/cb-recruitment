@@ -2,7 +2,7 @@
 title: 'How to Become a Blockchain Engineer (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-become-a-blockchain-engineer/cover.jpeg'
-date: '2022-08-30T05:35:07.322Z'
+date: '2022-08-30'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

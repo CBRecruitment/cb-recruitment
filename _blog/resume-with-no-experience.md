@@ -2,7 +2,7 @@
 title: 'How to Write a Great Resume with no Experience'
 excerpt: 'Resume and Cover Letters'
 coverImage: '/assets/blog/resume-with-no-experience/cover.jpeg'
-date: '2022-08-10T05:35:07.322Z'
+date: '2022-08-10'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

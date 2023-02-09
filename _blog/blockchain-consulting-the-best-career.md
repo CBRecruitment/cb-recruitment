@@ -2,7 +2,7 @@
 title: 'Is Blockchain Consulting the Best Career for 2023?'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/blockchain-consulting-the-best-career/cover.jpeg'
-date: '2022-11-24T05:35:07.322Z'
+date: '2022-11-24'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

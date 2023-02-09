@@ -2,7 +2,7 @@
 title: 'How to Become a UX Designer in 2023: In-depth Guide'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-become-a-ux-designer/cover.jpeg'
-date: '2022-08-25T05:35:07.322Z'
+date: '2022-08-25'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

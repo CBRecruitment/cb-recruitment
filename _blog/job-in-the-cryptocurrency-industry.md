@@ -2,7 +2,7 @@
 title: 'Jan’s Story: How I got a job in the Cryptocurrency Industry'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/job-in-the-cryptocurrency-industry/cover.jpeg'
-date: '2022-07-25T05:35:07.322Z'
+date: '2022-07-25'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

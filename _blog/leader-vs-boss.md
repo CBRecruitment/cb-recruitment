@@ -2,7 +2,7 @@
 title: 'Leader vs Boss: What’s the Difference? Which is Best in 2023?'
 excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/leader-vs-boss/cover.jpeg'
-date: '2022-09-01T05:35:07.322Z'
+date: '2022-09-01'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

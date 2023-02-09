@@ -2,7 +2,7 @@
 title: 'Employee Engagement and Retention: 10 Best Strategies for 2023'
 excerpt: 'Employee Relations'
 coverImage: '/assets/blog/employee-retention-strategies/cover.jpeg'
-date: '2022-09-29T05:35:07.322Z'
+date: '2022-09-29'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

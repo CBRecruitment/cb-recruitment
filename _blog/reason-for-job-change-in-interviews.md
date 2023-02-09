@@ -2,7 +2,7 @@
 title: 'How to Explain a Reason for Job Change in Interviews'
 excerpt: 'Job Interviews'
 coverImage: '/assets/blog/reason-for-job-change-in-interviews/cover.jpeg'
-date: '2022-11-21T05:35:07.322Z'
+date: '2022-11-21'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

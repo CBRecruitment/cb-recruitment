@@ -2,7 +2,7 @@
 title: 'Metaverse Jobs: The Top 5 Most Popular Careers (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/metaverse-jobs/cover.jpeg'
-date: '2022-07-20T05:35:07.322Z'
+date: '2022-07-20'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

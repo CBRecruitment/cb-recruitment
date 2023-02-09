@@ -2,7 +2,7 @@
 title: 'Fintech Jobs 2023: A Lucrative Career in Financial Technology'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/fintech-jobs-2022/cover.jpeg'
-date: '2022-10-20T05:35:07.322Z'
+date: '2022-10-20'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

@@ -2,7 +2,7 @@
 title: 'Web3 Careers: Exciting Job Opportunities for 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/web3-careers/cover.jpeg'
-date: '2022-11-14T05:35:07.322Z'
+date: '2022-11-14'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

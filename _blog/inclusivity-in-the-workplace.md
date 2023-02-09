@@ -2,7 +2,7 @@
 title: 'How to Improve Inclusivity in the Workplace'
 excerpt: 'Employee Relations'
 coverImage: '/assets/blog/inclusivity-in-the-workplace/cover.jpeg'
-date: '2022-12-05T05:35:07.322Z'
+date: '2022-12-05'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

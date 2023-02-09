@@ -2,7 +2,7 @@
 title: 'DeFi Jobs: Exciting Careers in Decentralised Finance (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/defi-jobs/cover.jpeg'
-date: '2022-09-20T05:35:07.322Z'
+date: '2022-09-20'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

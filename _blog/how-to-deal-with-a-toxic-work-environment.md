@@ -2,7 +2,7 @@
 title: 'How to Deal with a Toxic Work Environment'
 excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/how-to-deal-with-a-toxic-work-environment/cover.jpeg'
-date: '2022-10-17T05:35:07.322Z'
+date: '2022-10-17'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

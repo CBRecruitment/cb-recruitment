@@ -2,7 +2,7 @@
 title: '10 Excellent tips for how to get a job with Amazon'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-get-a-job-at-amazon/cover.jpeg'
-date: '2022-07-13T05:35:07.322Z'
+date: '2022-07-13'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

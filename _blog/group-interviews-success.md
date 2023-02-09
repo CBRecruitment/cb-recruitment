@@ -2,7 +2,7 @@
 title: 'Group Interviews: How to Stand Out from the Crowd'
 excerpt: 'Interviewing'
 coverImage: '/assets/blog/group-interviews-success/cover.jpeg'
-date: '2022-10-10T05:35:07.322Z'
+date: '2022-10-10'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

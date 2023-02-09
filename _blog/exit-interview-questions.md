@@ -2,7 +2,7 @@
 title: '10 Best Exit Interview Questions to Develop a Better Business'
 excerpt: 'Employee Relations'
 coverImage: '/assets/blog/exit-interview-questions/cover.jpeg'
-date: '2022-11-10T05:35:07.322Z'
+date: '2022-11-10'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

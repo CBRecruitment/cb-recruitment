@@ -2,7 +2,7 @@
 title: '18 Best Stay Interview Questions and How to Answer'
 excerpt: 'Interviewing'
 coverImage: '/assets/blog/chief-marketing-officer/cover.png'
-date: '2022-12-27T05:35:07.322Z'
+date: '2022-12-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

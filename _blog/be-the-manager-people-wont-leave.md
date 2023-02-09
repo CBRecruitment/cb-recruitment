@@ -2,7 +2,7 @@
 title: 'How to be the Manager People won’t Leave'
 excerpt: 'Employee Relations'
 coverImage: '/assets/blog/be-the-manager-people-wont-leave/cover.jpeg'
-date: '2022-08-29T05:35:07.322Z'
+date: '2022-08-29'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

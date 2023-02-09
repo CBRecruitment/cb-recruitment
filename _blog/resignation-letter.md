@@ -2,7 +2,7 @@
 title: 'How to Write a Fantastic Resignation Letter (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/resignation-letter/cover.jpeg'
-date: '2022-08-01T05:35:07.322Z'
+date: '2022-08-01'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

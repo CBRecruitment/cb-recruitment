@@ -2,7 +2,7 @@
 title: 'How to Develop Conceptual Skills for a Fantastic Job'
 excerpt: 'Popular Posts'
 coverImage: '/assets/blog/conceptual-skills/cover.jpeg'
-date: '2022-12-08T05:35:07.322Z'
+date: '2022-12-08'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

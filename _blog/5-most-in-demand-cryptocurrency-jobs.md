@@ -2,7 +2,7 @@
 title: 'The 5 Most in-demand Cryptocurrency Jobs Remote 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/5-most-in-demand-cryptocurrency-jobs/cover.jpeg'
-date: '2022-06-23T05:35:07.322Z'
+date: '2022-06-23'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

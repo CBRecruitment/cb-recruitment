@@ -2,7 +2,7 @@
 title: 'The Best 5 NFT Jobs for an Exciting Career (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/best-5-nft-jobs/cover.jpeg'
-date: '2022-09-05T05:35:07.322Z'
+date: '2022-09-05'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

@@ -2,7 +2,7 @@
 title: 'Jobs for Women in Web3: Best Opportunities in 2023'
 excerpt: 'Recruiting Insights'
 coverImage: '/assets/blog/jobs-for-women/cover.jpeg'
-date: '2022-11-07T05:35:07.322Z'
+date: '2022-11-07'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

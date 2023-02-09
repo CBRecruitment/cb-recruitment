@@ -2,7 +2,7 @@
 title: 'How to Write an Excellent Letter of Interest for a Job'
 excerpt: 'Resume and Cover Letters'
 coverImage: '/assets/blog/letter-of-interest-for-a-job/cover.jpeg'
-date: '2022-09-01T05:35:07.322Z'
+date: '2022-09-01'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

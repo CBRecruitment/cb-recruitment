@@ -2,7 +2,7 @@
 title: 'Venture Capitalist vs Angel Investor: What’s the Difference?'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/venture-capitalist-vs-angel-investor/cover.jpeg'
-date: '2022-11-03T05:35:07.322Z'
+date: '2022-11-03'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

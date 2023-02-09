@@ -2,7 +2,7 @@
 title: 'Product Marketing Manager: 5 Excellent Tips for a Rewarding Career'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/product-marketing-manager-career/cover.jpeg'
-date: '2022-10-14T05:35:07.322Z'
+date: '2022-10-14'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

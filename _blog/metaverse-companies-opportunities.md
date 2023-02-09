@@ -2,7 +2,7 @@
 title: 'How Will Metaverse Companies Create Incredible Work Opportunities'
 excerpt: 'Popular Posts'
 coverImage: '/assets/blog/metaverse-companies-opportunities/cover.png'
-date: '2023-01-17T05:35:07.322Z'
+date: '2023-01-17'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

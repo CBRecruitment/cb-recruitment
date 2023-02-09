@@ -2,7 +2,7 @@
 title: '20 Phone Interview tips to get you a Second Interview'
 excerpt: 'Job Interviews'
 coverImage: '/assets/blog/phone-interview-tips/cover.jpeg'
-date: '2022-10-08T05:35:07.322Z'
+date: '2022-10-08'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

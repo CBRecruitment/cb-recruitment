@@ -2,7 +2,7 @@
 title: 'How to Become a Venture Capitalist (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-become-a-venture-capitalist/cover.jpeg'
-date: '2022-07-08T05:35:07.322Z'
+date: '2022-07-08'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

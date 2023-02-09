@@ -2,7 +2,7 @@
 title: 'Rust Developer: Guide to a Fascinating Career 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/rust-developer-career/cover.jpeg'
-date: '2022-10-24T05:35:07.322Z'
+date: '2022-10-24'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

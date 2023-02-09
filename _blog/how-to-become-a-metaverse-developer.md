@@ -2,7 +2,7 @@
 title: 'How to Become a Metaverse Developer in 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-become-a-metaverse-developer/cover.jpeg'
-date: '2022-09-26T05:35:07.322Z'
+date: '2022-09-26'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

@@ -2,7 +2,7 @@
 title: 'How To Start A Career As A Solidity Developer (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/a-career-as-a-solidity-developer/cover.jpeg'
-date: '2022-12-22T05:35:07.322Z'
+date: '2022-12-22'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

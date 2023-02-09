@@ -2,7 +2,7 @@
 title: '18 High Income Skills You Can Learn in 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/high-income-skills/cover.jpeg'
-date: '2022-10-31T05:35:07.322Z'
+date: '2022-10-31'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

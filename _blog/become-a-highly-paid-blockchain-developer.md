@@ -2,7 +2,7 @@
 title: 'How to Become a Highly-paid Blockchain Developer'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/become-a-highly-paid-blockchain-developer/cover.jpeg'
-date: '2022-06-27T05:35:07.322Z'
+date: '2022-06-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

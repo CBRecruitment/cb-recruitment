@@ -2,7 +2,7 @@
 title: 'Discover Exciting Entry-level Cryptocurrency Jobs with no Experience'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/entry-level-cryptocurrency-jobs-with-no-experience/cover.jpeg'
-date: '2022-06-27T05:35:07.322Z'
+date: '2022-06-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

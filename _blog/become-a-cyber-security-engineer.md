@@ -2,7 +2,7 @@
 title: 'How to Become a Cyber Security Engineer in 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/become-a-cyber-security-engineer/cover.jpeg'
-date: '2022-12-19T05:35:07.322Z'
+date: '2022-12-19'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

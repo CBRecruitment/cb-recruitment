@@ -2,7 +2,7 @@
 title: '10 Best Skills to put on a Resume (2023)'
 excerpt: 'Resume and Cover Lettters'
 coverImage: '/assets/blog/skills-to-put-on-a-resume/cover.jpeg'
-date: '2022-10-08T05:35:07.322Z'
+date: '2022-10-08'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

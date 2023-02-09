@@ -2,7 +2,7 @@
 title: '9 Fantastic Benefits Of Job Shadowing In 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/job-shadowing/cover.png'
-date: '2023-01-05T05:35:07.322Z'
+date: '2023-01-05'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

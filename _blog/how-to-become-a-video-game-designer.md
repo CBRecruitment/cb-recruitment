@@ -2,7 +2,7 @@
 title: 'How to Become a Video Game Designer: Best Career 2023?'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-become-a-video-game-designer/cover.jpeg'
-date: '2022-10-03T05:35:07.322Z'
+date: '2022-10-03'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

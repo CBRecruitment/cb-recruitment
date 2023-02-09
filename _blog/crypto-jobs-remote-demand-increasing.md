@@ -2,7 +2,7 @@
 title: 'Why Demand for Crypto jobs Remote is Increasing (2023)'
 excerpt: 'Staffing Trends'
 coverImage: '/assets/blog/crypto-jobs-remote-demand-increasing/cover.jpeg'
-date: '2022-06-27T05:35:07.322Z'
+date: '2022-06-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

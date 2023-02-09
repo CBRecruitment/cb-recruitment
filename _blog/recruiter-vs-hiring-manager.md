@@ -2,7 +2,7 @@
 title: 'Recruiter vs Hiring Manager: The Best Career Choice for 2023?'
 excerpt: 'Recruiting Insights'
 coverImage: '/assets/blog/recruiter-vs-hiring-manager/cover.jpeg'
-date: '2022-10-06T05:35:07.322Z'
+date: '2022-10-06'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

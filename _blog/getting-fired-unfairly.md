@@ -2,7 +2,7 @@
 title: 'Top Tips: What To Do When You Get Fired Unfairly'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/getting-fired-unfairly/cover.png'
-date: '2023-01-09T05:35:07.322Z'
+date: '2023-01-09'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

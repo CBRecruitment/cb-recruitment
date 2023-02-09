@@ -2,7 +2,7 @@
 title: '5 Excellent Hybrid Meetings Practices to Implement in 2023'
 excerpt: 'Workplace Culture'
 coverImage: '/assets/blog/hybrid-meetings-practices/cover.png'
-date: '2023-01-26T05:35:07.322Z'
+date: '2023-01-26'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

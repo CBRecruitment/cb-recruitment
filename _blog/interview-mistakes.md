@@ -2,7 +2,7 @@
 title: 'The Top 10 Biggest Interview Mistakes (2023)'
 excerpt: 'Job Interviews'
 coverImage: '/assets/blog/interview-mistakes/cover.jpeg'
-date: '2022-07-27T05:35:07.322Z'
+date: '2022-07-27'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

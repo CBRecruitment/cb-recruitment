@@ -2,7 +2,7 @@
 title: '5 Top Tips for How to Accept a Job Offer (2023)'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/how-to-accept-a-job-offer/cover.jpeg'
-date: '2022-12-15T05:35:07.322Z'
+date: '2022-12-15'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

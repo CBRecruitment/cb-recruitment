@@ -2,7 +2,7 @@
 title: 'Powerful ways to Avoid Costs of bad Hiring Decisions'
 excerpt: 'Recruiting Insights'
 coverImage: '/assets/blog/bad-hiring-decisions/cover.jpeg'
-date: '2022-09-15T05:35:07.322Z'
+date: '2022-09-15'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

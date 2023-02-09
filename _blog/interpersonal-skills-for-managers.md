@@ -2,7 +2,7 @@
 title: '13 Excellent Interpersonal Skills For Managers To Learn 2023'
 excerpt: 'Employee Relations'
 coverImage: '/assets/blog/interpersonal-skills-for-managers/cover.jpeg'
-date: '2022-12-22T05:35:07.322Z'
+date: '2022-12-22'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

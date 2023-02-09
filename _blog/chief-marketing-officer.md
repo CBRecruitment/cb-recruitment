@@ -2,7 +2,7 @@
 title: 'How To Become A Chief Marketing Officer 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/chief-marketing-officer/cover.png'
-date: '2022-12-29T05:35:07.322Z'
+date: '2022-12-29'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

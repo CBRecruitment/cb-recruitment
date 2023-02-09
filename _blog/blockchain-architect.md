@@ -2,7 +2,7 @@
 title: 'How to Become a Highly-paid Blockchain Architect'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/blockchain-architect/cover.jpeg'
-date: '2022-08-15T05:35:07.322Z'
+date: '2022-08-15'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

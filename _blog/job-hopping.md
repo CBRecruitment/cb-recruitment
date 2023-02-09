@@ -2,7 +2,7 @@
 title: 'Can Job Hopping Jettison Your Career in 2023?'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/job-hopping/cover.jpeg'
-date: '2022-11-28T05:35:07.322Z'
+date: '2022-11-28'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

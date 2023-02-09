@@ -2,7 +2,7 @@
 title: 'The Top 7 Exciting Web3 Jobs to Apply for in 2023'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/web3-jobs/cover.jpeg'
-date: '2022-07-29T05:35:07.322Z'
+date: '2022-07-29'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

@@ -2,7 +2,7 @@
 title: 'How to Overcome Burnout from Work'
 excerpt: 'Popular Posts'
 coverImage: '/assets/blog/burnout-from-work/cover.jpeg'
-date: '2022-12-01T05:35:07.322Z'
+date: '2022-12-01'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

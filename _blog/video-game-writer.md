@@ -2,7 +2,7 @@
 title: 'Create An Exciting Career As A Video Game Writer'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/video-game-writer/cover.jpeg'
-date: '2022-09-22T05:35:07.322Z'
+date: '2022-09-22'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'
