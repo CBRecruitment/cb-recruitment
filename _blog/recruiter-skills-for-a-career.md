@@ -2,7 +2,7 @@
 title: '15 Best Recruiter Skills for a Fascinating Web3 Career'
 excerpt: 'Career Advice'
 coverImage: '/assets/blog/recruiter-skills-for-a-career/cover.png'
-date: '2023-01-12'
+date: '2023-01-12T05:35:07.322Z'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'

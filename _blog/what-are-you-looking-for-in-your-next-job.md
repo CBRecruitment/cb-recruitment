@@ -2,7 +2,7 @@
 title: 'How to Answer: What are You Looking for in Your Next Role'
 excerpt: 'Job Interviews'
 coverImage: '/assets/blog/what-are-you-looking-for-in-your-next-job/cover.png'
-date: '2023-01-06'
+date: '2023-01-06T05:35:07.322Z'
 author:
   name: Jan Barley
   picture: '/assets/blog/authors/jan_barley.jpeg'
