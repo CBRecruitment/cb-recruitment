@@ -35,7 +35,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                     onSubmit={handleSubmit}
                 >
                     <input
-                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[300px] focus:outline-none search-input'
+                        className='bg-white border-0 rounded-sm rounded-r-none text-[15px] p-[15px] h-[30px] w-[95%] focus:outline-none search-input'
                         placeholder='Search here...'
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}

@@ -1,17 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import UploadCVModal from '../components/UploadCVModal';
 
 const CompaniesPage = () => {
     return (
         <div className='flex flex-col h-screen'>
             <Navbar />
-            <div className='flex flex-grow flex-col justify-around items-center bg-[var(--darkgray)] py-10'>
-                <h1 className='md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-[var(--orange)]'>
+            <div className='bg-[var(--darkgray)] pt-10 mx-auto flex-grow'>
+                <h1 className='text-3xl text-[var(--orange)] text-center mb-6 px-5'>
                     Access top Talent in the Web3 Space
                 </h1>
-                <div className='md:max-w-3xl xl:max-w-5xl 2xl:max-w-7xl space-y-10 text-white text-center'>
+                <div className='space-y-10 px-8 mb-10 text-center text-white'>
                     <p>
                         Made up of a team with over 40 years' experience in
                         recruitment, we are committed to becoming the industry's
@@ -46,9 +45,10 @@ const CompaniesPage = () => {
                         typical recruitment process is unparalleled.
                     </p>
                 </div>
-                <UploadCVModal />
+                <div className='flex justify-center items-center pb-10'>
+                    <UploadCVModal />
+                </div>
             </div>
-            {/* <Footer /> */}
         </div>
     );
 };

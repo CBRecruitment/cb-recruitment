@@ -1,18 +1,27 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import router from 'next/router';
-import React, { useState } from 'react';
+import React from 'react';
+import HeroSearchBar from './HeroSearchBar';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const Hero = () => {
-    const [search, setSearch] = useState('');
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        router.push(`candidates/?search=${search}`);
-    };
-
     return (
-        <div className='custom-img-hero flex-grow'>
+        <div className='custom-img-hero-mobile'>
+            <div className=''>
+                <div className='h-screen w-[92.5%] mx-auto  pt-10 xl:max-w-[35%] xl:pt-10 xl:ml-28'>
+                    <h1 className='text-[var(--cream)] max-w-[45%] text-left Anton-Regular'>
+                        Making Web3 Work
+                    </h1>
+                    <HeroSearchBar />
+                    <SocialMediaIcons />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Hero;
+
+{
+    /* <div className='custom-img-hero flex-grow'>
             <div className='ml-24 xl:ml-28 max-w-[35%] h-full pt-5 xl:pt-10'>
                 <h1 className='text-[var(--orange)] max-w-[45%] text-left Anton-Regular'>
                     Making Web3 Work
@@ -84,8 +93,5 @@ const Hero = () => {
                     </Link>
                 </div>
             </div>
-        </div>
-    );
-};
-
-export default Hero;
+        </div> */
+}

@@ -117,7 +117,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
             <hr className='mx-auto mt-2 opacity-50 sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] ' />
             <div className='flex flex-col justify-center items-center mt-5 mx-auto lg:flex-row sm:max-w-[80%] md:max-w-[70%] lg:max-w-[65%] lg:justify-around'>
                 <Image

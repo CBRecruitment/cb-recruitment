@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -17,8 +18,8 @@ const Navbar = () => {
                     <Image
                         src={'/assets/branding/cblogo-whitev2.png'}
                         alt='CBR Logo'
-                        width={90}
-                        height={90}
+                        width={75}
+                        height={75}
                         className='sm:ml-4 md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
@@ -38,101 +39,48 @@ const Navbar = () => {
                 </ul>
 
                 {/* Mobile Button */}
-                {/* <div
+                <div
                     className='block sm:hidden z-10 text-white'
                     onClick={handleNav}
                 >
                     {nav ? (
-                        <AiOutlineClose size={25} />
+                        <AiOutlineClose size={30} />
                     ) : (
-                        <AiOutlineMenu size={25} />
+                        <AiOutlineMenu size={30} />
                     )}
-                </div> */}
+                </div>
 
                 {/* Mobile Menu */}
-                {/* <div
+                <div
                     className={`sm:hidden absolute top-0 ${
                         nav ? 'left-0' : 'left-full'
                     } right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black border-gray-400 text-center ease-in duration-300`}
                 >
-                    <ul className='text-white'>
+                    <ul className='text-white w-full'>
                         <Image
-                            className='mx-auto pb-16'
+                            className='mx-auto mb-8'
                             src={'/assets/cblogo-whitev2.png'}
                             alt='CBR Logo'
-                            width={75}
-                            height={75}
+                            width={100}
+                            height={85}
                         />
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
+                        <li className='p-6 text-3xl hover:text-[var(--orange)] '>
                             <Link href='/'>Home</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/candidates'>For Candidates</Link>
+                        <li className='p-6 text-3xl hover:text-[var(--orange)] '>
+                            <Link href='/candidates'>Candidates</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/companies'>For Companies</Link>
+                        <li className='p-6 text-3xl hover:text-[var(--orange)] '>
+                            <Link href='/companies'>Companies</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/about'>About</Link>
+                        <li className='p-6 text-3xl mb-6 hover:text-[var(--orange)] '>
+                            <Link href='/blog'>Blog</Link>
                         </li>
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/cbracademy'>CBR Academy</Link>
-                        </li>
-                        <li className='p-4 text-2xl hover:text-[var(--orange)] '>
-                            <Link href='/contact'>Contact</Link>
-                        </li>
-                        <li className='p-4 text-2xl mb-6 hover:text-[var(--orange)] '>
-                            <Link href='/faqs'>FAQs</Link>
-                        </li>
-                        <div className='flex mx-auto justify-center mt-20 space-x-5'>
-                            <Link href='https://t.me/CBR_Jobs' target='_blank'>
-                                <Image
-                                    className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/branding/telegram-orange.png'}
-                                    alt='Telegram logo'
-                                    width={30}
-                                    height={30}
-                                />
-                            </Link>
-                            <Link
-                                href='https://twitter.com/cb_recruitment_'
-                                target='_blank'
-                            >
-                                <Image
-                                    className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/branding/twitter-orange.png'}
-                                    alt='Twitter logo'
-                                    width={30}
-                                    height={30}
-                                />
-                            </Link>
-                            <Link
-                                href='https://www.linkedin.com/company/80659134'
-                                target='_blank'
-                            >
-                                <Image
-                                    className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/branding/linkedin-orange.png'}
-                                    alt='LinkedIn logo'
-                                    width={30}
-                                    height={30}
-                                />
-                            </Link>
-                            <Link
-                                href='mailto:info@cbrecruitment.com'
-                                target='_blank'
-                            >
-                                <Image
-                                    className='hover:scale-110 ease-in-out duration-200'
-                                    src={'/assets/branding/email-orange.png'}
-                                    alt='Email logo'
-                                    width={30}
-                                    height={30}
-                                />
-                            </Link>
+                        <div className='w-[90%] mx-auto'>
+                            <SocialMediaIcons />
                         </div>
                     </ul>
-                </div> */}
+                </div>
             </div>
         </header>
     );
@@ -169,4 +117,32 @@ export default Navbar;
                             />
                         </button>
                     </div> */
+}
+
+{
+    /* <header className='sticky left-0 top-0 w-full z-10 ease-in duration-300 bg-[var(--gray)] p-3'>
+            <div className='m-auto flex justify-between items-center'>
+                <Link href='/'>
+                    <Image
+                        src={'/assets/branding/cblogo-whitev2.png'}
+                        alt='CBR Logo'
+                        width={90}
+                        height={90}
+                        className='sm:ml-4 md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
+                    />
+                </Link>
+                <ul className='hidden sm:flex sm:mr-4 xl:mr-20 lg:mr-14 md:mr-10 list-none text-white Magnify-Bold'>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden sm:flex'>
+                        <Link href='/'>Home</Link>
+                    </li>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden md:flex '>
+                        <Link href='/candidates'>For Candidates</Link>
+                    </li>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden lg:flex '>
+                        <Link href='/companies'>For Companies</Link>
+                    </li>
+                    <li className='p-5 ease-in duration-100 hover:underline underline-offset-8 decoration-white hidden xl:flex '>
+                        <Link href='/blog'>Blog</Link>
+                    </li>
+                </ul> */
 }

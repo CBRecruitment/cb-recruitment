@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--cream);
 }
 
 /* @supports (-webkit-touch-callout: none) {
@@ -35,6 +36,13 @@ html {
   background-position: center right; 
   background-attachment: local; 
   background-size: cover;
+}
+
+.custom-img-hero-mobile {
+  background: url('/assets/branding/herobanner-mobile.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: center; 
 }
 
 /*******************
@@ -164,7 +172,7 @@ html {
 .Anton-Regular {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 85px;
   line-height: 1.2;
 }
 

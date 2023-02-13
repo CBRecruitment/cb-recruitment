@@ -7,16 +7,10 @@ import Partners from '../components/Partners';
 const Home = () => {
     return (
         <>
-            <Head>
-                <meta
-                    name='viewport'
-                    content='width=device-width, initial-scale=1'
-                />
-            </Head>
-            <div className='flex flex-col h-screen'>
+            <div className=''>
                 <Navbar />
                 <Hero />
-                <Partners />
+                {/* <Partners /> */}
             </div>
         </>
     );

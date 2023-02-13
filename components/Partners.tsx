@@ -3,7 +3,7 @@ import React from 'react';
 
 const Partners = () => {
     return (
-        <div className='w-full h-[17.5vh]'>
+        <div className='w-full h-[17.5vh] bg-white'>
             <h1 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-4 pb-5'>
                 PARTNERING WITH:
             </h1>

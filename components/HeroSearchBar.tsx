@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+import router from 'next/router';
+
+const HeroSearchBar = () => {
+    const [search, setSearch] = useState('');
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        router.push(`candidates/?search=${search}`);
+    };
+
+    return (
+        <div className='flex flex-col mx-auto bg-[var(--gray)] rounded-2xl p-4 mt-10'>
+            <span className='text-white mb-2 font-bold text-xl'>
+                Find a job you'll love
+            </span>
+            <form
+                className='flex flex-col space-y-3 w-full justify-between'
+                onSubmit={handleSubmit}
+            >
+                <input
+                    className='rounded-lg pl-3 p-[0.75rem]'
+                    placeholder='e.g "Full Stack Developer"'
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                ></input>
+                <button
+                    className='bg-[var(--orange)] p-2 rounded-lg text-white font-semibold text-xl'
+                    type='submit'
+                >
+                    GET STARTED
+                </button>
+            </form>
+        </div>
+    );
+};
+
+export default HeroSearchBar;
