@@ -38,7 +38,39 @@ const Home = ({ searchResults }: Props) => {
                 <Hero />
                 <Partners />
                 <LearnMore />
-                <JobOpeningsHome jobs={searchResults.data} />
+                {/* <JobOpeningsHome jobs={searchResults.data} /> */}
+                <div className='bg-[var(--gray)] py-6 flex flex-col px-4'>
+                    <div className='grid grid-cols-2 gap-y-3 justify-center'>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>
+                                Blockchain Architect
+                            </p>
+                        </div>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>
+                                Algo Trader
+                            </p>
+                        </div>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>
+                                Front End Dev
+                            </p>
+                        </div>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>
+                                Solutions Engineer
+                            </p>
+                        </div>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>
+                                Community Manager
+                            </p>
+                        </div>
+                        <div className='border-2 border-white rounded-lg w-fit p-1'>
+                            <p className='text-white Roboto-Bold'>3D Artist</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );
