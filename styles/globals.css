@@ -19,6 +19,12 @@ html {
   scroll-behavior: smooth;
   background-color: var(--cream);
   height: --webkit-fill-available;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
 }
 
 
