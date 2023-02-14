@@ -4,7 +4,7 @@ import React from 'react';
 const LearnMore = () => {
     return (
         <div className='top-border-shadow bg-white h-full'>
-            <div className='relative h-[500px] w-[370px] m-auto'>
+            <div className='relative h-[400px] w-[370px] m-auto'>
                 <Image
                     src='/assets/branding/Woman_with_paper.svg'
                     alt=''
@@ -21,18 +21,18 @@ const LearnMore = () => {
                     experience
                 </div>
                 <Image
-                    src='/assets/branding/Dotted_square.png'
+                    src='/assets/branding/Dotted_square_small.png'
                     alt=''
-                    width={'120'}
+                    width={'140'}
                     height={'0'}
-                    className='absolute top-[205px] left-[85px]'
+                    className='absolute top-[285px] left-[80px]'
                 />
                 <Image
-                    src='/assets/branding/Dotted_line.png'
+                    src='/assets/branding/Dotted_line_small.png'
                     alt=''
                     width={'250'}
                     height={'0'}
-                    className='absolute top-[7px] right-[23px]'
+                    className='absolute top-[245px] right-[28px] w-[250px]'
                 />
                 <div className='w-fit absolute top-[305px] right-[20px]'>
                     <button className='px-6 py-1 rounded-full text-[14px] tracking-wide font-semibold bg-gradient-to-b from-[#f09c05] to-[#f5d11e] text-white'>
