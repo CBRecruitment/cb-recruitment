@@ -1,48 +1,15 @@
-import Image from 'next/image';
 import React from 'react';
+import Carousel from './Carousel';
 
 const Partners = () => {
     return (
-        <div className='w-full h-[17.5vh] bg-white'>
-            <h1 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-4 pb-5'>
+        <div className='w-full m-auto bg-[var(--cream)]'>
+            <h1 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-6 pb-5'>
                 PARTNERING WITH:
             </h1>
-            <div className='flex justify-between max-w-[90%] h-16 mx-auto'>
-                <div className='flex'>
-                    <Image
-                        className='mr-3'
-                        src={'/assets/branding/cblogo-whitev2.png'}
-                        alt=''
-                        width={85}
-                        height={80}
-                    />
-                    <h1 className='text-gray-400 text-3xl flex items-center'>
-                        CB Recruitment
-                    </h1>
-                </div>
-                <div className='flex'>
-                    <Image
-                        className='mr-3'
-                        src={'/assets/branding/cblogo-whitev2.png'}
-                        alt=''
-                        width={85}
-                        height={80}
-                    />
-                    <h1 className='text-gray-400 text-3xl flex items-center'>
-                        CB Recruitment
-                    </h1>
-                </div>
-                <div className='flex'>
-                    <Image
-                        className='mr-3'
-                        src={'/assets/branding/cblogo-whitev2.png'}
-                        alt=''
-                        width={85}
-                        height={80}
-                    />
-                    <h1 className='text-gray-400 text-3xl flex items-center'>
-                        CB Recruitment
-                    </h1>
+            <div className='w-full py-6'>
+                <div className='w-[80%] m-auto'>
+                    <Carousel />
                 </div>
             </div>
         </div>

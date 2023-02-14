@@ -17,9 +17,13 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--cream);
   height: --webkit-fill-available;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+body {
+  height: --webkit-fill-available;
+  height: 100%;
 }
 
 
@@ -36,7 +40,7 @@ html {
 }
 
 .custom-img-hero-mobile {
-  background: url('/assets/branding/herobanner-mobile.png');
+  background: url('/assets/branding/herobanner-mobilelarge.png');
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: center; 
@@ -105,21 +109,6 @@ html {
   background-size: cover;
 }
 
-.right-side-chain:hover {
-  background: url("/assets/branding/rightsidechainlink.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 21.44cm;
-  background-size: 11.69cm;
-}
-
- .left-side-chain:hover {
-  background: url("/assets/branding/leftsidechainlink.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 17.675cm;
-  background-size: 11.69cm
-}
 
 /*******************
         FONTS
@@ -184,7 +173,7 @@ html {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
   font-size: 85px;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .Magnify-Regular {
@@ -215,11 +204,6 @@ html {
 .Roboto-Bold {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-}
-
-.mobile-font {
-  font-size: 2.5rem /* 36px */;
-  line-height: 2.5rem /* 40px */;
 }
 
 /*******************
@@ -253,4 +237,25 @@ html {
   color: #101010;
 }
 
+/*******************
+      CAROUSEL
+********************/
+.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
+  background-color: var(--darkgray) !important; 
+}
 
+.alice-carousel__dots-item:not(.__custom) {
+  background-color: #282828a9 !important;
+}
+
+
+/*******************
+    LEARN MORE
+********************/
+.top-border-shadow {
+  padding-top: 40px;
+  -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
+  box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
+
+}

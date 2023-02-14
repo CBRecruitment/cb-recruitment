@@ -51,7 +51,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div
+                {/* <div
                     className={`sm:hidden absolute top-0 ${
                         nav ? 'left-0' : 'left-full'
                     } right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black border-gray-400 text-center ease-in duration-300`}
@@ -80,7 +80,7 @@ const Navbar = () => {
                             <SocialMediaIcons />
                         </div>
                     </ul>
-                </div>
+                </div> */}
             </div>
         </header>
     );
