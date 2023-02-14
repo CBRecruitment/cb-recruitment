@@ -18,13 +18,9 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--cream);
+  height: --webkit-fill-available;
 }
 
-/* @supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-  }
-} */
 
 /*******************
        HERO
