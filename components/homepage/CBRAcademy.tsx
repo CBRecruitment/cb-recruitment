@@ -10,21 +10,21 @@ const CBRAcademy = () => {
                 <JobOpenings />
                 <JobOpeningsBar />
                 <div className='bg-[var(--yellow)]'>
-                    <div className='relative h-[350px] w-[370px] m-auto cbracademy-container'>
+                    <div className='relative h-[350px] w-[320px] m-auto cbracademy-container ml-[25px]'>
                         <Image
                             src='/assets/branding/Woman_in_chair.svg'
                             alt=''
                             width={'200'}
                             height={'0'}
-                            className='absolute top-[40px] right-[105px]'
+                            className='absolute top-[40px] right-[100px]'
                         />
-                        <div className='text-left absolute top-[75px] left-[20px] text-[var(--darkgray)]'>
+                        <div className='text-left absolute top-[85px] left-[15px] text-[var(--darkgray)]'>
                             <div className='absolute top-[110px] left-[0px] w-fit Magnify-Bold'>
                                 <h2 className='text-[22px] tracking-wide Magnify-Bold'>
                                     ACADEMY
                                 </h2>
                             </div>
-                            <div className='absolute top-[140px] left-[2px] w-[190px] text-[15px] leading-4 spacing tracking-widest Roboto-Bold'>
+                            <div className='absolute top-[140px] left-[2px] w-[180px] text-[15px] leading-4 spacing tracking-widest Roboto-Bold'>
                                 Text about the CB Recruitment Academy about what
                                 you can learn with us
                             </div>

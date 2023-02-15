@@ -12,7 +12,10 @@ const VideoProfessionals = () => {
                     across all areas for those that are experienced in Web3
                 </p>
             </div>
-            <img src='/assets/branding/Video_mock_up.png'></img>
+            <img
+                src='/assets/branding/Video_mock_up.png'
+                className='m-auto'
+            ></img>
         </>
     );
 };

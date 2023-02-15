@@ -3,7 +3,7 @@ import { Job } from '../../interfaces/types';
 
 const JobOpenings = () => {
     return (
-        <div className='text-[14px] w-[340px] m-auto text-center grid grid-cols-2 gap-y-4 px-6 job-grid-container pb-12'>
+        <div className='text-[14px] w-[320px] m-auto text-center grid grid-cols-2 gap-y-4 px-6 job-grid-container pb-12'>
             <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
                 <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
                     Blockchain Architect

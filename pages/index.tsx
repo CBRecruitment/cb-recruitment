@@ -5,11 +5,10 @@ import Navbar from '../components/Navbar';
 import Partners from '../components/homepage/Partners';
 import CBRAcademy from '../components/homepage/CBRAcademy';
 import VideoProfessionals from '../components/homepage/VideoProfessionals';
-import Container from '../components/blog/container';
-import MoreStories from '../components/blog/more-stories';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
 import CareerAdvice from '../components/blog/home/career-advice';
+import Footer from '../components/Footer';
 
 type Props = {
     allPosts: Post[];
@@ -26,9 +25,8 @@ const Home = ({ allPosts }: Props) => {
                 {/* <JobOpeningsHome jobs={searchResults.data} /> */}
                 <CBRAcademy />
                 <VideoProfessionals />
-                {/* <Container> */}
                 <CareerAdvice posts={allPosts} />
-                {/* </Container> */}
+                <Footer />
             </div>
         </>
     );

@@ -4,7 +4,7 @@ import React from 'react';
 const LearnMore = () => {
     return (
         <div className='top-border-shadow bg-white h-full'>
-            <div className='relative h-[400px] w-[370px] m-auto '>
+            <div className='relative h-[400px] w-[320px] m-auto '>
                 <Image
                     src='/assets/branding/Woman_with_paper.svg'
                     alt=''
