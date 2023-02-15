@@ -1,12 +1,55 @@
-import { GetServerSideProps } from 'next';
-import Head from 'next/head';
 import React from 'react';
-import Hero from '../components/Hero';
-// import JobOpeningsHome from '../components/JobOpeningsHome';
-import LearnMore from '../components/LearnMore';
+import Hero from '../components/homepage/Hero';
+import LearnMore from '../components/homepage/LearnMore';
 import Navbar from '../components/Navbar';
-import Partners from '../components/Partners';
-import { Job } from '../interfaces/types';
+import Partners from '../components/homepage/Partners';
+import CBRAcademy from '../components/homepage/CBRAcademy';
+import VideoProfessionals from '../components/homepage/VideoProfessionals';
+import Container from '../components/blog/container';
+import MoreStories from '../components/blog/more-stories';
+import { getAllPosts } from '../lib/api';
+import Post from '../interfaces/post';
+import CareerAdvice from '../components/blog/home/career-advice';
+
+type Props = {
+    allPosts: Post[];
+};
+
+const Home = ({ allPosts }: Props) => {
+    return (
+        <>
+            <div className=''>
+                <Navbar />
+                <Hero />
+                <Partners />
+                <LearnMore />
+                {/* <JobOpeningsHome jobs={searchResults.data} /> */}
+                <CBRAcademy />
+                <VideoProfessionals />
+                {/* <Container> */}
+                <CareerAdvice posts={allPosts} />
+                {/* </Container> */}
+            </div>
+        </>
+    );
+};
+
+export default Home;
+
+export const getStaticProps = async () => {
+    const allPosts = getAllPosts([
+        'title',
+        'date',
+        'slug',
+        'author',
+        'coverImage',
+        'excerpt',
+    ]);
+
+    return {
+        props: { allPosts },
+    };
+};
 
 // const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 // const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -29,51 +72,3 @@ import { Job } from '../interfaces/types';
 //     const searchResults: Props = await res.json();
 //     return { props: { searchResults } };
 // };
-
-const Home = () => {
-    return (
-        <>
-            <div className=''>
-                <Navbar />
-                <Hero />
-                <Partners />
-                <LearnMore />
-                {/* <JobOpeningsHome jobs={searchResults.data} /> */}
-                <div className='bg-[var(--gray)] py-6 flex flex-col px-4'>
-                    <div className='grid grid-cols-2 gap-y-3 justify-center'>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>
-                                Blockchain Architect
-                            </p>
-                        </div>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>
-                                Algo Trader
-                            </p>
-                        </div>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>
-                                Front End Dev
-                            </p>
-                        </div>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>
-                                Solutions Engineer
-                            </p>
-                        </div>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>
-                                Community Manager
-                            </p>
-                        </div>
-                        <div className='border-2 border-white rounded-lg w-fit p-1'>
-                            <p className='text-white Roboto-Bold'>3D Artist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-};
-
-export default Home;

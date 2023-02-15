@@ -5,6 +5,16 @@
 /*******************
       GENERAL
 ********************/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.569);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.cover-img-corners {
+  border-radius: 10px 10px 0 0;
+}
+
 
 :root {
   --orange: #ec9b3c;
@@ -18,7 +28,7 @@
 html {
   scroll-behavior: smooth;
   height: --webkit-fill-available;
-  /* overflow: hidden; */
+
 }
 
 body {
@@ -72,7 +82,6 @@ body {
 .search-btn {
   border-radius: 0 15px 15px 0;
 }
-
 
 /*******************
     LANDING PAGE
@@ -257,5 +266,58 @@ body {
   -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
   -moz-box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
   box-shadow: inset 0px 137px 120px -182px rgba(0,0,0,1);
+}
 
+@media screen and (max-width: 350px) {
+  .lady {
+    left: 5px;
+  }
+
+  .top-text {
+    left: 105px
+  }
+
+  .bottom-text {
+    left: 110px
+  }
+
+  .dotted_square {
+    left: 62px
+  }
+
+  .dotted_line {
+    right: 75px;
+    width: 200px;
+  }
+
+  .button {
+    right: 60px
+  }
+}
+
+/*******************
+    Jobs HomePage
+********************/
+
+@media screen and (min-width: 350px) {
+  .job-grid-container {
+    width: 375px;
+    column-gap: 1rem;
+  }
+}
+
+/*******************
+    CBRAcademy
+********************/
+
+@media screen and (min-width: 360px) {
+  .cbracademy-container {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .cbracademy-container {
+    margin-left: 50px;
+  }
 }

@@ -1,13 +1,12 @@
-import Image from 'next/image';
 import React from 'react';
 import HeroSearchBar from './HeroSearchBar';
-import SocialMediaIcons from './SocialMediaIcons';
+import SocialMediaIcons from '../SocialMediaIcons';
 
 const Hero = () => {
     return (
         <div className='custom-img-hero-mobile flex-1'>
             <div className=''>
-                <div className='h-screen w-[92.5%] mx-auto  pt-10 xl:max-w-[35%] xl:pt-10 xl:ml-28'>
+                <div className='min-h-screen w-[92.5%] mx-auto  pt-10 xl:max-w-[35%] xl:pt-10 xl:ml-28'>
                     <h1 className='text-[var(--cream)] max-w-[45%] text-left Anton-Regular'>
                         Making Web3 Work
                     </h1>
