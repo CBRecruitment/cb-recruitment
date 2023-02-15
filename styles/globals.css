@@ -27,9 +27,9 @@ body {
 ********************/
 @font-face {
   font-family: 'Anton', sans-serif;
-  src: url(/public/fonts/Anton-Regular.ttf) format('truetype');
-  src: url(/public/fonts/Anton-Regular.woff2) format('woff2'),
-  url(/public/fonts/Anton-Regular.woff) format('woff');
+  /* src: url(/public/fonts/Anton-Regular.ttf) format('truetype'); */
+  src: url(/public/fonts/Anton-Regular.woff2) format('woff2');
+  /* url(/public/fonts/Anton-Regular.woff) format('woff'); */
   font-weight: 400;
 }
 
@@ -141,16 +141,10 @@ body {
       FOOTER
 ********************/
 
-.custom-img-footer {
-  background: linear-gradient(
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url("https://media.istockphoto.com/id/1009749402/photo/digital-abstract-blue-color-wave-particles-flow-background.jpg?s=612x612&w=0&k=20&c=C289shLqh6KXLLK6BQAd1a6o3QMhwD4OXoTlSF8F42s=");
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: cover;
+.top-border-shadow-newsletter {
+  -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
+  -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
+  box-shadow: inset 0px 137px 20px -136px rgba(0, 0, 0, 0.502);
 }
 
 /*******************
@@ -322,8 +316,4 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
-.top-border-shadow-newsletter {
-  -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
-  -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
-  box-shadow: inset 0px 137px 20px -136px rgba(0, 0, 0, 0.502);
-}
+
