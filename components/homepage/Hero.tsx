@@ -4,15 +4,13 @@ import SocialMediaIcons from '../SocialMediaIcons';
 
 const Hero = () => {
     return (
-        <div className='custom-img-hero-mobile'>
-            <div className=''>
-                <div className=' w-[92.5%] mx-auto  pt-10 xl:max-w-[35%] xl:pt-10 xl:ml-28'>
-                    <h1 className='text-[var(--cream)] max-w-[45%] text-left Anton-Regular'>
-                        Making Web3 Work
-                    </h1>
-                    <HeroSearchBar />
-                    <SocialMediaIcons />
-                </div>
+        <div className='custom-img-hero'>
+            <div className='w-[92.5%] py-10 m-auto pt-10'>
+                <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular'>
+                    Making Web3 Work
+                </h1>
+                <HeroSearchBar />
+                <SocialMediaIcons />
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ const Partners = () => {
             <h1 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-6 pb-5'>
                 PARTNERING WITH:
             </h1>
-            <div className='w-full py-6'>
+            <div className='w-full py-6 sm:py-5'>
                 <div className='w-[80%] m-auto'>
                     <Carousel />
                 </div>

@@ -20,7 +20,7 @@ const Nav = () => {
                         alt='CBR Logo'
                         width={75}
                         height={75}
-                        className='sm:ml-4 md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
+                        className='md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
 
@@ -49,7 +49,7 @@ const Nav = () => {
                         >
                             <a
                                 href={link.link}
-                                className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px]'
+                                className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px] xl:text-[17px] xl:px-6'
                             >
                                 {link.name}
                             </a>

@@ -39,7 +39,7 @@ const Carousel = () => {
                 disableButtonsControls
                 infinite
                 autoPlay
-                animationDuration={2000}
+                animationDuration={3200}
             />
         </div>
     );

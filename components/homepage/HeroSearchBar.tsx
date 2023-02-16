@@ -10,22 +10,22 @@ const HeroSearchBar = () => {
     };
 
     return (
-        <div className='flex flex-col mx-auto bg-[var(--gray)] rounded-2xl p-4 mt-10'>
+        <div className='flex flex-col mx-auto bg-[var(--gray)] rounded-2xl p-4 mt-10 sm:w-[70%] sm:mx-0 md:w-[60%]'>
             <span className='text-white mb-2 font-bold text-xl'>
                 Find a job you'll love
             </span>
             <form
-                className='flex flex-col space-y-3 w-full justify-between'
+                className='flex flex-col space-y-3 w-full justify-between sm:flex-row sm:h-10 sm:space-y-0'
                 onSubmit={handleSubmit}
             >
                 <input
-                    className='rounded-lg pl-3 p-[0.75rem]'
+                    className='rounded-lg pl-3 p-[0.75rem] sm:w-[65%]'
                     placeholder='e.g "Full Stack Developer"'
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 ></input>
                 <button
-                    className='bg-[var(--orange)] p-2 rounded-lg text-white font-semibold text-xl'
+                    className='bg-[var(--orange)] p-2 rounded-lg text-white font-semibold text-xl sm:flex sm:justify-center sm:items-center sm:text-sm sm:w-[30%]'
                     type='submit'
                 >
                     GET STARTED

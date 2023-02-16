@@ -11,11 +11,11 @@ const VideoProfessionals = () => {
                     Short blurb about deep connections we have in the space
                     across all areas for those that are experienced in Web3
                 </p>
+                <img
+                    src='/assets/branding/Video_mock_up.png'
+                    className='m-auto'
+                ></img>
             </div>
-            <img
-                src='/assets/branding/Video_mock_up.png'
-                className='m-auto'
-            ></img>
         </>
     );
 };

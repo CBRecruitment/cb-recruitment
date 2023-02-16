@@ -121,28 +121,17 @@ body {
 /*******************
        HERO
 ********************/
-
 .custom-img-hero {
-  background: url('/assets/branding/herobannerv2.jpg');
-  background-repeat: no-repeat;
-  background-position: center right; 
-  background-attachment: local; 
-  background-size: cover;
-}
-
-.custom-img-hero-mobile {
   background: url('/assets/branding/herobanner-mobilelarge.png');
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: center; 
 }
 
- @media screen and (min-width: 768px) {
-  .custom-img-hero-mobile {
-    background: url('/assets/branding/herobannerv2.jpg');
-    background-repeat: no-repeat;
-    background-position: center right; 
-    background-attachment: local; 
+ @media screen and (min-width: 450px) {
+  .custom-img-hero {
+    background: url('/assets/branding/hero_banner.png');
+    background-position: center; 
     background-size: cover;
   }
  }
@@ -372,11 +361,11 @@ body {
     Newsletter
 ********************/
 
-@media screen and (min-width: 500px){
+/* @media screen and (min-width: 500px){
   .newsletter-container {
     width: 70%
   }
-}
+} */
 
 /*******************
     Mobile Menu

@@ -17,15 +17,15 @@ type Props = {
 
 const Home = ({ allPosts }: Props) => {
     return (
-        <div>
+        <div className='md:flex md:flex-col md:h-screen'>
             <Nav />
             <Hero />
             <Partners />
-            <LearnMore />
+            {/* <LearnMore />
             <CBRAcademy />
             <VideoProfessionals />
             <CareerAdvice posts={allPosts} />
-            <Footer />
+            <Footer /> */}
             {/* <JobOpeningsHome jobs={searchResults.data} /> */}
         </div>
     );

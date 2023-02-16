@@ -54,7 +54,7 @@ const Footer = () => {
                     <li>Lorem Ipsum</li>
                 </ul>
             </section>
-            <div className='w-[90%] m-auto pb-10 newsletter-container'>
+            <div className='w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[30%] m-auto pb-10 newsletter-container'>
                 <div className='flex flex-col mx-auto bg-[var(--cream)] rounded-2xl p-4 mt-10'>
                     <span className='text-black mb-2 font-bold text-xl'>
                         News Letter
