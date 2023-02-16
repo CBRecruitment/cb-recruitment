@@ -2,7 +2,7 @@ import React from 'react';
 
 const JobOpeningsBar = () => {
     return (
-        <div className='absolute top-[175px]'>
+        <div className='absolute top-[169px]'>
             <div className='absolute'>
                 <p className='bg-[var(--cream)] rounded-full m-auto w-fit px-[2rem] py-[0.2rem] text-[var(--darkgray)] text-[11px] Roboto font-semibold tracking-wide top-[14px] pt-1 relative bottom-0'>
                     JOB OPENINGS
