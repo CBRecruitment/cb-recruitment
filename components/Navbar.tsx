@@ -53,7 +53,7 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {/* <div
                     className={`sm:hidden absolute top-0 ${
-                        nav ? 'left-0' : 'left-full'
+                        nav ? 'top' : 'left-full'
                     } right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black border-gray-400 text-center ease-in duration-300`}
                 >
                     <ul className='text-white w-full'>

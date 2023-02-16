@@ -9,6 +9,7 @@ import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
 import CareerAdvice from '../components/blog/home/career-advice';
 import Footer from '../components/Footer';
+import Nav from '../components/Navbar/Nav';
 
 type Props = {
     allPosts: Post[];
@@ -16,19 +17,17 @@ type Props = {
 
 const Home = ({ allPosts }: Props) => {
     return (
-        <>
-            <div className=''>
-                <Navbar />
-                <Hero />
-                <Partners />
-                <LearnMore />
-                {/* <JobOpeningsHome jobs={searchResults.data} /> */}
-                <CBRAcademy />
-                <VideoProfessionals />
-                <CareerAdvice posts={allPosts} />
-                <Footer />
-            </div>
-        </>
+        <div>
+            <Nav />
+            <Hero />
+            <Partners />
+            <LearnMore />
+            <CBRAcademy />
+            <VideoProfessionals />
+            <CareerAdvice posts={allPosts} />
+            <Footer />
+            {/* <JobOpeningsHome jobs={searchResults.data} /> */}
+        </div>
     );
 };
 

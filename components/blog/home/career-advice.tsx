@@ -16,7 +16,7 @@ const CareerAdvice = ({ posts }: Props) => {
             <h2 className='w-[95%] m-auto text-center mt-3 mb-6 text-[13px] tracking-wide'>
                 Short blurb about our blog posts and tips for career advice
             </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-16 lg:gap-x-32 gap-y-6 md:gap-y-32 mb-16 px-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-16 lg:gap-x-32 gap-y-6 md:gap-y-32 mb-16 px-6 career-advice-posts'>
                 {FilteredPosts.map((post) => (
                     <CareerAdvicePosts
                         key={post.slug}

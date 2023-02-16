@@ -54,18 +54,18 @@ const Footer = () => {
                     <li>Lorem Ipsum</li>
                 </ul>
             </section>
-            <div className='w-[90%] m-auto pb-10'>
+            <div className='w-[90%] m-auto pb-10 newsletter-container'>
                 <div className='flex flex-col mx-auto bg-[var(--cream)] rounded-2xl p-4 mt-10'>
                     <span className='text-black mb-2 font-bold text-xl'>
                         News Letter
                     </span>
                     <form className='flex flex-col space-y-3 w-full justify-between'>
                         <input
-                            className='rounded-lg pl-3 p-[0.75rem] top-border-shadow-newsletter'
+                            className='rounded-lg pl-3 p-[0.45rem] top-border-shadow-newsletter'
                             placeholder='Your email address...'
                         ></input>
                         <button
-                            className='bg-[var(--orange)] p-2 rounded-lg text-white font-semibold text-xl'
+                            className='bg-[var(--orange)] p-1 rounded-lg text-white font-semibold text-lg'
                             type='submit'
                         >
                             SIGN UP

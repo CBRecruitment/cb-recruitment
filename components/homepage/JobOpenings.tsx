@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import { Job } from '../../interfaces/types';
-
 const JobOpenings = () => {
     return (
         <div className='text-[14px] w-[320px] m-auto text-center grid grid-cols-2 gap-y-4 px-6 job-grid-container pb-12'>
