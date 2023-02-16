@@ -5,7 +5,7 @@ const JobApplicationForm = ({ id }: any) => {
     const [course, setCourse] = useState('');
 
     return (
-        <div className='w-full mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5 '>
+        <div className='w-full mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5'>
             <form
                 className='flex flex-col w-[90%] mx-auto'
                 action='/api/jobapplicationform'

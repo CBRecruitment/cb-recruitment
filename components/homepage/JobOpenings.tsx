@@ -1,35 +1,43 @@
 const JobOpenings = () => {
     return (
-        <div className='text-[14px] w-[320px] m-auto text-center grid grid-cols-2 gap-y-4 px-6 job-grid-container pb-12'>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    Blockchain Architect
-                </p>
-            </div>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    Algo Trader
-                </p>
-            </div>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    Front End Dev
-                </p>
-            </div>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    Solutions Engineer
-                </p>
-            </div>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    Community Manager
-                </p>
-            </div>
-            <div className='border-2 border-white rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                <p className='text-white Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                    3D Artist
-                </p>
+        <div className='text-[14px] w-[320px] pb-10 m-auto'>
+            <div className='space-y-2'>
+                <div className='flex justify-between'>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit items-center m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            Blockchain Architect
+                        </p>
+                    </div>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            Algo Trader
+                        </p>
+                    </div>
+                </div>
+                <div className='flex justify-between'>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            Front End Dev
+                        </p>
+                    </div>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            Solutions Engineer
+                        </p>
+                    </div>
+                </div>
+                <div className='flex justify-between'>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            Community Manager
+                        </p>
+                    </div>
+                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
+                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
+                            3D Artist
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

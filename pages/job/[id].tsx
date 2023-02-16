@@ -1,8 +1,7 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import Footer from '../../components/Footer';
-import Navbar from '../../components/Navbar';
-import JobApplicationForm from '../../components/JobApplicationForm';
+import JobApplicationForm from '../../components/candidates/JobApplicationForm';
+import Nav from '../../components/Navbar/Nav';
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
 
@@ -21,11 +20,11 @@ const job = (props: any) => {
     const skills = jobData.skills.data;
     return (
         <div className='flex flex-col h-screen'>
-            <Navbar />
+            <Nav />
             <div className='bg-[var(--darkgray)] flex-grow'>
-                <div className='text-white py-10 flex justify-between w-[70%] mx-auto'>
-                    <div key={jobData.id} className='w-[50%]'>
-                        <div>
+                <div className='text-white flex flex-col w-[90%] mx-auto'>
+                    <div key={jobData.id}>
+                        <div className='flex flex-col pt-8 pb-2'>
                             <p className='text-2xl text-[var(--orange)]'>
                                 {jobData.title}
                             </p>
@@ -33,32 +32,36 @@ const job = (props: any) => {
                                 {jobData.categories?.data[0]?.name}
                             </p>
                         </div>
-                        <div className='mt-5 flex space-x-4'>
-                            <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)] cursor-pointer'>
+                        <div className='flex justify-start space-x-3 pb-2 pt-3'>
+                            <p className='text-sm rounded-md border border-[var(--orange)] px-6 py-1  hover:bg-[var(--orange)] cursor-pointer'>
                                 {/* Location */}
                                 {jobData?.customText12}
                             </p>
-                            <p className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)] cursor-pointer'>
+                            <p className='text-sm rounded-md border border-[var(--orange)] px-6 py-1  hover:bg-[var(--orange)] cursor-pointer'>
                                 {/* Industry */}
                                 {jobData?.customText14}
                             </p>
-                            {skills.map((skill: any) => (
-                                <p
-                                    key={skill.id}
-                                    className='text-sm rounded-md border border-[var(--orange)] p-2 hover:bg-[var(--orange)] cursor-pointer'
-                                >
-                                    {skill.name}
-                                </p>
-                            ))}
                         </div>
-                        <div
-                            className='text-white mt-10'
-                            dangerouslySetInnerHTML={{
-                                __html: jobData?.description,
-                            }}
-                        />
+                        <div>
+                            <div className='flex justify-start space-x-3'>
+                                {skills.map((skill: any) => (
+                                    <p
+                                        key={skill.id}
+                                        className='text-sm rounded-md border border-[var(--orange)] px-6 py-1 hover:bg-[var(--orange)] cursor-pointer'
+                                    >
+                                        {skill.name}
+                                    </p>
+                                ))}
+                            </div>
+                            <div
+                                className='text-white mt-10'
+                                dangerouslySetInnerHTML={{
+                                    __html: jobData?.description,
+                                }}
+                            />
+                        </div>
                     </div>
-                    <div className='w-[35%]'>
+                    <div className='mt-10'>
                         <JobApplicationForm id={props.id} />
                     </div>
                 </div>

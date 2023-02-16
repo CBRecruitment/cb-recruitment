@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/homepage/Hero';
 import LearnMore from '../components/homepage/LearnMore';
-import Navbar from '../components/Navbar';
 import Partners from '../components/homepage/Partners';
 import CBRAcademy from '../components/homepage/CBRAcademy';
 import VideoProfessionals from '../components/homepage/VideoProfessionals';
@@ -21,11 +20,11 @@ const Home = ({ allPosts }: Props) => {
             <Nav />
             <Hero />
             <Partners />
-            {/* <LearnMore />
+            <LearnMore />
             <CBRAcademy />
             <VideoProfessionals />
             <CareerAdvice posts={allPosts} />
-            <Footer /> */}
+            <Footer />
             {/* <JobOpeningsHome jobs={searchResults.data} /> */}
         </div>
     );

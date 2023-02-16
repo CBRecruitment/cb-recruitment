@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import JobOpenings from '../components/JobOpenings';
 import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
+import Nav from '../components/Navbar/Nav';
+import JobSearch from '../components/candidates/JobSearch';
+import JobOpenings from '../components/candidates/JobOpenings';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -31,20 +32,15 @@ export const getServerSideProps: GetServerSideProps = async (req) => {
 
 const CandidatesPage = ({ searchResults, searchQuery }: Props) => {
     return (
-        <div className='flex flex-col h-screen'>
-            <Navbar />
-            <div className='flex-grow bg-[var(--darkgray)] text-white pt-6'>
-                <div className='flex justify-center items-center'>
-                    <h1 className='text-4xl justify-center items-center underline text-[var(--orange)] inline'>
-                        Job Openings
-                    </h1>
-                </div>
+        <>
+            <div className='md:flex md:flex-col md:h-screen'>
+                <Nav />
                 <JobOpenings
                     jobs={searchResults.data}
                     searchQuery={searchQuery}
                 />
             </div>
-        </div>
+        </>
     );
 };
 
