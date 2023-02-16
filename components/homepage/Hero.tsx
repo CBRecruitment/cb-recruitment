@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <div className='custom-img-hero'>
             <div className='w-[92.5%] py-10 m-auto pt-10'>
-                <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular'>
+                <h1 className='text-[var(--cream)] w-[100px] text-left Anton-Regular'>
                     Making Web3 Work
                 </h1>
                 <HeroSearchBar />
