@@ -16,7 +16,7 @@ type Props = {
 const JobOpenings = ({ jobs, searchQuery }: Props) => {
     // const [search, setSearch] = useState(searchQuery ?? '');
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(6);
+    const [postsPerPage, setPostsPerPage] = useState(9);
     const router = useRouter();
 
     const lastPostIndex = currentPage * postsPerPage;
@@ -43,7 +43,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                         const categories = job.categories.data;
                         return (
                             <Link href={`/job/${job.id}`} key={job.id}>
-                                <div className='flex flex-col justify-center border border-white m-auto items-center min-h-[270px] max-w-[215px] bg-[#181717] rounded-lg hover:scale-105 ease-in-out duration-300'>
+                                <div className='flex flex-col justify-center border border-white m-auto items-center min-h-[270px] max-w-[235px] bg-[#181717] rounded-lg hover:scale-105 ease-in-out duration-300'>
                                     <div className='flex flex-col justify-center items-center text-center w-[80%] min-h-[260px] space-y-3'>
                                         <Image
                                             src={
