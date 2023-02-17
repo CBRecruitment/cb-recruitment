@@ -21,6 +21,6 @@
   @apply text-blue-600;
 }
 
-.markdown li{
+.markdown li {
   list-style-type: circle;
 }

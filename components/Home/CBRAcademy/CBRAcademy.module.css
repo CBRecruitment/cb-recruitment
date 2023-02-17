@@ -1,0 +1,42 @@
+/*******************
+    CBRAcademy
+********************/
+
+@media screen and (min-width: 375px) {
+    .text {
+      width: 150px;
+    }
+} 
+
+@media screen and (min-width: 500px) {
+    .main_container {
+      padding-bottom: 20px;
+    }
+  
+    .container {
+      width: 400px;
+    }
+  
+    .lady {
+      width: 210px;
+      right: 100px;
+    }
+  
+    .case {
+      right: 135px;
+      top: 145px;
+      width: 32px;
+    }
+  
+    .paper {
+      right: 80px;
+      top: 180px;
+    }
+  
+    .dotted_curved_line {
+      width: 160px;
+      top: 235px;
+      right: 60px;
+    }
+}
+  

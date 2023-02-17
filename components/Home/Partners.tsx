@@ -3,7 +3,8 @@ import Image from 'next/image';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
-const handleDragStart = (e: any) => e.preventDefault();
+const handleDragStart = (e: { preventDefault: () => any }) =>
+    e.preventDefault();
 
 const responsive = {
     0: { items: 1 },
@@ -41,19 +42,21 @@ const items = [
 const Partners = () => {
     return (
         <div className='w-full m-auto bg-[var(--cream)]'>
-            <h1 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-6 pb-5'>
+            <h2 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-5 pb-5'>
                 PARTNERING WITH:
-            </h1>
-            <AliceCarousel
-                mouseTracking
-                items={items}
-                responsive={responsive}
-                controlsStrategy='alternate'
-                disableButtonsControls
-                infinite
-                autoPlay
-                animationDuration={3200}
-            />
+            </h2>
+            <div className='p-2'>
+                <AliceCarousel
+                    mouseTracking
+                    items={items}
+                    responsive={responsive}
+                    controlsStrategy='alternate'
+                    disableButtonsControls
+                    infinite
+                    autoPlay
+                    animationDuration={3200}
+                />
+            </div>
         </div>
     );
 };

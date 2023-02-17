@@ -9,8 +9,7 @@ import { getPostBySlug, getAllPosts } from '../lib/api';
 import Head from 'next/head';
 import markdownToHtml from '../lib/markdownToHtml';
 import type PostType from '../interfaces/post';
-import Navbar from '../components/Navbar/Nav';
-import PostTitle from '../components/blog/post-title';
+import PostTitle from '../components/Blog/post-title';
 
 type Props = {
     post: PostType;
@@ -25,14 +24,12 @@ export default function Post({ post, morePosts, preview }: Props) {
     }
     return (
         <Layout preview={preview}>
-            <Navbar />
             <Container>
-                <Header />
                 {router.isFallback ? (
                     <PostTitle>Loading…</PostTitle>
                 ) : (
                     <>
-                        <article className=''>
+                        <article>
                             <Head>
                                 <title>{post.title}</title>
                                 <meta property='og:locale' content='en_US' />

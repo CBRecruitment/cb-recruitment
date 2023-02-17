@@ -12,14 +12,14 @@ const Nav = () => {
     ];
     let [open, setOpen] = useState(false);
     return (
-        <div className='shadow-md w-full sticky top-0 left-0 z-10'>
-            <div className='md:flex items-center justify-between bg-[var(--gray)] p-3 md:px-10 px-7'>
+        <div className='shadow-md w-full sticky top-0 left-0 z-20'>
+            <div className='md:flex items-center justify-between bg-[var(--gray)] p-2 md:px-10 px-3'>
                 <Link href='/'>
                     <Image
                         src={'/assets/branding/cblogo-whitev2.png'}
                         alt='CBR Logo'
-                        width={75}
-                        height={75}
+                        width={70}
+                        height={70}
                         className='md:ml-12 lg:ml-20 xl:ml-28 hover:animate-pulse duration-200'
                     />
                 </Link>
@@ -27,7 +27,7 @@ const Nav = () => {
                 {/* Mobile menu button */}
                 <div
                     onClick={() => setOpen(!open)}
-                    className='text-3xl absolute right-5 top-6 cursor-pointer md:hidden text-white'
+                    className='text-3xl absolute right-3 top-4 cursor-pointer md:hidden text-white'
                 >
                     {open ? (
                         <AiOutlineClose size={30} />
@@ -38,8 +38,8 @@ const Nav = () => {
 
                 {/* Mobile Menu */}
                 <ul
-                    className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in bg-[var(--gray)] nav-height ${
-                        open ? 'top-[78px] ' : 'top-[-490px]'
+                    className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in bg-[var(--gray)] ${
+                        open ? 'top-[66px] ' : 'top-[-490px]'
                     }`}
                 >
                     {links.map((link) => (
@@ -47,12 +47,12 @@ const Nav = () => {
                             key={link.name}
                             className='md:ml-8 text-xl md:my-0 my-7'
                         >
-                            <a
+                            <Link
                                 href={link.link}
                                 className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px] xl:text-[17px] xl:px-6'
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
 

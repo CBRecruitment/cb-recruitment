@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/General/Footer/Footer';
 import Navbar from '../components/Navbar/Nav';
 
 const ThankYou = () => {

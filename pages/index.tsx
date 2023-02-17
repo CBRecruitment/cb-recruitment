@@ -1,13 +1,13 @@
 import React from 'react';
-import Hero from '../components/Home/Hero';
+import Hero from '../components/Home/Hero/Hero';
 import LearnMore from '../components/Home/LearnMore';
 import Partners from '../components/Home/Partners';
-import CBRAcademy from '../components/Home/CBRAcademy';
+import CBRAcademy from '../components/Home/CBRAcademy/CBRAcademy';
 import VideoProfessionals from '../components/Home/VideoProfessionals';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
-import CareerAdvice from '../components/Blog/Home/career-advice';
-import Footer from '../components/Footer';
+import CareerAdvice from '../components/Home/CareerAdvice/CareerAdvice';
+import Footer from '../components/General/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 
 type Props = {
@@ -17,14 +17,12 @@ type Props = {
 const Home = ({ allPosts }: Props) => {
     return (
         <div className='md:flex md:flex-col md:h-screen'>
-            <Nav />
             <Hero />
             <Partners />
             <LearnMore />
             <CBRAcademy />
             <VideoProfessionals />
             <CareerAdvice posts={allPosts} />
-            <Footer />
             {/* <JobOpeningsHome jobs={searchResults.data} /> */}
         </div>
     );

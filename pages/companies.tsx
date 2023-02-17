@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import UploadCVModal from '../components/UploadCVModal';
+import UploadCVModal from '../components/Candidates/UploadCVModal';
 
 const CompaniesPage = () => {
     return (
-        <div className='flex flex-col h-screen'>
-            <Navbar />
+        <div className='flex flex-col'>
             <div className='bg-[var(--darkgray)] pt-10 mx-auto flex-grow'>
                 <h1 className='text-3xl text-[var(--orange)] text-center mb-6 px-5'>
                     Access top Talent in the Web3 Space
@@ -48,6 +46,7 @@ const CompaniesPage = () => {
                 <div className='flex justify-center items-center pb-10'>
                     <UploadCVModal />
                 </div>
+                <hr />
             </div>
         </div>
     );

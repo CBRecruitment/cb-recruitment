@@ -1,9 +1,8 @@
-import Avatar from '../avatar';
-import DateFormatter from '../date-formatter';
-import CoverImage from '../cover-image';
+import DateFormatter from '../../Blog/date-formatter';
 import Link from 'next/link';
 import type Author from '../../../interfaces/author';
-import CareerAdviceCover from './career-advice-cover';
+import CareerAdviceCover from './CareerAdvice-Cover';
+import styles from './CareerAdvice.module.css';
 
 type Props = {
     title: string;
@@ -23,7 +22,7 @@ const CareerAdvicePosts = ({
     slug,
 }: Props) => {
     return (
-        <div className='card'>
+        <div className={styles.card}>
             <div className='mb-3'>
                 <CareerAdviceCover slug={slug} title={title} src={coverImage} />
             </div>

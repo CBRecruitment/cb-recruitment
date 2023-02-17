@@ -1,0 +1,10 @@
+/*******************
+      CANDIDATES
+********************/
+
+.bg {
+    background: url('/assets/branding/candidates_bg.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: center; 
+  }

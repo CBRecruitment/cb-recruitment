@@ -6,7 +6,6 @@ import Layout from '../components/Blog/layout';
 import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
 import Post from '../interfaces/post';
-import Navbar from '../components/Navbar/Nav';
 
 type Props = {
     allPosts: Post[];
@@ -17,7 +16,6 @@ export default function Blog({ allPosts }: Props) {
     const morePosts = allPosts.slice(1);
     return (
         <div className='bg-[var(--cream)]'>
-            <Navbar />
             <Layout>
                 <Head>
                     <title>{`Read Up-To-Date Content on Everything Crypto`}</title>

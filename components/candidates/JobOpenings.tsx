@@ -14,7 +14,7 @@ type Props = {
 };
 
 const JobOpenings = ({ jobs, searchQuery }: Props) => {
-    const [search, setSearch] = useState(searchQuery ?? '');
+    // const [search, setSearch] = useState(searchQuery ?? '');
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
     const router = useRouter();
@@ -29,22 +29,22 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
     // };
 
     return (
-        <div className=''>
+        <div>
             <JobSearch />
             <div className='bg-[var(--gray)] relative'>
                 <div className='pt-12'>
                     <JobOpeningsHome />
                 </div>
-                <p className='bg-[var(--cream)] rounded-full m-auto w-fit px-[2rem] py-[0.2rem] text-[var(--darkgray)] text-[11px] Roboto font-semibold tracking-wide mb-8'>
+                <h2 className='bg-[var(--cream)] rounded-full m-auto w-fit px-[2rem] py-[0.2rem] text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-8'>
                     JOB OPENINGS
-                </p>
+                </h2>
                 <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%] mb-6'>
                     {currentPosts?.map((job) => {
                         const categories = job.categories.data;
                         return (
                             <Link href={`/job/${job.id}`} key={job.id}>
-                                <div className='flex flex-col justify-center border border-white m-auto items-center min-h-[265px] max-w-[225px] bg-[var(--darkgray)] rounded-lg hover:scale-105 ease-in-out duration-300'>
-                                    <div className='flex flex-col justify-center items-center text-center max-w-[70%]'>
+                                <div className='flex flex-col justify-center border border-white m-auto items-center min-h-[270px] max-w-[215px] bg-[#181717] rounded-lg hover:scale-105 ease-in-out duration-300'>
+                                    <div className='flex flex-col justify-center items-center text-center w-[80%] min-h-[260px] space-y-3'>
                                         <Image
                                             src={
                                                 '/assets/branding/cblogo-whitev2.png'
@@ -52,21 +52,24 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                                             alt='CBRecruiment Logo'
                                             width={60}
                                             height={20}
+                                            className='mx-auto'
                                         />
-                                        <p className='text-md text-[var(--orange)] my-2'>
+                                        <h3 className='text-md text-[#f2ad11] pt-2 pb-2 overflow-hidden text-ellipsis w-full'>
                                             {job.title}
-                                        </p>
-                                        <p className='text-[12px] font-semibold bg-[var(--orange)] mt-2 border p-1 w-full rounded-lg'>
-                                            {job.customText15}
-                                        </p>
-                                        {categories.map((category) => (
-                                            <span className='text-[12px] font-semibold bg-[var(--orange)] mt-2 border p-1 w-full rounded-lg'>
-                                                {category.name}
+                                        </h3>
+                                        <div className='flex flex-col w-[90%] space-y-1'>
+                                            <span className='text-[12px] font-semibold bg-[#f2ad11] border-2 p-1 w-full rounded-sm '>
+                                                {job.customText15}
                                             </span>
-                                        ))}
-                                        <p className='text-[12px] font-semibold bg-[var(--orange)] mt-2 border p-1 w-full rounded-lg'>
-                                            {job.customText12}
-                                        </p>
+                                            {categories.map((category) => (
+                                                <span className='text-[12px] font-semibold bg-[#f2ad11] mt-2 border-2 p-1 w-full rounded-sm whitespace-nowrap text-ellipsis overflow-hidden'>
+                                                    {category.name}
+                                                </span>
+                                            ))}
+                                            <span className='text-[12px] font-semibold bg-[#f2ad11] mt-2 border-2 p-1 w-full rounded-sm whitespace-nowrap text-ellipsis overflow-hidden'>
+                                                {job.customText12}
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </Link>
@@ -89,9 +92,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                         postsPerPage={postsPerPage}
                         setCurrentPage={setCurrentPage}
                         currentPage={currentPage}
-                    >
-                        {' '}
-                    </Pagination>
+                    ></Pagination>
                 </footer>
             </div>
         </div>

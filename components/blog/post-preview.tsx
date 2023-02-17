@@ -1,6 +1,6 @@
-import Avatar from './avatar';
-import DateFormatter from './date-formatter';
-import CoverImage from './cover-image';
+import Avatar from '../Blog/avatar';
+import DateFormatter from '../Blog/date-formatter';
+import CoverImage from '../Blog/cover-image';
 import Link from 'next/link';
 import type Author from '../../interfaces/author';
 
@@ -38,7 +38,7 @@ const PostPreview = ({
             <div className='text-lg mb-4'>
                 <DateFormatter dateString={date} />
             </div>
-            <p className='text-lg leading-relaxed mb-4 bg-[var(--orange)] w-fit py-1 px-3 rounded-full'>
+            <p className='text-md leading-relaxed mb-4 bg-[var(--orange)] w-fit py-1 px-3 rounded-full'>
                 {excerpt}
             </p>
             <Avatar name={author.name} picture={author.picture} />

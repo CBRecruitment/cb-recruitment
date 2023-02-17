@@ -1,6 +1,8 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
@@ -54,14 +56,19 @@ const Footer = () => {
                     <li>Lorem Ipsum</li>
                 </ul>
             </section>
-            <div className='w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[30%] m-auto pb-10 newsletter-container'>
+            <div className='w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[30%] m-auto pb-10'>
                 <div className='flex flex-col mx-auto bg-[var(--cream)] rounded-2xl p-4 mt-10'>
                     <span className='text-black mb-2 font-bold text-xl'>
                         News Letter
                     </span>
                     <form className='flex flex-col space-y-3 w-full justify-between'>
                         <input
-                            className='rounded-lg pl-3 p-[0.45rem] top-border-shadow-newsletter'
+                            className={clsx(
+                                'rounded-lg',
+                                'pl-3',
+                                'p-[0.45rem]',
+                                styles.newsletter_shadow
+                            )}
                             placeholder='Your email address...'
                         ></input>
                         <button

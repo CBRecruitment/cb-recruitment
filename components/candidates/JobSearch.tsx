@@ -1,11 +1,13 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import HeroSearchBar from '../Home/HeroSearchBar';
+import HeroSearchBar from '../Home/Hero/HeroSearchBar';
+import styles from './Candidates.module.css';
+import clsx from 'clsx';
 
 const JobSearch = () => {
     return (
-        <div className='custom-img-candidates h-full relative'>
+        <div className={clsx('relative', 'h-full', styles.bg)}>
             <div className='w-[90%] py-10 m-auto pt-2'>
                 <div className='pb-1'>
                     <HeroSearchBar />

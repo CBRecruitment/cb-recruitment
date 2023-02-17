@@ -1,0 +1,18 @@
+/*******************
+       HERO
+********************/
+
+.bg {
+    background: url('/assets/branding/herobanner-mobilelarge.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: center; 
+}
+  
+@media screen and (min-width: 450px) {
+    .bg {
+      background: url('/assets/branding/hero_banner.png');
+      background-position: center; 
+      background-size: cover;
+    }
+}

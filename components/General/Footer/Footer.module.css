@@ -1,0 +1,9 @@
+/*******************
+      FOOTER
+********************/
+
+.newsletter_shadow {
+    -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
+    -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
+    box-shadow: inset 0px 137px 20px -136px rgba(0, 0, 0, 0.502);
+}

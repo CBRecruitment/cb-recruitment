@@ -1,43 +1,25 @@
+const jobs = [
+    'Blockchain Architect',
+    'Solutions Engineer',
+    'Front End Dev',
+    'Algo Trader',
+    'Community Manager',
+    '3D Artist',
+];
+
 const JobOpenings = () => {
     return (
-        <div className='text-[14px] w-[320px] pb-10 m-auto'>
-            <div className='space-y-2'>
-                <div className='flex justify-between'>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit items-center m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            Blockchain Architect
-                        </p>
+        <div className='text-[14px] w-[320px] pb-10 m-auto flex justify-center'>
+            <div className='grid grid-cols-2 gap-2'>
+                {jobs.map((job) => (
+                    <div className='w-full py-1'>
+                        <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
+                            <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
+                                {job}
+                            </p>
+                        </div>
                     </div>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            Algo Trader
-                        </p>
-                    </div>
-                </div>
-                <div className='flex justify-between'>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            Front End Dev
-                        </p>
-                    </div>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            Solutions Engineer
-                        </p>
-                    </div>
-                </div>
-                <div className='flex justify-between'>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            Community Manager
-                        </p>
-                    </div>
-                    <div className='border-2 border-[var(--cream)] rounded-lg p-1 w-fit flex items-center jobs m-auto max-w-[160px]'>
-                        <p className='text-[#ffffffc8] Roboto-Bold whitespace-nowrap text-ellipsis overflow-hidden'>
-                            3D Artist
-                        </p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

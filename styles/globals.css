@@ -116,54 +116,18 @@ body {
   font-weight: 700;
 }
 
-/*******************
-       HERO
-********************/
-.custom-img-hero {
-  background: url('/assets/branding/herobanner-mobilelarge.png');
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-attachment: center; 
-}
 
- @media screen and (min-width: 450px) {
-  .custom-img-hero {
-    background: url('/assets/branding/hero_banner.png');
-    background-position: center; 
-    background-size: cover;
-  }
- }
-/*******************
-      CANDIDATES
-********************/
-.custom-img-candidates {
-  background: url('/assets/branding/candidates_bg.png');
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-attachment: center; 
-}
-
-
-/*******************
-      FOOTER
-********************/
-
-.top-border-shadow-newsletter {
-  -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
-  -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
-  box-shadow: inset 0px 137px 20px -136px rgba(0, 0, 0, 0.502);
-}
 
 /*******************
       Search Bar
 ********************/
-.search-input {
+/* .search-input {
   border-radius: 15px 0 0 15px;
 }
 
 .search-btn {
   border-radius: 0 15px 15px 0;
-}
+} */
 
 /*******************
     LANDING PAGE
@@ -294,92 +258,4 @@ body {
   } 
 }
 
-/*******************
-    Jobs HomePage
-********************/
 
-
-
-/*******************
-    CBRAcademy
-********************/
-@media screen and (min-width: 500px) {
-  .cbracademy {
-    padding-bottom: 20px;
-  }
-
-  .cbracademy-container {
-    width: 400px;
-  }
-
-  .lady-sitting {
-    width: 210px;
-    right: 100px;
-  }
-
-  .case {
-    right: 135px;
-    top: 145px;
-    width: 32px;
-  }
-
-  .paper {
-    right: 80px;
-    top: 180px;
-  }
-
-  .dotted_curved_line {
-    width: 160px;
-    top: 235px;
-    right: 60px;
-  }
-
-}
-
- @media screen and (min-width: 375px) {
-  .bottom-text-cbracademy {
-    width: 150px;
-  }
-} 
-
-
-/*******************
-    Career Advice
-********************/
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.569);
-  transition: 0.3s;
-  border-radius: 10px;
-}
-
-.cover-img-corners {
-  border-radius: 10px 10px 0 0;
-}
-
-@media screen and (min-width: 500px){
-  .career-advice-posts {
-    width: 70%;
-  }
-}
-
-/*******************
-    Newsletter
-********************/
-
-/* @media screen and (min-width: 500px){
-  .newsletter-container {
-    width: 70%
-  }
-} */
-
-/*******************
-    Mobile Menu
-********************/
-
-
-@media screen and (max-width: 767px) {
-  .nav-height {
-    height: 550px;
-  }
-}
