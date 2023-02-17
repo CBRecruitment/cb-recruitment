@@ -11,8 +11,8 @@ const JobOpenings = () => {
     return (
         <div className='text-[14px] w-[320px] pb-10 m-auto flex justify-center'>
             <div className='grid grid-cols-2 gap-2'>
-                {jobs.map((job) => (
-                    <div className='w-full py-1'>
+                {jobs.map((job, idx) => (
+                    <div className='w-full py-1' key={idx}>
                         <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
                             <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
                                 {job}
