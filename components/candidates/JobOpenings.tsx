@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { Job } from '../../interfaces/types';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import { useRouter } from 'next/router';
-import Pagination from './Pagination';
 import JobOpeningsHome from '../Home/JobOpenings';
 import JobSearch from './JobSearch';
+import Pagination from './Pagination';
 
 type Props = {
     jobs: Job[];
@@ -14,7 +14,6 @@ type Props = {
 };
 
 const JobOpenings = ({ jobs, searchQuery }: Props) => {
-    // const [search, setSearch] = useState(searchQuery ?? '');
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(9);
     const router = useRouter();
@@ -22,11 +21,6 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
-
-    // const handleSubmit = (e: { preventDefault: () => void }) => {
-    //     e.preventDefault();
-    //     router.push(`candidates/?search=${search}`);
-    // };
 
     return (
         <div>
@@ -100,6 +94,13 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
 };
 
 export default JobOpenings;
+
+// const [search, setSearch] = useState(searchQuery ?? '');
+
+// const handleSubmit = (e: { preventDefault: () => void }) => {
+//     e.preventDefault();
+//     router.push(`candidates/?search=${search}`);
+// };
 
 {
     /* <div className='search justify-center flex mb-10'>

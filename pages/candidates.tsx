@@ -1,9 +1,7 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
-import Nav from '../components/Navbar/Nav';
 import JobOpenings from '../components/Candidates/JobOpenings';
-import Footer from '../components/General/Footer/Footer';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
