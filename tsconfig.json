@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "pages/job/[id].tsx", "pages/companies.tsx", "components/Home/Hero/HeroSearchBar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/job/[id].tsx", "pages/companies.tsx", "components/Home/Hero/HeroSearchBar.tsx"],
   "exclude": ["node_modules"]
 }
