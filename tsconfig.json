@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Animations/AnimatedTextWord2.js", "components/Animations/AnimatedTextWord.js", "pages/job/[id].jsx", "pages/companies.tsx", "components/SearchBar.jsx", "components/HeroSearchBar.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/job/[id].tsx", "pages/companies.tsx", "components/Home/HeroSearchBar.tsx"],
   "exclude": ["node_modules"]
 }

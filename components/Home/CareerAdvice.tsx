@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import MoreStories from '../blog/more-stories';
-import HeroPost from '../blog/hero-post';
+import MoreStories from '../Blog/more-stories';
+import HeroPost from '../Blog/hero-post';
 import Post from '../../interfaces/post';
-import Container from '../blog/container';
-import Intro from '../blog/intro';
-import Layout from '../blog/layout';
+import Container from '../Blog/container';
+import Intro from '../Blog/intro';
+import Layout from '../Blog/layout';
 import { getAllPosts } from '../../lib/api';
 
 type Props = {

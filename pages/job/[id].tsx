@@ -1,6 +1,6 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import JobApplicationForm from '../../components/candidates/JobApplicationForm';
+import JobApplicationForm from '../../components/Candidates/JobApplicationForm';
 import Nav from '../../components/Navbar/Nav';
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;

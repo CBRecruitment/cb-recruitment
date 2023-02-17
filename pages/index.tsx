@@ -1,12 +1,12 @@
 import React from 'react';
-import Hero from '../components/homepage/Hero';
-import LearnMore from '../components/homepage/LearnMore';
-import Partners from '../components/homepage/Partners';
-import CBRAcademy from '../components/homepage/CBRAcademy';
-import VideoProfessionals from '../components/homepage/VideoProfessionals';
+import Hero from '../components/Home/Hero';
+import LearnMore from '../components/Home/LearnMore';
+import Partners from '../components/Home/Partners';
+import CBRAcademy from '../components/Home/CBRAcademy';
+import VideoProfessionals from '../components/Home/VideoProfessionals';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
-import CareerAdvice from '../components/blog/home/career-advice';
+import CareerAdvice from '../components/Blog/Home/career-advice';
 import Footer from '../components/Footer';
 import Nav from '../components/Navbar/Nav';
 

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import HeroSearchBar from '../homepage/HeroSearchBar';
+import HeroSearchBar from '../Home/HeroSearchBar';
 
 const JobSearch = () => {
     return (

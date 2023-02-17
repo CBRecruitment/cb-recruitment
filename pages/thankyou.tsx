@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Nav';
 
 const ThankYou = () => {
     return (
@@ -8,7 +8,7 @@ const ThankYou = () => {
             <Navbar />
             <div className='flex justify-center bg-[var(--darkgray)] h-full'>
                 <h1 className='flex items-center text-[var(--orange)] text-4xl'>
-                    Your CV was successfully uploaded, thank you for applying!
+                    Your application was successful, thank you for applying!
                 </h1>
             </div>
             <Footer />

@@ -2,8 +2,8 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
 import Nav from '../components/Navbar/Nav';
-import JobSearch from '../components/candidates/JobSearch';
-import JobOpenings from '../components/candidates/JobOpenings';
+import JobSearch from '../components/Candidates/JobSearch';
+import JobOpenings from '../components/Candidates/JobOpenings';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;

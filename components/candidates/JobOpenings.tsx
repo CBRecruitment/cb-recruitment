@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { Job } from '../../interfaces/types';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import { useRouter } from 'next/router';
-import Pagination from '../Pagination';
-import JobOpeningsHome from '../homepage/JobOpenings';
+import Pagination from './Pagination';
+import JobOpeningsHome from '../Home/JobOpenings';
 import JobSearch from './JobSearch';
 
 type Props = {

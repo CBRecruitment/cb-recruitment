@@ -1,16 +1,16 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../components/blog/container';
-import PostBody from '../components/blog/post-body';
-import Header from '../components/blog/header';
-import PostHeader from '../components/blog/post-header';
-import Layout from '../components/blog/layout';
+import Container from '../components/Blog/container';
+import PostBody from '../components/Blog/post-body';
+import Header from '../components/Blog/header';
+import PostHeader from '../components/Blog/post-header';
+import Layout from '../components/Blog/layout';
 import { getPostBySlug, getAllPosts } from '../lib/api';
-import PostTitle from '../components/blog/post-title';
 import Head from 'next/head';
 import markdownToHtml from '../lib/markdownToHtml';
 import type PostType from '../interfaces/post';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Nav';
+import PostTitle from '../components/blog/post-title';
 
 type Props = {
     post: PostType;
