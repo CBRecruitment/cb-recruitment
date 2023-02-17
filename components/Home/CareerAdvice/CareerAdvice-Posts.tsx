@@ -1,6 +1,6 @@
-import DateFormatter from '../../Blog/date-formatter';
 import Link from 'next/link';
 import type Author from '../../../interfaces/author';
+import DateFormatter from '../../Blog/date-formatter';
 import CareerAdviceCover from './CareerAdvice-Cover';
 import styles from './CareerAdvice.module.css';
 
