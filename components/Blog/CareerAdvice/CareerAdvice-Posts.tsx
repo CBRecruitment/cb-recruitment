@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type Author from '../../../interfaces/author';
-// import DateFormatter from '../date-formatter';
+import DateFormatter from '../date-formatter';
 import CareerAdviceCover from './CareerAdvice-Cover';
 import styles from './CareerAdvice.module.css';
 
@@ -27,7 +27,7 @@ const CareerAdvicePosts = ({ title, coverImage, date, excerpt, author, slug }: P
         </h3>
         <div className='text-[10px] flex justify-between w-[95%] m-auto'>
           <p>Jan Barley</p>
-          {/* <DateFormatter dateString={date} /> */}
+          <DateFormatter dateString={date} />
           <p className='text-[10px] leading-relaxed mb-4 bg-[var(--orange)] w-fit px-3 rounded-full'>{excerpt}</p>
         </div>
       </div>
