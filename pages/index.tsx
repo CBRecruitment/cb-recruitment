@@ -6,6 +6,7 @@ import VideoProfessionals from '../components/Home/VideoProfessionals';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
 import CareerAdvice from '../components/Blog/CareerAdvice/CareerAdvice';
+import Partners from '../components/Home/Partners/Partners';
 
 type Props = {
   allPosts: Post[];
@@ -13,7 +14,7 @@ type Props = {
 
 const Home = ({ allPosts }: Props) => {
   return (
-    <div className=''>
+    <div>
       <Hero />
       <LearnMore />
       <CBRAcademy />

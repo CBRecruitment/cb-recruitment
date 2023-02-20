@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 const LearnMore = () => {
   return (
-    <div className={clsx(' bg-white h-full', styles.shadow)}>
+    <div className={clsx('bg-white', styles.shadow)}>
       <div className={clsx('relative h-[400px] w-[320px] m-auto', styles.container)}>
         <Image
           src='/assets/branding/Woman_with_paper.svg'

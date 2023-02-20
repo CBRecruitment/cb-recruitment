@@ -8,10 +8,10 @@ import Partners from '../Partners/Partners';
 
 const Hero = () => {
   return (
-    <div className='lg:flex lg:flex-col lg:h-screen'>
+    <div className='flex flex-col h-screen'>
       <Nav />
       <div className={clsx('flex-grow', styles.bg)}>
-        <div className='w-[92.5%] m-auto pt-14 py-10'>
+        <div className='w-[92.5%] m-auto pt-14'>
           <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular text-7xl leading-[1.1] lg:w-[10%] lg:text-8xl'>
             Making Web3 Work
           </h1>
