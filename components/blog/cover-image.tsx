@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../Home/CareerAdvice/CareerAdvice.module.css';
+import styles from '../Blog/CareerAdvice/CareerAdvice.module.css';
 import clsx from 'clsx';
 
 type Props = {
