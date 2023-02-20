@@ -1,28 +1,50 @@
+import { useEffect, useState } from 'react';
+
 const jobs = [
-    'Blockchain Architect',
-    'Solutions Engineer',
-    'Front End Dev',
-    'Algo Trader',
-    'Community Manager',
-    '3D Artist',
+  'Blockchain Architect',
+  'Solutions Engineer',
+  'Front End Dev',
+  'Algo Trader',
+  'Community Manager',
+  '3D Artist',
 ];
 
+const jobs2 = ['Marketing Manager', 'Senior Developer', 'Investor Relations'];
+
 const JobOpenings = () => {
-    return (
-        <div className='text-[14px] w-[320px] pb-10 m-auto flex justify-center'>
-            <div className='grid grid-cols-2 gap-2'>
-                {jobs.map((job, idx) => (
-                    <div className='w-full py-1' key={idx}>
-                        <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
-                            <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
-                                {job}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+  //   const [mdScreen, setMdScreen] = useState(false);
+
+  //   if (screen.width > 768) {
+  //     setMdScreen(true);
+  //   } else {
+  //     setMdScreen(false);
+  //   }
+
+  return (
+    <div className='text-[14px] w-[320px] md:w-[600px] pb-10 m-auto flex justify-center'>
+      <div className='grid grid-cols-3 gap-2'>
+        {jobs.map((job, idx) => (
+          <div className='w-full py-1' key={idx}>
+            <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
+              <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
+                {job}
+              </p>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+        {/* {mdScreen &&
+          jobs2.map((job, idx) => (
+            <div className='w-full py-1' key={idx}>
+              <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
+                <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
+                  {job}
+                </p>
+              </div>
+            </div>
+          ))} */}
+      </div>
+    </div>
+  );
 };
 
 export default JobOpenings;

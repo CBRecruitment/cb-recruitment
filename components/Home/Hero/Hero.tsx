@@ -4,15 +4,19 @@ import SocialMediaIcons from '../../General/SocialMediaIcons';
 import styles from './Hero.module.css';
 import Nav from '../../Navbar/Nav';
 import clsx from 'clsx';
-import Partners from '../Partners/Partners';
 
 const Hero = () => {
   return (
     <div className='md:flex md:flex-col md:h-screen'>
       <Nav />
       <div className={clsx('md:flex-grow', styles.bg)}>
-        <div className='w-[92.5%] m-auto pt-14'>
-          <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular text-7xl leading-[1.1] lg:w-[10%] lg:text-8xl 2xl:text-9xl 2xl:leading-[1.2]'>
+        <div className={clsx('w-[92.5%] m-auto pt-10', styles.portrait)}>
+          <h1
+            className={clsx(
+              'text-[var(--cream)] w-[30%] text-left Anton-Regular leading-[1.1] text-[80px] md:text-[120px] md:mt-4 lg:mb-14',
+              styles.tablet
+            )}
+          >
             Making Web3 Work
           </h1>
           <HeroSearchBar />
