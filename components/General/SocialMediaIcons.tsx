@@ -4,7 +4,7 @@ import React from 'react';
 
 const SocialMediaIcons = () => {
   return (
-    <div className='flex justify-around w-[90%] mx-auto space-x-5 mt-10 pb-3 sm:w-[60%] sm:mx-0 md:w-[40%] lg:w-[30%] xl:w-[25%] 2xl:w-[20%] opacity-80'>
+    <div className='flex justify-around w-[90%] mx-auto space-x-5 mt-10 pb-10 sm:w-[60%] sm:mx-0 md:w-[40%] lg:w-[30%] xl:w-[25%] 2xl:w-[20%] opacity-80'>
       <Link href='https://t.me/CBR_Jobs' target='_blank'>
         <Image
           className='hover:scale-110 ease-in-out duration-200'

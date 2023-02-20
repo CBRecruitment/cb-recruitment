@@ -8,18 +8,17 @@ import Partners from '../Partners/Partners';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col h-screen'>
+    <div className='md:flex md:flex-col md:h-screen'>
       <Nav />
-      <div className={clsx('flex-grow', styles.bg)}>
+      <div className={clsx('md:flex-grow', styles.bg)}>
         <div className='w-[92.5%] m-auto pt-14'>
-          <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular text-7xl leading-[1.1] lg:w-[10%] lg:text-8xl'>
+          <h1 className='text-[var(--cream)] w-[30%] text-left Anton-Regular text-7xl leading-[1.1] lg:w-[10%] lg:text-8xl 2xl:text-9xl 2xl:leading-[1.2]'>
             Making Web3 Work
           </h1>
           <HeroSearchBar />
           <SocialMediaIcons />
         </div>
       </div>
-      <Partners />
     </div>
   );
 };

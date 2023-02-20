@@ -16,6 +16,7 @@ const Home = ({ allPosts }: Props) => {
   return (
     <div>
       <Hero />
+      <Partners />
       <LearnMore />
       <CBRAcademy />
       <VideoProfessionals />

@@ -13,14 +13,14 @@ const Nav = () => {
   let [open, setOpen] = useState(false);
   return (
     <div className='shadow-md w-full sticky top-0 left-0 z-20'>
-      <div className='md:flex items-center justify-between bg-[var(--gray)] p-2 md:px-10 px-3'>
+      <div className='md:flex items-center justify-between bg-[var(--gray)] p-3 md:px-10 px-3'>
         <Link href='/'>
           <Image
             src={'/assets/branding/cblogo-whitev2.png'}
             alt='CBR Logo'
-            width={70}
-            height={70}
-            className='md:ml-12 lg:ml-20 xl:ml-28'
+            width={75}
+            height={75}
+            className='ml-4 xl:ml-8'
           />
         </Link>
 
