@@ -1,14 +1,11 @@
 import React from 'react';
 import Hero from '../components/Home/Hero/Hero';
 import LearnMore from '../components/Home/LearnMore/LearnMore';
-import Partners from '../components/Home/Partners';
 import CBRAcademy from '../components/Home/CBRAcademy/CBRAcademy';
 import VideoProfessionals from '../components/Home/VideoProfessionals';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
 import CareerAdvice from '../components/Blog/CareerAdvice/CareerAdvice';
-import Footer from '../components/General/Footer/Footer';
-import Nav from '../components/Navbar/Nav';
 
 type Props = {
   allPosts: Post[];
@@ -16,9 +13,8 @@ type Props = {
 
 const Home = ({ allPosts }: Props) => {
   return (
-    <div className='md:flex md:flex-col md:h-screen'>
+    <div className=''>
       <Hero />
-      <Partners />
       <LearnMore />
       <CBRAcademy />
       <VideoProfessionals />

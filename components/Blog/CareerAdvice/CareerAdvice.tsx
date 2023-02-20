@@ -1,5 +1,5 @@
 import type Post from '../../../interfaces/post';
-import CareerAdvicePosts from '../CareerAdvice-Posts';
+import CareerAdvicePosts from './CareerAdvice-Posts';
 import styles from './CareerAdvice.module.css';
 import clsx from 'clsx';
 
