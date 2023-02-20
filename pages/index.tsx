@@ -6,43 +6,36 @@ import CBRAcademy from '../components/Home/CBRAcademy/CBRAcademy';
 import VideoProfessionals from '../components/Home/VideoProfessionals';
 import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
-import CareerAdvice from '../components/Home/CareerAdvice/CareerAdvice';
+import CareerAdvice from '../components/Blog/CareerAdvice/CareerAdvice';
 import Footer from '../components/General/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 
 type Props = {
-    allPosts: Post[];
+  allPosts: Post[];
 };
 
 const Home = ({ allPosts }: Props) => {
-    return (
-        <div className='md:flex md:flex-col md:h-screen'>
-            <Hero />
-            <Partners />
-            <LearnMore />
-            <CBRAcademy />
-            <VideoProfessionals />
-            <CareerAdvice posts={allPosts} />
-            {/* <JobOpeningsHome jobs={searchResults.data} /> */}
-        </div>
-    );
+  return (
+    <div className='md:flex md:flex-col md:h-screen'>
+      <Hero />
+      <Partners />
+      <LearnMore />
+      <CBRAcademy />
+      <VideoProfessionals />
+      <CareerAdvice posts={allPosts} />
+      {/* <JobOpeningsHome jobs={searchResults.data} /> */}
+    </div>
+  );
 };
 
 export default Home;
 
 export const getStaticProps = async () => {
-    const allPosts = getAllPosts([
-        'title',
-        'date',
-        'slug',
-        'author',
-        'coverImage',
-        'excerpt',
-    ]);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
 
-    return {
-        props: { allPosts },
-    };
+  return {
+    props: { allPosts },
+  };
 };
 
 // const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;

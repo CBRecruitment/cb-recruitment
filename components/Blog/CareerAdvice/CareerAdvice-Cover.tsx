@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../Home/CareerAdvice/CareerAdvice.module.css';
+import styles from './CareerAdvice.module.css';
 import clsx from 'clsx';
 
 type Props = {
@@ -9,15 +9,15 @@ type Props = {
   slug?: string;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CareerAdviceCover = ({ title, src, slug }: Props) => {
   const image = (
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={clsx('shadow-sm w-full', styles.card, {
+      className={clsx('shadow-sm', 'w-full', styles.corners, {
         'hover:shadow-lg transition-shadow duration-200': slug,
       })}
-      width={1300}
+      width={700}
       height={630}
     />
   );
@@ -34,4 +34,4 @@ const CoverImage = ({ title, src, slug }: Props) => {
   );
 };
 
-export default CoverImage;
+export default CareerAdviceCover;
