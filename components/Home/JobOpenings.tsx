@@ -9,19 +9,18 @@ const jobs = [
   '3D Artist',
 ];
 
-const jobs2 = ['Marketing Manager', 'Senior Developer', 'Investor Relations'];
+// const jobs2 = [
+//   'Marketing Manager',
+//   'Senior Developer',
+//   'Investor Relations',
+//   'Rust Engineer',
+//   'Smart Contract Dev',
+//   'Chief of Finance',
+// ];
 
 const JobOpenings = () => {
-  //   const [mdScreen, setMdScreen] = useState(false);
-
-  //   if (screen.width > 768) {
-  //     setMdScreen(true);
-  //   } else {
-  //     setMdScreen(false);
-  //   }
-
   return (
-    <div className='text-[14px] w-[320px] md:w-[600px] pb-10 m-auto flex justify-center'>
+    <div className='text-[14px] w-[320px] md:w-[600px] xl:w-[900px] pb-10 xl:pb-24 m-auto flex justify-center'>
       <div className='grid grid-cols-3 gap-2'>
         {jobs.map((job, idx) => (
           <div className='w-full py-1' key={idx}>
@@ -32,16 +31,6 @@ const JobOpenings = () => {
             </div>
           </div>
         ))}
-        {/* {mdScreen &&
-          jobs2.map((job, idx) => (
-            <div className='w-full py-1' key={idx}>
-              <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
-                <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
-                  {job}
-                </p>
-              </div>
-            </div>
-          ))} */}
       </div>
     </div>
   );

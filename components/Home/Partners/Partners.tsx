@@ -5,12 +5,13 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import clsx from 'clsx';
 import styles from './Partners.module.css';
 
-const handleDragStart = (e: { preventDefault: () => any }) => e.preventDefault();
+const handleDragStart = (e: { preventDefault: () => any }) =>
+  e.preventDefault();
 
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1024: { items: 3 },
+  1400: { items: 3 },
 };
 
 const items = [
@@ -18,7 +19,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto'
+    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
     width={90}
     height={90}
   />,
@@ -26,7 +27,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto'
+    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
     width={90}
     height={90}
   />,
@@ -34,7 +35,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto'
+    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
     width={90}
     height={90}
   />,
@@ -43,8 +44,10 @@ const items = [
 const Partners = () => {
   return (
     <div className={clsx('w-full m-auto bg-[var(--cream)]', styles.container)}>
-      <h2 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-5 pb-5'>PARTNERING WITH:</h2>
-      <div className='p-2'>
+      <h2 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-5 pb-5 xl:text-3xl xl:pt-7 xl:pb-7'>
+        PARTNERING WITH:
+      </h2>
+      <div className='p-2 xl:p-8'>
         <AliceCarousel
           mouseTracking
           items={items}
