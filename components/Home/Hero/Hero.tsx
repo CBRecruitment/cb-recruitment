@@ -13,7 +13,7 @@ const Hero = () => {
         <div className={clsx('w-[92.5%] m-auto pt-10', styles.portrait)}>
           <h1
             className={clsx(
-              'text-[var(--cream)] w-[30%] text-left Anton-Regular leading-[1.1] text-[80px] md:text-[110px] md:mt-4 lg:mb-14 xl:w-[20%]',
+              'text-[var(--cream)] w-[30%] text-left Anton-Regular leading-[1.1] text-[80px] md:text-[110px] lg:mb-4 xl:w-[25%]',
               styles.tablet
             )}
           >

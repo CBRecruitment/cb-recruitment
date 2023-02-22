@@ -19,7 +19,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
+    className='w-[90px] m-auto 2xl:w-[110px] 2xl:pb-4'
     width={90}
     height={90}
   />,
@@ -27,7 +27,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
+    className='w-[90px] m-auto 2xl:w-[110px] 2xl:pb-4'
     width={90}
     height={90}
   />,
@@ -35,7 +35,7 @@ const items = [
     src={'/assets/branding/cblogo-whitev2.png'}
     alt={'Partner'}
     onDragStart={handleDragStart}
-    className='w-[90px] m-auto xl:w-[110px] xl:pb-4'
+    className='w-[90px] m-auto 2xl:w-[110px] 2xl:pb-4'
     width={90}
     height={90}
   />,
@@ -44,10 +44,10 @@ const items = [
 const Partners = () => {
   return (
     <div className={clsx('w-full m-auto bg-[var(--cream)]', styles.container)}>
-      <h2 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-5 pb-5 xl:text-3xl xl:pt-7 xl:pb-7'>
+      <h2 className='text-[var(--gray)] text-2xl tracking-wide flex justify-center pt-5 pb-5 2xl:text-3xl 2xl:pt-7 2xl:pb-7'>
         PARTNERING WITH:
       </h2>
-      <div className='p-2 xl:p-8'>
+      <div className='p-2 2xl:p-8'>
         <AliceCarousel
           mouseTracking
           items={items}
