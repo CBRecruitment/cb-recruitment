@@ -25,18 +25,24 @@ const Nav = () => {
         </Link>
 
         {/* Mobile menu button */}
-        <div onClick={() => setOpen(!open)} className='text-3xl absolute right-3 top-4 cursor-pointer md:hidden text-white'>
+        <div
+          onClick={() => setOpen(!open)}
+          className='text-3xl absolute right-3 top-5 cursor-pointer md:hidden text-white'
+        >
           {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
 
         {/* Mobile Menu */}
         <ul
-          className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in bg-[var(--gray)] ${
+          className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in bg-[var(--gray)]  ${
             open ? 'top-[66px] ' : 'top-[-490px]'
           }`}
         >
           {links.map((link) => (
-            <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
+            <li
+              key={link.name}
+              className='md:ml-8 text-xl md:my-0 my-7 hover:underline hover:underline-offset-[10px] hover:text-white'
+            >
               <Link
                 href={link.link}
                 className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px] xl:text-[17px] xl:px-6'
@@ -65,7 +71,10 @@ const Nav = () => {
                 height={40}
               />
             </Link>
-            <Link href='https://www.linkedin.com/company/80659134' target='_blank'>
+            <Link
+              href='https://www.linkedin.com/company/80659134'
+              target='_blank'
+            >
               <Image
                 className='hover:scale-110 ease-in-out duration-200'
                 src={'/assets/branding/linkedin-white.png'}

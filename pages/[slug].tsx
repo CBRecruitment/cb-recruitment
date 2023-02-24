@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Container from '../components/Blog/container';
 import PostBody from '../components/Blog/post-body';
-import Header from '../components/Blog/header';
 import PostHeader from '../components/Blog/post-header';
 import Layout from '../components/Blog/layout';
 import { getPostBySlug, getAllPosts } from '../lib/api';
@@ -37,9 +36,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta property='og:image' content={post.ogImage.url} />
                 <meta property='og:title' content={post.title} />
                 <meta property='og:description' content={post.ogDescription} />
-                <meta property='og:url' content={`https://cbrecruitment.com/${post.slug}/`} />
+                <meta
+                  property='og:url'
+                  content={`https://cbrecruitment.com/${post.slug}/`}
+                />
               </Head>
-              <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
+              <PostHeader
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                author={post.author}
+              />
               <PostBody content={post.content} />
             </article>
           </>

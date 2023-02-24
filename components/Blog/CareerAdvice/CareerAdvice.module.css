@@ -16,5 +16,17 @@
       width: 70%;
     }
 }
+
+@media screen and (min-width: 500px){
+    .posts {
+      width: 90%;
+    }
+}
+  
+@media screen and (min-width: 1280px){
+    .posts {
+      width: 85%;
+    }
+}
   
   

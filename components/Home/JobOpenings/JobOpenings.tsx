@@ -9,23 +9,23 @@ const jobs = [
   '3D Artist',
 ];
 
-// const jobs2 = [
-//   'Marketing Manager',
-//   'Senior Developer',
-//   'Investor Relations',
-//   'Rust Engineer',
-//   'Smart Contract Dev',
-//   'Chief of Finance',
-// ];
+const jobs2 = [
+  'Marketing Manager',
+  'Senior Developer',
+  'Investor Relations',
+  'Rust Engineer',
+  'Smart Contract Dev',
+  'Chief of Finance',
+];
 
 const JobOpenings = () => {
   return (
-    <div className='text-[14px] w-[320px] md:w-[600px] xl:w-[900px] pb-10 xl:pb-24 m-auto flex justify-center'>
-      <div className='grid grid-cols-3 gap-2'>
+    <div className='text-[14px] w-[300px] md:w-[600px] xl:w-[900px] pb-10 xl:pb-20 m-auto flex justify-center xl:pt-2'>
+      <div className='grid grid-cols-3 gap-2 xl:gap-x-8'>
         {jobs.map((job, idx) => (
-          <div className='w-full py-1' key={idx}>
-            <div className='border-2 border-white rounded-lg p-1 text-center w-full'>
-              <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm'>
+          <div className='w-full py-1 xl:py-2' key={idx}>
+            <div className='border-2 border-white rounded-lg p-1 xl:p-3 text-center w-full'>
+              <p className='text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm xl:text-xl'>
                 {job}
               </p>
             </div>

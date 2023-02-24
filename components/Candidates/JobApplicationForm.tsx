@@ -5,7 +5,7 @@ const JobApplicationForm = ({ id }: any) => {
   const [course, setCourse] = useState('');
 
   return (
-    <div className='w-full mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5'>
+    <div className='w-[120%] mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5'>
       <form
         className='flex flex-col w-[90%] mx-auto'
         action='/api/jobapplicationform'
@@ -13,7 +13,9 @@ const JobApplicationForm = ({ id }: any) => {
         encType='multipart/form-data'
       >
         <input type='hidden' name='id' value={id} />
-        <h1 className='text-2xl mb-3 flex justify-center text-[var(--orange)]'>Job Application Form</h1>
+        <h1 className='text-2xl mb-3 flex justify-center text-[var(--orange)]'>
+          Job Application Form
+        </h1>
         <fieldset className='p-2 min-w-full text-left mb-1 block'>
           <label htmlFor='firstname'>
             <p className='mb-2'>First name</p>
@@ -88,15 +90,29 @@ const JobApplicationForm = ({ id }: any) => {
         </fieldset>
         {source === 'Lunar Strategies' ? (
           <fieldset className='p-2 min-w-full text-left mb-2'>
-            <p className='mb-2'>Have you completed the Lunar Academy Web3 Marketing Course?</p>
+            <p className='mb-2'>
+              Have you completed the Lunar Academy Web3 Marketing Course?
+            </p>
 
             <label>
-              <input type='radio' name='radio' value='yes' className='ml-4' onChange={(e) => setCourse(e.target.value)} />
+              <input
+                type='radio'
+                name='radio'
+                value='yes'
+                className='ml-4'
+                onChange={(e) => setCourse(e.target.value)}
+              />
               Yes
             </label>
 
             <label>
-              <input type='radio' name='radio' value='no' className='ml-4' onChange={(e) => setCourse(e.target.value)} />
+              <input
+                type='radio'
+                name='radio'
+                value='no'
+                className='ml-4'
+                onChange={(e) => setCourse(e.target.value)}
+              />
               No
             </label>
           </fieldset>
@@ -106,7 +122,13 @@ const JobApplicationForm = ({ id }: any) => {
         <fieldset className='p-2 min-w-full text-left mb-2'>
           <label htmlFor='cv'>
             <p className='mb-3'>Upload CV</p>
-            <input type='file' id='cv' name='cv' required className='font-normal w-full pl-4' />
+            <input
+              type='file'
+              id='cv'
+              name='cv'
+              required
+              className='font-normal w-full pl-4'
+            />
           </label>
         </fieldset>
         {course == 'yes' ? (

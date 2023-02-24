@@ -4,9 +4,10 @@ import Image from 'next/image';
 import { Job } from '../../interfaces/types';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import { useRouter } from 'next/router';
-import JobOpeningsHome from '../Home/JobOpenings';
+import JobOpeningsHome from '../Home/JobOpenings/JobOpenings';
 import JobSearch from './JobSearch';
 import Pagination from './Pagination';
+import Navbar from '../Navbar/Nav';
 
 type Props = {
   jobs: Job[];
@@ -23,15 +24,15 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
   const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div>
+    <>
       <JobSearch />
       <div className='bg-[var(--gray)] relative'>
         <div className='pt-12'>
           <JobOpeningsHome />
         </div>
-        <h2 className='bg-[var(--cream)] rounded-full m-auto w-fit px-[2rem] py-[0.2rem] text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-8'>
+        <h1 className='bg-[var(--cream)] rounded-full m-auto w-fit px-8 md:px-10 py-1 md:py-3 text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-10'>
           JOB OPENINGS
-        </h2>
+        </h1>
         <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%] mb-6'>
           {currentPosts?.map((job) => {
             const categories = job.categories.data;
@@ -46,7 +47,9 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                       height={20}
                       className='mx-auto'
                     />
-                    <h3 className='text-md text-[#f2ad11] pt-2 pb-2 overflow-hidden text-ellipsis w-full'>{job.title}</h3>
+                    <h3 className='text-md text-[#f2ad11] pt-2 pb-2 overflow-hidden text-ellipsis w-full'>
+                      {job.title}
+                    </h3>
                     <div className='flex flex-col w-[90%] space-y-1'>
                       <span className='text-[12px] font-semibold bg-[#f2ad11] border-2 p-1 w-full rounded-sm '>
                         {job.customText15}
@@ -68,24 +71,24 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
         </div>
         <div className='flex justify-center items-center'>
           <button
-            className='md:fixed md:bottom-[100px] md:w-full'
+            className=''
             onClick={() => {
               router.push(`/candidates`);
             }}
           >
-            <KeyboardReturnIcon className='text-[40px] text-[var(--orange)]' />
+            <KeyboardReturnIcon className='text-[40px] text-[var(--orange)] hover:text-white' />
           </button>
         </div>
-        <footer className='pb-10 md:fixed md:bottom-0 md:w-full md:mb-10'>
+        <div className='pb-10 text-white'>
           <Pagination
             totalPosts={jobs?.length}
             postsPerPage={postsPerPage}
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
           ></Pagination>
-        </footer>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -39,4 +39,78 @@
       right: 60px;
     }
 }
-  
+
+@media screen and (min-width: 1280px) {
+  .main_container {
+    padding-bottom: 20px;
+  }
+
+  .container {
+    width: 1000px;
+    height: 1300px;
+  }
+
+  .lady {
+    width: 375px;
+    right: 110px;
+    top: 90px;
+  }
+
+  .text_container {
+    left: 80px;
+    top: 10px;
+  }
+
+  .text {
+    font-size: 23px;
+    top: 160px;
+    width: 300px;
+    line-height: normal;
+  }
+
+  .case {
+    right: 260px;
+    top: 200px;
+    width: 55px;
+  }
+
+  .paper {
+    right: 50px;
+    top: 300px;
+    width: 80px;
+  }
+
+  .dotted_curved_line {
+    width: 400px;
+    top: 450px;
+    right: 150px;
+  }
+
+  .middle_text_container {
+    left: 80px;
+    top: 350px;
+  }
+
+  .bottom_lady {
+    top: 650px;
+    width: 375px;
+    right: 450px;
+  }
+
+  .bottom_text_container {
+    left: 650px;
+    top: 600px;
+  }
+
+  .bottom_text_container2 {
+    left: 80px;
+    top: 900px;
+  }
+
+  .bottom_dotted_curved_line {
+    width: 400px;
+    top: 1000px;
+    right: 120px;
+  }
+
+}

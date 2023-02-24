@@ -12,22 +12,15 @@ const CareerAdvice = ({ posts }: Props) => {
 
   return (
     <div className='flex flex-col justify-center items-center text-[var(--darkgray)]'>
-      <h1 className='Roboto mt-4 tracking-wide text-[16px] font-bold'>CAREER ADVICE</h1>
-      <h2 className='w-[95%] m-auto text-center mt-3 mb-6 text-[13px] tracking-wide'>
+      <h1 className='Roboto mt-4 tracking-wide text-[16px] font-bold xl:text-[25px] xl:mt-8'>
+        CAREER ADVICE
+      </h1>
+      <h2 className='w-[95%] m-auto text-center mt-3 mb-10 text-[13px] tracking-wide xl:text-[20px] xl:mb-10'>
         Short blurb about our blog posts and tips for career advice
       </h2>
       <div
         className={clsx(
-          'grid',
-          'grid-cols-1',
-          'md:grid-cols-2',
-          'lg:grid-cols-3',
-          'md:gap-x-16',
-          'lg:gap-x-32',
-          'gap-y-6',
-          'md:gap-y-32',
-          'mb-16',
-          'px-6',
+          'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-6 md:gap-y-32 mb-16 px-6',
           styles.posts
         )}
       >

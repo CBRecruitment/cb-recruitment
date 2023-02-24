@@ -7,6 +7,7 @@ import { getAllPosts } from '../lib/api';
 import Post from '../interfaces/post';
 import CareerAdvice from '../components/Blog/CareerAdvice/CareerAdvice';
 import Partners from '../components/Home/Partners/Partners';
+import Footer from '../components/General/Footer/Footer';
 
 type Props = {
   allPosts: Post[];
@@ -22,6 +23,7 @@ const Home = ({ allPosts }: Props) => {
       <VideoProfessionals />
       <CareerAdvice posts={allPosts} />
       {/* <JobOpeningsHome jobs={searchResults.data} /> */}
+      <Footer />
     </div>
   );
 };

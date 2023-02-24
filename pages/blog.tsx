@@ -6,6 +6,7 @@ import Layout from '../components/Blog/layout';
 import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
 import Post from '../interfaces/post';
+import Navbar from '../components/Navbar/Nav';
 
 type Props = {
   allPosts: Post[];
@@ -14,12 +15,14 @@ type Props = {
 export default function Blog({ allPosts }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+
   return (
     <div className='bg-[var(--cream)]'>
       <Layout>
         <Head>
           <title>{`Read Up-To-Date Content on Everything Crypto`}</title>
         </Head>
+        {/* <Navbar /> */}
         <Container>
           <Intro />
           {heroPost && (
@@ -40,7 +43,14 @@ export default function Blog({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ]);
 
   return {
     props: { allPosts },

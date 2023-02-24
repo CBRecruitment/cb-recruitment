@@ -1,7 +1,9 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import JobApplicationForm from '../../components/Candidates/JobApplicationForm';
-import Nav from '../../components/Navbar/Nav';
+import Navbar from '../../components/Navbar/Nav';
+import Footer from '../../components/General/Footer/Footer';
+
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
 
@@ -18,12 +20,13 @@ const job = (props: any) => {
   const data = props.data;
   const jobData = data.data;
   const skills = jobData.skills.data;
+
   return (
-    <div className='flex flex-col h-screen'>
-      <Nav />
-      <div className='bg-[var(--darkgray)] flex-grow'>
-        <div className='text-white flex flex-col w-[90%] mx-auto'>
-          <div key={jobData.id}>
+    <div className='flex flex-col  h-screen pt-10'>
+      <Navbar />
+      <div className='bg-[var(--darkgray)] flex-grow pb-10'>
+        <div className='text-white flex flex-col xl:flex-row w-[90%] mx-auto'>
+          <div key={jobData.id} className='xl:w-[50%]'>
             <div className='flex flex-col pt-8 pb-2'>
               <p className='text-2xl text-[var(--orange)]'>{jobData.title}</p>
               <p className=''>{jobData.categories?.data[0]?.name}</p>
@@ -50,19 +53,20 @@ const job = (props: any) => {
                 ))}
               </div>
               <div
-                className='text-white mt-10'
+                className='text-white mt-10 Roboto-Bold space-y-2'
                 dangerouslySetInnerHTML={{
                   __html: jobData?.description,
                 }}
               />
             </div>
           </div>
-          <div className='mt-10'>
+          <div className='mt-10 mx-auto'>
             <JobApplicationForm id={props.id} />
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <hr />
+      <Footer />
     </div>
   );
 };

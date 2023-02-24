@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar/Nav';
 const ThankYou = () => {
   return (
     <div className='flex flex-col h-screen'>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className='flex justify-center bg-[var(--darkgray)] h-full'>
         <h1 className='flex items-center text-[var(--orange)] text-4xl'>
           Your application was successful, thank you for applying!

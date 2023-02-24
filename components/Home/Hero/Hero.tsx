@@ -2,8 +2,8 @@ import React from 'react';
 import HeroSearchBar from './HeroSearchBar';
 import SocialMediaIcons from '../../General/SocialMediaIcons';
 import styles from './Hero.module.css';
-import Nav from '../../Navbar/Nav';
 import clsx from 'clsx';
+import Nav from '../../Navbar/Nav';
 
 const Hero = () => {
   return (
