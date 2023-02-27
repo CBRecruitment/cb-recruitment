@@ -92,14 +92,14 @@
   }
 
   .bottom_lady {
-    top: 650px;
+    top: 675px;
     width: 375px;
     right: 450px;
   }
 
   .bottom_text_container {
-    left: 650px;
-    top: 600px;
+    left: 675px;
+    top: 650px;
   }
 
   .bottom_text_container2 {
@@ -113,4 +113,18 @@
     right: 120px;
   }
 
+}
+
+@media screen and (min-width: 1536px) {
+  .container {
+    width: 1050px;
+  }
+
+  .bottom_lady {
+    right: 480px;
+  }
+
+  .bottom_text_container {
+    left: 700px;
+  }
 }

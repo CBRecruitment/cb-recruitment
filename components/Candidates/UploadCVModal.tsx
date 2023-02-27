@@ -5,7 +5,7 @@ const UploadCVModal = () => {
   return (
     <>
       <button
-        className='bg-[var(--orange)] text-black font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-fit w-fit'
+        // className='bg-[var(--orange)] text-black font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-fit w-fit'
         type='button'
         onClick={() => setShowModal(true)}
       >
@@ -17,9 +17,16 @@ const UploadCVModal = () => {
             <div className='relative w-auto my-6 mx-auto max-w-xl'>
               <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-[var(--darkgray)] outline-none focus:outline-none'>
                 <div className='flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t '>
-                  <h3 className='text-3xl font-semibold text-white'>Upload your CV</h3>
-                  <button className='bg-transparent border-0 text-white float-right' onClick={() => setShowModal(false)}>
-                    <span className='text-black opacity-7 h-7 w-7 rounded-sm text-xl block bg-[var(--orange)]'>x</span>
+                  <h3 className='text-3xl font-semibold text-white'>
+                    Upload your CV
+                  </h3>
+                  <button
+                    className='bg-transparent border-0 text-white float-right'
+                    onClick={() => setShowModal(false)}
+                  >
+                    <span className='text-black opacity-7 h-7 w-7 rounded-sm text-xl block bg-[var(--orange)]'>
+                      x
+                    </span>
                   </button>
                 </div>
 
@@ -30,7 +37,10 @@ const UploadCVModal = () => {
                     method='post'
                     // encType='multipart/form-data'
                   >
-                    <label htmlFor='fullname' className='block text-sm font-bold mb-2'>
+                    <label
+                      htmlFor='fullname'
+                      className='block text-sm font-bold mb-2 '
+                    >
                       Full Name
                       <input
                         type='text'
@@ -40,7 +50,10 @@ const UploadCVModal = () => {
                         className='shadow appearance-none border rounded w-full py-1 px-1 mt-1 text-black'
                       />
                     </label>
-                    <label htmlFor='email' className='block text-sm font-bold mb-2'>
+                    <label
+                      htmlFor='email'
+                      className='block text-sm font-bold mb-2'
+                    >
                       Email Address
                       <input
                         type='text'
@@ -50,7 +63,10 @@ const UploadCVModal = () => {
                         className='shadow appearance-none border rounded w-full py-1 px-1 mt-1 text-black'
                       />
                     </label>
-                    <label htmlFor='message' className='block text-sm font-bold mb-2'>
+                    <label
+                      htmlFor='message'
+                      className='block text-sm font-bold mb-2'
+                    >
                       Message
                       <textarea
                         id='message'
@@ -59,9 +75,18 @@ const UploadCVModal = () => {
                         className='shadow appearance-none border rounded w-full py-2 px-1 mt-1 font-normal text-black'
                       />
                     </label>
-                    <label htmlFor='cv' className='block text-sm font-bold mb-2'>
+                    <label
+                      htmlFor='cv'
+                      className='block text-sm font-bold mb-2'
+                    >
                       Upload CV
-                      <input type='file' id='cv' name='cv' required className='font-normal w-full pl-4 mt-2' />
+                      <input
+                        type='file'
+                        id='cv'
+                        name='cv'
+                        required
+                        className='font-normal w-full pl-4 mt-2'
+                      />
                     </label>
                     <button
                       className='border-2 border-white bg-[var(--orange)] text-black rounded-md p-2 w-[60%] mx-auto font-bold mt-8 flex justify-center items-center '

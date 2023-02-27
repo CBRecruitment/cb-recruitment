@@ -3,6 +3,7 @@ import DateFormatter from './date-formatter';
 import CoverImage from './cover-image';
 import Link from 'next/link';
 import type Author from '../../interfaces/author';
+import Header from './header';
 
 type Props = {
   title: string;
@@ -13,7 +14,14 @@ type Props = {
   slug: string;
 };
 
-const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
+const HeroPost = ({
+  title,
+  coverImage,
+  date,
+  excerpt,
+  author,
+  slug,
+}: Props) => {
   return (
     <section>
       <div className='mb-8 md:mb-16'>
@@ -31,7 +39,9 @@ const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => 
           </div>
         </div>
         <div>
-          <p className='text-lg leading-relaxed mb-4'>{excerpt}</p>
+          <p className='text-lg leading-relaxed mb-6 bg-[var(--orange)] w-fit py-1 px-3 rounded-full'>
+            {excerpt}
+          </p>
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>

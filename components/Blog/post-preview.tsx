@@ -13,7 +13,14 @@ type Props = {
   slug: string;
 };
 
-const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
+const PostPreview = ({
+  title,
+  coverImage,
+  date,
+  excerpt,
+  author,
+  slug,
+}: Props) => {
   return (
     <div>
       <div className='mb-5'>
@@ -27,7 +34,9 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) 
       <div className='text-lg mb-4'>
         <DateFormatter dateString={date} />
       </div>
-      <p className='text-md leading-relaxed mb-4 bg-[var(--orange)] w-fit py-1 px-3 rounded-full'>{excerpt}</p>
+      <p className='text-md leading-relaxed mb-4 bg-[var(--orange)] w-fit py-1 px-3 rounded-full'>
+        {excerpt}
+      </p>
       <Avatar name={author.name} picture={author.picture} />
     </div>
   );

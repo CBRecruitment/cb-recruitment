@@ -10,7 +10,7 @@ const Layout = ({ preview, children }: Props) => {
   return (
     <>
       <Meta />
-      <div className='min-h-screen bg-[var(--cream)]'>
+      <div className='min-h-screen bg-white'>
         <main>{children}</main>
       </div>
       <Footer />

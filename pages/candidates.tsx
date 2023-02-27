@@ -2,7 +2,7 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
 import JobOpenings from '../components/Candidates/JobOpenings';
-import Navbar from '../components/Navbar/Nav';
+import Nav from '../components/Navbar/Nav';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (req) => {
 const CandidatesPage = ({ searchResults, searchQuery }: Props) => {
   return (
     <>
-      <Navbar />
+      <Nav />
       <JobOpenings jobs={searchResults.data} searchQuery={searchQuery} />
     </>
   );

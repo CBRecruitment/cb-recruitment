@@ -5,7 +5,7 @@ const JobApplicationForm = ({ id }: any) => {
   const [course, setCourse] = useState('');
 
   return (
-    <div className='w-[120%] mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5'>
+    <div className='w-full mx-auto bg-[var(--gray)] border-white rounded-md border-4 text-white font-medium py-5'>
       <form
         className='flex flex-col w-[90%] mx-auto'
         action='/api/jobapplicationform'
@@ -24,7 +24,7 @@ const JobApplicationForm = ({ id }: any) => {
               id='firstname'
               name='firstname'
               required
-              className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
+              className='px-4 py-2 w-full text-black font-medium rounded-md text-sm'
             />
           </label>
         </fieldset>
@@ -36,7 +36,7 @@ const JobApplicationForm = ({ id }: any) => {
               id='lastname'
               name='lastname'
               required
-              className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
+              className='px-4 py-2 w-full text-black font-medium rounded-md text-sm'
             />
           </label>
         </fieldset>
@@ -48,7 +48,7 @@ const JobApplicationForm = ({ id }: any) => {
               id='email'
               name='email'
               required
-              className='px-4 py-1 w-full text-black font-medium rounded-md text-sm'
+              className='px-4 py-2 w-full text-black font-medium rounded-md text-sm'
             />
           </label>
         </fieldset>
@@ -63,10 +63,10 @@ const JobApplicationForm = ({ id }: any) => {
             />
           </label>
         </fieldset>
-        <fieldset className='p-2 min-w-full text-left mb-1 '>
+        <fieldset className='p-2 min-w-full text-left mb-1'>
           <p className='mb-2'>How did you hear about us?</p>
           <select
-            className='p-2 min-w-full text-black rounded-md text-sm'
+            className='p-2 min-w-full text-black rounded-md text-md'
             onChange={(e) => setSource(e.target.value)}
             name='source'
             required
@@ -127,7 +127,7 @@ const JobApplicationForm = ({ id }: any) => {
               id='cv'
               name='cv'
               required
-              className='font-normal w-full pl-4'
+              className='font-normal w-full pl-2 pt-1'
             />
           </label>
         </fieldset>
@@ -140,7 +140,7 @@ const JobApplicationForm = ({ id }: any) => {
                 id='courseCertificate'
                 name='courseCertificate'
                 required
-                className='font-normal w-full pl-4'
+                className='font-normal w-full pl-2'
               />
             </label>
           </fieldset>
@@ -148,7 +148,7 @@ const JobApplicationForm = ({ id }: any) => {
           ''
         )}
         <button
-          className='border-2 border-black rounded-md p-2 w-[80%] mx-auto font-bold mt-4 bg-[var(--orange)] hover:text-black'
+          className='border-2 border-black rounded-md p-2 w-[95%] mx-auto font-bold mt-4 bg-[var(--orange)] hover:text-black'
           type='submit'
         >
           Send Application

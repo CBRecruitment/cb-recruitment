@@ -9,6 +9,7 @@ import Head from 'next/head';
 import markdownToHtml from '../lib/markdownToHtml';
 import type PostType from '../interfaces/post';
 import PostTitle from '../components/Blog/post-title';
+import Nav from '../components/Navbar/Nav';
 
 type Props = {
   post: PostType;
@@ -23,6 +24,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
   return (
     <Layout preview={preview}>
+      <Nav />
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>

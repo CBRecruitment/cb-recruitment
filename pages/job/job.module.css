@@ -1,0 +1,13 @@
+/*******************
+        JOB
+********************/
+.jobdescription ul {
+ list-style-type: disc;
+ margin-left: 2rem;
+}
+
+.jobdescription strong {
+  color: var(--orange);
+  padding-right: 0.5rem;
+
+}

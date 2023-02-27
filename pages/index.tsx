@@ -22,7 +22,6 @@ const Home = ({ allPosts }: Props) => {
       <CBRAcademy />
       <VideoProfessionals />
       <CareerAdvice posts={allPosts} />
-      {/* <JobOpeningsHome jobs={searchResults.data} /> */}
       <Footer />
     </div>
   );
@@ -44,6 +43,10 @@ export const getStaticProps = async () => {
     props: { allPosts },
   };
 };
+
+{
+  /* <JobOpeningsHome jobs={searchResults.data} /> */
+}
 
 // const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 // const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;

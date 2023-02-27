@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import JobOpeningsHome from '../Home/JobOpenings/JobOpenings';
 import JobSearch from './JobSearch';
 import Pagination from './Pagination';
-import Navbar from '../Navbar/Nav';
 
 type Props = {
   jobs: Job[];
@@ -30,10 +29,10 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
         <div className='pt-12'>
           <JobOpeningsHome />
         </div>
-        <h1 className='bg-[var(--cream)] rounded-full m-auto w-fit px-8 md:px-10 py-1 md:py-3 text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-10'>
+        <h2 className='bg-[var(--cream)] rounded-full m-auto w-fit px-8 md:px-10 py-1 md:py-3 text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-10 xl:mb-16 relative 2xl:bottom-[30px]'>
           JOB OPENINGS
-        </h1>
-        <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:w-[60%] mb-6'>
+        </h2>
+        <div className='m-auto grid grid-cols-1 gap-y-6 gap-x-6 w-[90%] sm:grid-cols-2 lg:grid-cols-3 xl:w-[80%] 2xl:grid-cols-4 mb-6'>
           {currentPosts?.map((job) => {
             const categories = job.categories.data;
             return (
