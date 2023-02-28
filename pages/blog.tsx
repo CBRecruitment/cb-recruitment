@@ -17,7 +17,7 @@ export default function Blog({ allPosts }: Props) {
   const morePosts = allPosts.slice(1);
 
   return (
-    <div className='bg-white'>
+    <div className='bg'>
       <Nav />
       <Layout>
         <Head>

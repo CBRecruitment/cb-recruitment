@@ -22,18 +22,18 @@
 ********************/
 
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   @media screen and (orientation: portrait) {
-    /* .portrait {
+    .portrait {
       padding-top: 4em;
-    } */
+    }
     .tablet {
       font-size: 110px;
       line-height: 1.2;
       margin-bottom: 0.5em;
     }
   }
-}
+} */
 
 
 

@@ -7,9 +7,7 @@ import JobOpenings from '../JobOpenings/JobOpenings';
 
 const CBRAcademy = () => {
   return (
-    <div
-      className={clsx('bg-[var(--gray)] pt-10 relative', styles.main_container)}
-    >
+    <div className={clsx('bg pt-10 relative', styles.main_container)}>
       <JobOpenings />
       <JobOpeningsBar />
       <div className='bg-[var(--yellow)]'>

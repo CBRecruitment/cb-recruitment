@@ -3,6 +3,8 @@ import { BsPerson } from 'react-icons/bs';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { useState } from 'react';
 import UploadCVModal from '../Candidates/UploadCVModal';
+import styles from './Authentication.module.css';
+import clsx from 'clsx';
 
 export default function Authentication() {
   const [open, setOpen] = useState(false);
@@ -13,21 +15,29 @@ export default function Authentication() {
 
   if (user) {
     return (
-      <div className='hidden md:flex'>
+      <div className='hidden md:flex '>
         <div className=' text-white cursor-pointer w-32 flex justify-evenly items-center'>
           <BsPerson size={25} />
-          <p className='capitalize text-[var(--orange)] text-lg'>
-            {user.nickname}
-          </p>
+          <p className='text-[var(--orange)] text-lg'>{user?.name}</p>
           <div onClick={() => setOpen(!open)} className='text-white'>
             {open ? <FiChevronUp size={25} /> : <FiChevronDown size={25} />}
           </div>
           {open && (
-            <div className='absolute'>
-              <ul className='flex flex-col items-center pb-0 absolute z-auto pl-0 bg-[var(--gray)] top-[35px] w-[250px] h-fit right-[-52px] rounded-b-sm'>
-                <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
-                  Profile
-                </li>
+            <div className='absolute '>
+              <ul
+                className={clsx(
+                  'flex flex-col items-center pb-0 absolute z-auto pl-0 bg-[var(--gray)] top-[35px] w-[250px] h-fit right-[-52px] rounded-b-lg',
+                  styles.shadow
+                )}
+              >
+                <a
+                  className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'
+                  href='/profile'
+                >
+                  <li>
+                    <button>Profile</button>
+                  </li>
+                </a>
                 <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   <UploadCVModal />
                 </li>
@@ -37,7 +47,7 @@ export default function Authentication() {
                 <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   Saved jobs
                 </li>
-                <li className='w-full p-3 pl-3 hover:bg-[#4f5961]'>
+                <li className='w-full p-3 pl-3 hover:bg-[#4f5961] hover:rounded-b-lg'>
                   <a href='/api/auth/logout'>
                     <button>Logout</button>
                   </a>

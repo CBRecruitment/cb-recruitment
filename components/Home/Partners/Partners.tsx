@@ -49,7 +49,6 @@ const Partners = () => {
       </h2>
       <div className='p-2 2xl:p-8'>
         {/* <AliceCarousel
-          mouseTracking
           items={items}
           responsive={responsive}
           controlsStrategy='alternate'

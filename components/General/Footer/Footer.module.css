@@ -2,16 +2,6 @@
       FOOTER
 ********************/
 
-@media screen and (max-width: 640px) {
-    .bg {
-        background: url('/assets/branding/Footer-mobile.jpg');
-        background-repeat: no-repeat;
-        background-position: center; 
-        background-attachment: center;
-    }
-}
-
-
 .newsletter_shadow {
     -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
     -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
