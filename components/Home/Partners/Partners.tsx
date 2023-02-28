@@ -48,7 +48,7 @@ const Partners = () => {
         PARTNERING WITH:
       </h2>
       <div className='p-2 2xl:p-8'>
-        <AliceCarousel
+        {/* <AliceCarousel
           mouseTracking
           items={items}
           responsive={responsive}
@@ -57,7 +57,7 @@ const Partners = () => {
           infinite
           autoPlay
           animationDuration={3200}
-        />
+        /> */}
       </div>
     </div>
   );
