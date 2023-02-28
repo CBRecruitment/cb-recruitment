@@ -24,20 +24,20 @@ export default function Authentication() {
           </div>
           {open && (
             <div className='absolute'>
-              <ul className='flex flex-col items-center pb-0 absolute z-auto pl-0 bg-[var(--gray)] top-[39px] w-[200px] h-fit right-[-52px] rounded-b-sm'>
-                <li className='w-full border-b-2 p-2 pl-3 hover:bg-[#4f5961]'>
+              <ul className='flex flex-col items-center pb-0 absolute z-auto pl-0 bg-[var(--gray)] top-[35px] w-[250px] h-fit right-[-52px] rounded-b-sm'>
+                <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   Profile
                 </li>
-                <li className='w-full border-b-2 p-2 pl-3 hover:bg-[#4f5961]'>
+                <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   <UploadCVModal />
                 </li>
-                <li className='w-full border-b-2 p-2 pl-3 hover:bg-[#4f5961]'>
+                <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   Post a job
                 </li>
-                <li className='w-full border-b-2 p-2 pl-3 hover:bg-[#4f5961]'>
+                <li className='w-full border-b-2 p-3 pl-3 hover:bg-[#4f5961]'>
                   Saved jobs
                 </li>
-                <li className='w-full p-2 pl-3 hover:bg-[#4f5961]'>
+                <li className='w-full p-3 pl-3 hover:bg-[#4f5961]'>
                   <a href='/api/auth/logout'>
                     <button>Logout</button>
                   </a>

@@ -5,13 +5,13 @@ import Nav from '../components/Navbar/Nav';
 
 const CompaniesPage = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col h-screen'>
       <Nav />
       <div className='bg-[var(--darkgray)] pt-10 mx-auto flex-grow'>
         <h1 className='text-3xl text-[var(--orange)] text-center mb-6 px-5'>
           Access top Talent in the Web3 Space
         </h1>
-        <main className='space-y-10 px-10 mb-10 text-center text-white xl:px-44'>
+        <main className='space-y-10 px-10 mb-10 text-center text-white xl:px-72 2xl:px-96'>
           <p>
             Made up of a team with over 40 years' experience in recruitment, we
             are committed to becoming the industry's most trusted recruiter. Our
@@ -43,12 +43,11 @@ const CompaniesPage = () => {
             process is unparalleled.
           </p>
         </main>
-        <button className='flex justify-center items-center pb-10 mx-auto'>
-          <UploadCVModal />
-        </button>
-        <hr />
       </div>
-      <Footer />
+      <hr />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -2,30 +2,18 @@
       FOOTER
 ********************/
 
+@media screen and (max-width: 640px) {
+    .bg {
+        background: url('/assets/branding/Footer-mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-attachment: center;
+    }
+}
+
+
 .newsletter_shadow {
     -webkit-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
     -moz-box-shadow: inset 0px 137px 120px -182px rgba(0, 0, 0, 0.502);
     box-shadow: inset 0px 137px 20px -136px rgba(0, 0, 0, 0.502);
-}
-
-.vl_1 {
-    position: relative;
-    width: fit-content;
-    border-left: 2px solid white;
-    margin-top: 4em;
-    bottom: 25px;
-    left: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.vl_2 {
-    position: relative;
-    width: fit-content;
-    border-left: 2px solid white;
-    margin-top: 4em;
-    bottom: 25px;
-    left: 0px;
-    margin-left: auto;
-    margin-right: auto;
 }
