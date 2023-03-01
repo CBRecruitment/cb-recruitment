@@ -26,7 +26,7 @@ export default function Authentication() {
             <div className='absolute '>
               <ul
                 className={clsx(
-                  'flex flex-col items-center pb-0 absolute z-auto pl-0 bg-[var(--gray)] top-[35px] w-[250px] h-fit right-[-52px] rounded-b-lg',
+                  'flex flex-col items-center pb-0 absolute z-auto pl-0 bg top-[35px] w-[250px] h-fit right-[-52px] rounded-b-lg',
                   styles.shadow
                 )}
               >

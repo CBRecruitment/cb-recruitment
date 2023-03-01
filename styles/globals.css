@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 .bg {
-  background: url('/assets/branding/Footer-bg.jpg');
+  background: url('/assets/branding/blackbg.jpg');
   background-repeat: repeat;
-  background-position:center;
+  background-position: center;
+}
+
+.gray_bg {
+  background: url('/assets/branding/graybg.jpg');
+  background-repeat: repeat;
+  background-position: center;
 }
 
 /*******************
@@ -167,13 +173,13 @@ body {
   justify-content: center;
   margin-top: 2rem;
   padding-top: 1em;
-  width: 80%; 
+  width: fit-content;
   margin: 0 auto;
 }
 
 .pagination button {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   font-weight: 400;
   font-size: 16px;
   margin: 0 10px 10px;

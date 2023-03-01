@@ -6,11 +6,15 @@ const JobSearchBar = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    router.push(`candidates/?search=${search}`);
+    if (search === '') {
+      router.push(`/candidates`);
+    } else {
+      router.push(`candidates/?search=${search}`);
+    }
   };
 
   return (
-    <div className='flex flex-col mx-auto bg-[var(--gray)] rounded-2xl p-4 mt-4 sm:w-[80%] md:w-[70%] xl:w-[50%]'>
+    <div className='flex flex-col mx-auto bg rounded-2xl p-4 mt-4 sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
       <span className='text-white mb-2 font-bold text-xl'>
         Find a job you'll love
       </span>
@@ -19,7 +23,7 @@ const JobSearchBar = () => {
         onSubmit={handleSubmit}
       >
         <input
-          className='rounded-lg pl-3 p-[0.75rem] sm:w-[65%]'
+          className='rounded-lg pl-3 p-[0.75rem] sm:w-[67%]'
           placeholder='e.g "Full Stack Developer"'
           value={search}
           onChange={(e) => setSearch(e.target.value)}

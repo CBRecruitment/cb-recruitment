@@ -21,7 +21,7 @@ const Nav = () => {
 
   return (
     <div className='shadow-md w-full sticky top-0 left-0 z-20 border-b-[1px]'>
-      <div className='md:flex items-center justify-between bg-[var(--gray)] p-2 md:px-10 px-3'>
+      <div className='md:flex items-center justify-between bg p-2 md:px-10 px-3'>
         <Link href='/'>
           <Image
             src={'/assets/branding/cblogo-whitev2.png'}
@@ -43,7 +43,7 @@ const Nav = () => {
         {/* Mobile Menu */}
         <div className='flex flex-row'>
           <ul
-            className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto pl-9 transition-all duration-500 ease-in bg-[var(--gray)] justify-center ${
+            className={`sm:pl-14 md:flex md:items-center md:pb-0 pb-12 absolute md:static bg md:z-auto z-[-1] left-0 w-full md:w-auto pl-9 transition-all duration-500 ease-in justify-center ${
               open ? 'top-[69px] ' : 'top-[-490px]'
             }`}
           >

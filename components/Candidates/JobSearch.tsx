@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './Candidates.module.css';
 import clsx from 'clsx';
 import JobSearchBar from './JobSearchBar';
@@ -9,9 +8,25 @@ const JobSearch = () => {
   return (
     <div className={clsx('relative', 'h-full', styles.bg)}>
       <div className='w-[90%] py-10 m-auto pt-2'>
-        <div className='pb-1'>
+        <div className='py-10'>
           <JobSearchBar />
-          <div className='flex justify-around w-[90%] mx-auto space-x-5 mt-8 sm:w-[70%] md:w-[60%] lg:w-[50%] opacity-80'>
+        </div>
+      </div>
+      <Image
+        src='/assets/branding/coloured_bar_1536.jpg'
+        className='absolute bottom-0 h-[25px] w-full'
+        alt='Coloured band'
+        width={'1536'}
+        height={0}
+      />
+    </div>
+  );
+};
+
+export default JobSearch;
+
+{
+  /* <div className='flex justify-around w-[90%] mx-auto space-x-5 mt-8 sm:w-[70%] md:w-[60%] lg:w-[50%] opacity-80'>
             <Link href='https://t.me/CBR_Jobs' target='_blank'>
               <Image
                 className=''
@@ -51,27 +66,17 @@ const JobSearch = () => {
                 height={45}
               />
             </Link>
-          </div>
-        </div>
-      </div>
-      <Image
-        src='/assets/branding/coloured_band.png'
-        className='relative bottom-0 w-full'
-        alt='Coloured band'
-        width={100}
-        height={25}
-      />
-      <div className='flex justify-center'>
+          </div> */
+}
+
+{
+  /* <div className='flex justify-center md:hidden'>
         <Image
           src='/assets/branding/elipse-button_with_arrow.png'
-          className='absolute top-[285px] z-10 sm:top-[235px]'
+          className='absolute top-[265px] z-10 sm:top-[235px]'
           alt='Orange down arrow logo'
-          width={90}
+          width={80}
           height={90}
         />
-      </div>
-    </div>
-  );
-};
-
-export default JobSearch;
+      </div> */
+}

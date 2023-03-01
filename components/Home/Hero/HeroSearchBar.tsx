@@ -10,7 +10,7 @@ const HeroSearchBar = () => {
   };
 
   return (
-    <div className='flex flex-col mx-auto bg-[var(--gray)] rounded-2xl p-4 mt-4 sm:w-[60%] sm:mx-0 md:w-[50%] lg:w-[40%] xl:w-[30%]'>
+    <div className='flex flex-col mx-auto bg rounded-2xl p-4 mt-4 sm:w-[60%] sm:mx-0 md:w-[50%] lg:w-[40%] xl:w-[30%]'>
       <span className='text-white mb-2 font-bold text-xl'>
         Find a job you'll love
       </span>

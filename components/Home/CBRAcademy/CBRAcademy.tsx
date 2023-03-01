@@ -159,9 +159,9 @@ const CBRAcademy = () => {
           </div>
         </div>
         <Image
-          src='/assets/branding/coloured_band.png'
+          src='/assets/branding/coloured_bar_1536.jpg'
           alt='Coloured band'
-          width={'450'}
+          width={'1536'}
           height={'0'}
           className='absolute bottom-0 h-[25px] w-full'
         />

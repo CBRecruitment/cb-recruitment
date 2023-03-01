@@ -7,7 +7,7 @@ const CompaniesPage = () => {
   return (
     <div className='flex flex-col h-screen'>
       <Nav />
-      <div className='bg-[var(--darkgray)] pt-10 mx-auto flex-grow'>
+      <div className='gray_bg pt-10 mx-auto flex-grow'>
         <h1 className='text-3xl text-[var(--orange)] text-center mb-6 px-5'>
           Access top Talent in the Web3 Space
         </h1>
