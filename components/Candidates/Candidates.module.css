@@ -1,6 +1,8 @@
 /*******************
       CANDIDATES
 ********************/
+@tailwind components;
+
 
 .bg {
     background: url('/assets/branding/candidates_bg.png');
@@ -16,4 +18,13 @@
             background-attachment: center; 
             background-repeat: no-repeat;
       } 
+}
+
+/*******************
+    JOB OPENINGS
+********************/
+@layer components {
+      .jobdetails {
+            @apply font-semibold bg-[var(--orange)] text-[11px] mt-2 border-[1px] p-[0.3rem] w-fit rounded-sm whitespace-nowrap text-ellipsis overflow-hidden md:text-center md:justify-center md:text-[12px]
+      }
 }

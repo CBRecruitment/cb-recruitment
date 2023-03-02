@@ -1,22 +1,24 @@
 import { Input } from '@mui/material';
 import React, { useState } from 'react';
 import { BsSquare, BsCheckSquareFill } from 'react-icons/bs';
-import ContractType from './ContractType/ContractType';
-import EmploymentType from './EmploymentType/EmploymentType';
+import JobCategory from './JobCategory/JobCategory';
 import Salary from './Salary/Salary';
 import styles from './Sidemenu.module.css';
+import Industry from './Industry/Industry';
+import Experience from './Experience/Experience';
+import Skills from './Skills/Skills';
+import Location from './Location/Location';
 
 const Sidemenu = () => {
   const [checked, setChecked] = useState(false);
-  const [open, setOpen] = useState(false);
 
   const handleChange = () => {
     setChecked(!checked);
   };
 
   return (
-    <div className='hidden md:flex  text-white h-full mt-0 p-2'>
-      <form className='w-[250px]'>
+    <div className='flex justify-center text-white h-full mt-0 p-2'>
+      <form className='w-[250px] xsm:w-[350px] md:w-[250px] 2xl:w-[300px]'>
         <h2 className='pb-3 text-xl text-white'>Sort By</h2>
         <section className='flex justify-between'>
           <button className='border w-[46%] text-[17px] p-1 bg-[var(--orange)] rounded-md'>
@@ -45,13 +47,22 @@ const Sidemenu = () => {
             )}
           </label>
         </section>
-        <div className='text-black pt-4'>
-          <EmploymentType />
+        <div className={styles.filters}>
+          <JobCategory />
         </div>
-        <div className='text-black pt-4'>
-          <ContractType />
+        <div className={styles.filters}>
+          <Skills />
         </div>
-        <div className='text-black pt-4'>
+        <div className={styles.filters}>
+          <Industry />
+        </div>
+        <div className={styles.filters}>
+          <Experience />
+        </div>
+        <div className={styles.filters}>
+          <Location />
+        </div>
+        <div className={styles.filters}>
           <Salary />
         </div>
       </form>

@@ -1,0 +1,40 @@
+.container {
+  text-align: left;
+  border-radius: 5px;
+}
+
+.input {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.menu {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto;
+  max-height: 140px;
+  background-color: #fff;
+}
+
+.item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #f3d9bc;
+}
+
+.selected_value {
+  font-size: 20px;
+  color: white;
+}
+
+.tool {
+  color: var(--orange);
+}

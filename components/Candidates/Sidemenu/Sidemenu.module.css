@@ -2,3 +2,8 @@
   border: 1px solid white;
   border-radius: 0.2rem;
 }
+
+.filters {
+  padding-top: 1rem;
+  color: black;
+}

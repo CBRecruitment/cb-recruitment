@@ -7,6 +7,9 @@ import JobSearch from './JobSearch';
 import Pagination from './Pagination';
 import Sidemenu from './Sidemenu/Sidemenu';
 import { BsArrowReturnLeft } from 'react-icons/bs';
+import styles from './Candidates.module.css';
+import clsx from 'clsx';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 type Props = {
   jobs: Job[];
@@ -17,47 +20,108 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(12);
   const router = useRouter();
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleInputClick = (e: any) => {
+    setShowMenu(!showMenu);
+  };
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div>
+    <div className='pb-10'>
       <JobSearch />
-      <div className='gray_bg pt-10 md:px-4 xl:pl-10 flex flex-col h-full'>
-        <div className='flex justify-center md:justify-start'>
-          <Sidemenu />
-          <div className='md:w-full md:pl-4 xl:pl-10 h-full'>
-            <div className='mx-auto gap-y-6 xl:gap-y-10 gap-x-6 mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 relative'>
+      <div className='gray_bg pt-10 flex flex-col h-full w-full'>
+        <div className='md:flex md:space-x-6 md:pl-4'>
+          <div className='flex flex-col justify-center pb-10 md:hidden'>
+            {showMenu && <Sidemenu />}
+            <section className='flex justify-center'>
+              <button
+                onClick={handleInputClick}
+                className='px-10 py-1 bg-[var(--orange)] rounded-lg text-white font-semibold tracking-wider'
+              >
+                FILTER
+              </button>
+            </section>
+          </div>
+          <div className='hidden md:block'>
+            <Sidemenu />
+          </div>
+          <div className='w-[95%] mx-auto'>
+            <div className='grid md:grid-cols-2 md:gap-y-4 md:gap-x-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
               {currentPosts?.map((job) => {
                 const categories = job.categories.data;
+                const skills = job.skills.data.slice(0, 1);
+                const skills2 = job.skills.data.slice(1, 1);
                 return (
                   <Link href={`/job/${job.id}`} key={job.id}>
-                    <div className='flex flex-col justify-center rounded-lg hover:scale-105 ease-in-out duration-300 border border-white bg-[#181717] m-auto items-center min-h-[280px] max-w-[250px] md:w-[210px] 2xl:w-[230px]'>
-                      <div className='flex flex-col justify-center items-center text-center w-[90%] min-h-[260px] space-y-3'>
-                        <Image
-                          src={'/assets/branding/cblogo-whitev2.png'}
-                          alt='CBRecruiment Logo'
-                          width={60}
-                          height={20}
-                          className='mx-auto'
-                        />
-                        <h3 className='text-md text-[#f2ad11] pt-2 pb-2 overflow-hidden text-ellipsis w-full'>
-                          {job.title}
-                        </h3>
-                        <div className='flex flex-col w-[90%] space-y-1'>
-                          <span className='text-[12px] font-semibold bg-[#f2ad11] border-2 p-1 w-full rounded-sm '>
-                            {job.customText15}
-                          </span>
+                    <div className='border border-white rounded-md bg-black flex py-2 sm:py-3 mb-2 md:min-h-[250px] md:w-[220px] md:flex-col md:justify-center md:mx-auto hover:scale-105 hover:ease-in-out hover:duration-300'>
+                      <Image
+                        src={'/assets/branding/cblogo-whitev2.png'}
+                        alt='CBRecruiment Logo'
+                        width={60}
+                        height={0}
+                        className='w-fit h-fit my-auto p-4 md:m-auto md:p-2'
+                      />
+                      <div
+                        className='flex flex-col justify-evenly h-[100px] w-[275px] xsm:w-[320px] sm:w-[450px]
+                       md:min-h-[220px] md:w-[220px] md:mx-auto md:justify-evenly md:text-center'
+                      >
+                        <section className='md:w-[85%] md:mx-auto'>
+                          <h3 className='text-[var(--orange)] sm:text-lg font-medium md:whitespace-nowrap md:overflow-hidden md:text-ellipsis'>
+                            {job.title}
+                          </h3>
                           {categories.map((category) => (
-                            <span className='text-[12px] font-semibold bg-[#f2ad11] mt-2 border-2 p-1 w-full rounded-sm whitespace-nowrap text-ellipsis overflow-hidden'>
+                            <h4
+                              key={category.id}
+                              className='text-sm text-white font-light sm:text-base md:whitespace-nowrap md:overflow-hidden md:text-ellipsis md:w-[80%] md:mx-auto'
+                            >
                               {category.name}
-                            </span>
+                            </h4>
                           ))}
-                          <span className='text-[12px] font-semibold bg-[#f2ad11] mt-2 border-2 p-1 w-full rounded-sm whitespace-nowrap text-ellipsis overflow-hidden'>
-                            {job.customText12}
-                          </span>
+                        </section>
+                        <div className='md:mx-auto'>
+                          <section className='space-x-2 xsm:w-[320px] sm:w-[450px] xsm:flex xsm:items-center md:space-x-0 md:flex md:flex-col md:w-[170px]'>
+                            <span
+                              className={clsx(
+                                'md:min-w-full',
+                                styles.jobdetails
+                              )}
+                            >
+                              {job.customText15}
+                            </span>
+                            {skills.map((skill) => (
+                              <span
+                                key={skill.id}
+                                className={clsx(
+                                  'md:min-w-full',
+                                  styles.jobdetails
+                                )}
+                              >
+                                {skill.name}
+                              </span>
+                            ))}
+                            {skills2.map((skill) => (
+                              <span
+                                className={clsx(
+                                  'hidden sm:inline-flex md:min-w-full',
+                                  styles.jobdetails
+                                )}
+                              >
+                                {skill.name}
+                              </span>
+                            ))}
+                            <span
+                              className={clsx(
+                                'hidden xsm:inline-flex md:min-w-full',
+                                styles.jobdetails
+                              )}
+                            >
+                              {job.customText12}
+                            </span>
+                          </section>
                         </div>
                       </div>
                     </div>
@@ -65,21 +129,19 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                 );
               })}
             </div>
-
-            <div className='flex justify-center items-center mx-auto w-fit'>
-              <button
-                className=''
+            <div className='flex justify-center mt-4'>
+              {/* <button
                 onClick={() => {
                   router.push(`/candidates`);
                 }}
               >
                 <BsArrowReturnLeft
                   className='text-[var(--orange)] hover:text-white'
-                  size={35}
+                  size={40}
                 />
-              </button>
+              </button> */}
             </div>
-            <div className='text-white pb-10'>
+            <div className='text-white'>
               <Pagination
                 totalPosts={jobs?.length}
                 postsPerPage={postsPerPage}
@@ -95,15 +157,6 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
 };
 
 export default JobOpenings;
-
-{
-  /* <div className='pt-8'>
-          <JobOpeningsHome />
-        </div>
-        <h2 className='bg-[var(--cream)] rounded-full m-auto w-fit px-8 md:px-10 py-1 md:py-3 text-[var(--darkgray)] text-[13px] Roboto font-semibold tracking-wide mb-10 xl:mb-16 relative 2xl:bottom-[30px]'>
-          JOB OPENINGS
-        </h2> */
-}
 
 // const [search, setSearch] = useState(searchQuery ?? '');
 

@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next';
 import { Job } from '../interfaces/types';
 import JobOpenings from '../components/Candidates/JobOpenings';
 import Nav from '../components/Navbar/Nav';
+import Footer from '../components/General/Footer/Footer';
 
 const BullhornUrl = process.env.REACT_APP_BULLHORN_URL;
 const BhRestToken = process.env.REACT_APP_BH_REST_TOKEN;
@@ -34,6 +35,7 @@ const CandidatesPage = ({ searchResults, searchQuery }: Props) => {
     <div className='gray_bg'>
       <Nav />
       <JobOpenings jobs={searchResults.data} searchQuery={searchQuery} />
+      <Footer />
     </div>
   );
 };

@@ -42,3 +42,7 @@
 .tool {
   color: var(--orange);
 }
+
+.slider {
+  margin-top: 1em;
+}

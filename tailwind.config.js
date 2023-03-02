@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xsm': '450px'
+      }
+    },
   },
   plugins: [require("tailwindcss-animate"),],
 };
