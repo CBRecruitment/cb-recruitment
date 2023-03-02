@@ -103,7 +103,7 @@ const Nav = () => {
               </Link>
             </div>
           </ul>
-          <Authentication />
+          {/* <Authentication /> */}
         </div>
       </div>
     </div>
