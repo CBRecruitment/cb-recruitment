@@ -7,10 +7,10 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  const { user, error, isLoading } = useUser();
+  // const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  // if (isLoading) return <div>Loading...</div>;
+  // if (error) return <div>{error.message}</div>;
 
   let links = [
     { name: 'Home', link: '/' },
