@@ -22,11 +22,12 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps = async (req) => {
   const search =
-    req.query.search === undefined ? '' : `AND title:${req.query.search}`;
+    req.query.search === undefined ? '' : `AND title:${req.query.search}*`;
   const res = await fetch(
-    `${BullhornUrl}/search/JobOrder?fields=id,title,categories,skills,employmentType,customText14,customText15,customText12,dateAdded&count=500&query=isOpen:1 AND isDeleted:0 AND NOT status:archive ${search}&BhRestToken=${BhRestToken}&sort=-dateAdded`
+    `${BullhornUrl}/search/JobOrder?fields=id,title,categories,skills,employmentType,customText14,customText15,customText12,dateAdded&count=100&query=isOpen:1 AND isDeleted:0 AND NOT status:archive ${search}&BhRestToken=${BhRestToken}&sort=-dateAdded`
   );
   const searchResults: Props = await res.json();
+  console.log(searchResults);
   return { props: { searchResults, searchQuery: req.query.search || null } };
 };
 

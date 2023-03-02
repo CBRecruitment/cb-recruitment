@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import styles from './Industry.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-function valuetext(value: number) {
-  return `${value}`;
-}
-
 const Industry = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [selectOption, setSelectOption] = useState(false);

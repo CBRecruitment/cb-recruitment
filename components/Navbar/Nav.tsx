@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import Authentication from '../Auth/Authentication';
+// import Authentication from '../Auth/Authentication';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
