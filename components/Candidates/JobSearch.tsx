@@ -1,15 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './Candidates.module.css';
 import clsx from 'clsx';
-import JobSearchBar from './JobSearchBar';
+import router from 'next/router';
 
-const JobSearch = () => {
+type Props = {
+  searchQuery: string;
+};
+
+const JobSearch = ({ searchQuery }: Props) => {
+  const [search, setSearch] = useState(searchQuery ?? '');
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    {
+      search
+        ? router.push(`candidates/?search=${search}`)
+        : router.push(`/candidates`);
+    }
+  };
+
   return (
     <div className={clsx('relative', 'h-full', styles.bg)}>
       <div className='w-[90%] py-10 m-auto pt-2'>
         <div className='py-10'>
-          <JobSearchBar />
+          <div className='flex flex-col mx-auto bg rounded-2xl p-4 mt-4 sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
+            <span className='text-white mb-2 font-bold text-xl'>
+              Find a job you'll love
+            </span>
+            <form
+              className='flex flex-col space-y-3 w-full justify-between sm:flex-row sm:h-10 sm:space-y-0'
+              onSubmit={handleSubmit}
+            >
+              <input
+                className='rounded-lg pl-3 p-[0.75rem] sm:w-[67%]'
+                placeholder='e.g "Full Stack Developer"'
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              ></input>
+              <button
+                className='bg-[var(--orange)] p-2 rounded-lg text-white font-semibold text-xl sm:flex sm:justify-center sm:items-center sm:text-sm sm:w-[30%]'
+                type='submit'
+              >
+                GET STARTED
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <Image

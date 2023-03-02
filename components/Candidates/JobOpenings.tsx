@@ -17,13 +17,20 @@ type Props = {
 };
 
 const JobOpenings = ({ jobs, searchQuery }: Props) => {
+  const [search, setSearch] = useState(searchQuery ?? '');
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(12);
-  const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
+
+  const router = useRouter();
 
   const handleInputClick = (e: any) => {
     setShowMenu(!showMenu);
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    router.push(`candidates/?search=${search}`);
   };
 
   const lastPostIndex = currentPage * postsPerPage;
@@ -32,7 +39,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
 
   return (
     <div className='pb-10'>
-      <JobSearch />
+      <JobSearch searchQuery={searchQuery} />
       <div className='gray_bg pt-10 flex flex-col h-full w-full'>
         <div className='md:flex md:space-x-6 md:pl-4'>
           <div className='flex flex-col justify-center pb-10 md:hidden'>
@@ -157,13 +164,6 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
 };
 
 export default JobOpenings;
-
-// const [search, setSearch] = useState(searchQuery ?? '');
-
-// const handleSubmit = (e: { preventDefault: () => void }) => {
-//     e.preventDefault();
-//     router.push(`candidates/?search=${search}`);
-// };
 
 {
   /* <div className='search justify-center flex mb-10'>

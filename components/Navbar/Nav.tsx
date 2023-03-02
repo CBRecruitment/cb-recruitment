@@ -28,7 +28,7 @@ const Nav = () => {
             alt='CBR Logo'
             width={75}
             height={75}
-            className='ml-4 xl:ml-8'
+            className='ml-1 xl:ml-8'
           />
         </Link>
 
