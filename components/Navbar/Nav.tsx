@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import Authentication from '../Auth/Authentication';
+// import Authentication from '../Auth/Authentication';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  const { user, error, isLoading } = useUser();
+  // const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  // if (isLoading) return <div>Loading...</div>;
+  // if (error) return <div>{error.message}</div>;
 
   let links = [
     { name: 'Home', link: '/' },
@@ -104,7 +104,7 @@ const Nav = () => {
               </Link>
             </div>
           </ul>
-          <Authentication />
+          {/* <Authentication /> */}
         </div>
       </div>
     </div>
