@@ -17,7 +17,7 @@ const Nav = () => {
     { name: 'Find Jobs', link: '/candidates' },
     { name: 'Hiring', link: '/companies' },
     { name: 'Learn', link: '/blog' },
-    { name: 'About Us', link: '/about' },
+    // { name: 'About Us', link: '/about' },
   ];
 
   return (
