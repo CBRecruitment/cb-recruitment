@@ -29,9 +29,9 @@ const job = (props: any) => {
     <>
       <div className='flex flex-col h-screen'>
         <Nav />
-        <div className='bg-[var(--darkgray)] flex-grow pb-10'>
-          <div className='text-white flex flex-col md:flex-row w-[90%] lg:w-[80%] xl:w-[70%] mx-auto'>
-            <div key={jobData.id} className='md:w-[40%] lg:w-[50%]'>
+        <div className='gray_bg flex-grow pb-10'>
+          <div className='text-white flex flex-col md:flex-row w-[90%] lg:w-[80%] xl:w-[80%] m-auto'>
+            <div key={jobData.id} className='md:w-[55%] lg:w-[50%]'>
               <button
                 className='pb-4'
                 onClick={() => {
@@ -53,9 +53,17 @@ const job = (props: any) => {
                   {/* Industry */}
                   {jobData?.customText14}
                 </p>
+                {skills.map((skill: any) => (
+                  <p
+                    key={skill.id}
+                    className='hidden xl:flex text-sm rounded-md border border-[var(--orange)] px-6 py-1 hover:bg-[var(--orange)] cursor-pointer'
+                  >
+                    {skill.name}
+                  </p>
+                ))}
               </div>
               <div>
-                <div className='flex justify-start space-x-3'>
+                <div className='flex justify-start space-x-3 xl:hidden'>
                   {skills.map((skill: any) => (
                     <p
                       key={skill.id}
@@ -65,6 +73,7 @@ const job = (props: any) => {
                     </p>
                   ))}
                 </div>
+
                 <div
                   className={clsx(
                     'text-white mt-10 !font-sans space-y-3',
@@ -76,7 +85,7 @@ const job = (props: any) => {
                 />
               </div>
             </div>
-            <div className='mt-10 md:mt-64 mx-auto'>
+            <div className='mt-10 m-auto md:mt-28 md:pl-24'>
               <JobApplicationForm id={props.id} />
             </div>
           </div>

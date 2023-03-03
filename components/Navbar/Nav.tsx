@@ -3,32 +3,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-// import Authentication from '../Auth/Authentication';
+import Authentication from '../Auth/Authentication';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  // const { user, error, isLoading } = useUser();
+  const { user, error, isLoading } = useUser();
 
-  // if (isLoading) return <div>Loading...</div>;
-  // if (error) return <div>{error.message}</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
 
   let links = [
     { name: 'Home', link: '/' },
-    { name: 'For Candidates', link: '/candidates' },
-    { name: 'For Companies', link: '/companies' },
-    { name: 'Blog', link: '/blog' },
+    { name: 'Find Jobs', link: '/candidates' },
+    { name: 'Hiring', link: '/companies' },
+    { name: 'Learn', link: '/blog' },
+    { name: 'About Us', link: '/aboutus' },
   ];
 
   return (
     <div className='shadow-md w-full sticky top-0 left-0 z-20 border-b-[1px]'>
-      <div className='md:flex items-center justify-between bg p-2 md:px-10 px-3'>
+      <div className='md:flex items-center justify-between bg p-2 md:px-8 px-3'>
         <Link href='/'>
           <Image
             src={'/assets/branding/cblogo-whitev2.png'}
             alt='CBR Logo'
             width={75}
             height={75}
-            className='ml-1 xl:ml-8'
+            className='ml-1 xl:ml-6 2xl:ml-9'
           />
         </Link>
 
@@ -54,7 +55,7 @@ const Nav = () => {
               >
                 <Link
                   href={link.link}
-                  className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px] xl:text-[17px] xl:px-6'
+                  className='text-[var(--orange)] hover:text-white duration-500 md:text-white md:text-[15px] xl:text-[16px] xl:px-3'
                 >
                   {link.name}
                 </Link>
@@ -103,7 +104,7 @@ const Nav = () => {
               </Link>
             </div>
           </ul>
-          {/* <Authentication /> */}
+          <Authentication />
         </div>
       </div>
     </div>

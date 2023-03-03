@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import JobSearch from './JobSearch';
 import Pagination from './Pagination';
 import Sidemenu from './Sidemenu/Sidemenu';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import styles from './Candidates.module.css';
 import clsx from 'clsx';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
@@ -40,8 +40,8 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
   return (
     <div className='pb-10'>
       <JobSearch searchQuery={searchQuery} />
-      <div className='gray_bg pt-10 flex flex-col h-full w-full'>
-        <div className='md:flex md:space-x-6 md:pl-4'>
+      <div className='bg pt-10 flex flex-col h-full w-full'>
+        <div className='md:flex md:space-x-6 md:pl-2'>
           <div className='flex flex-col justify-center pb-10 md:hidden'>
             {showMenu && <Sidemenu />}
             <section className='flex justify-center'>
@@ -142,7 +142,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                   router.push(`/candidates`);
                 }}
               >
-                <BsArrowReturnLeft
+                <KeyboardReturnIcon
                   className='text-[var(--orange)] hover:text-white'
                   size={40}
                 />

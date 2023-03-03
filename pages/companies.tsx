@@ -1,5 +1,4 @@
 import React from 'react';
-import UploadCVModal from '../components/Candidates/UploadCVModal';
 import Footer from '../components/General/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 

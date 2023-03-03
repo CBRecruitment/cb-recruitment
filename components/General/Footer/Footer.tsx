@@ -6,7 +6,12 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={clsx('h-full bg-[var(--darkgray)] bg', styles.bg)}>
+    <footer
+      className={clsx(
+        'h-full bg-[var(--darkgray)] bg border-t-[1px]',
+        styles.bg
+      )}
+    >
       <div className='md:flex md:p-6 lg:py-20'>
         <div className='md:w-fit md:mx-auto'>
           <div className='flex justify-center pt-10 h-fit'>

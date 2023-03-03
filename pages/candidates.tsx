@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps = async (req) => {
 
 const CandidatesPage = ({ searchResults, searchQuery }: Props) => {
   return (
-    <div className='gray_bg'>
+    <div className='bg'>
       <Nav />
       <JobOpenings jobs={searchResults.data} searchQuery={searchQuery} />
       <Footer />

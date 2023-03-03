@@ -24,7 +24,7 @@ const Hero = () => {
           >
             Making Web3 Work
           </h1>
-          <div className='2xl:pt-10'>
+          <div className='2xl:pt-8'>
             <HeroSearchBar />
             <SocialMediaIcons />
           </div>

@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import styles from './JobCategory.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import router from 'next/router';
+
+type formProps = {
+  value: string;
+  label: string;
+};
 
 const JobCategory = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [selectOption, setSelectOption] = useState(false);
+  const [search, setSearch] = useState([]);
+  const [checkedValues, setCheckedValues] = useState([]);
 
   const options = [
-    {
-      value: 'business development / sales',
-      label: 'Business Development / Sales',
-    },
-    { value: 'finance', label: 'Finance' },
-    { value: 'legal', label: 'Legal' },
-    { value: 'marketing', label: 'Marketing' },
-    { value: 'operations', label: 'Operations' },
-    { value: 'product', label: 'Product' },
     { value: 'research / writing', label: 'Research / Writing' },
     { value: 'sales', label: 'Sales' },
     { value: 'technical', label: 'Technical' },
@@ -26,9 +24,15 @@ const JobCategory = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleSelectOption = (e: any) => {
-    setSelectOption(true);
-    console.log(selectOption);
+  const handleCheckbox = (e: any) => {
+    const { checked, value } = e.target;
+    checked ? setCheckedValues((prev) => [...prev, value]) : '';
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSearch(checkedValues);
+    router.push(`candidates/?search=${search}`);
   };
 
   return (
@@ -43,20 +47,35 @@ const JobCategory = () => {
       </div>
       <hr />
       {showMenu && (
-        <div className={styles.menu}>
-          {options?.map((option: any) => (
-            <div
-              onClick={handleSelectOption}
-              key={option.value}
-              className={styles.item}
-            >
-              {option.label}
+        <form className={styles.menu} onSubmit={handleSubmit}>
+          {options?.map((option: formProps) => (
+            <div key={option.value} className={styles.item}>
+              <label>{option.label}</label>
+              <input
+                type='checkbox'
+                onChange={handleCheckbox}
+                value={option.label}
+              />
             </div>
           ))}
-        </div>
+          <button className={styles.button} type='submit'>
+            Apply
+          </button>
+        </form>
       )}
     </div>
   );
 };
 
 export default JobCategory;
+
+{
+  //   value: 'business development / sales',
+  //   label: 'Business Development / Sales',
+  // },
+  // { value: 'finance', label: 'Finance' },
+  // { value: 'legal', label: 'Legal' },
+  // { value: 'marketing', label: 'Marketing' },
+  // { value: 'operations', label: 'Operations' },
+  // { value: 'product', label: 'Product' },
+}

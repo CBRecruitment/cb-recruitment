@@ -18,7 +18,7 @@ const Sidemenu = () => {
 
   return (
     <div className='flex justify-center text-white h-full mt-0 p-2'>
-      <form className='w-[260px] xsm:w-[350px] md:w-[250px] 2xl:w-[300px]'>
+      <div className='w-[260px] xsm:w-[350px] md:w-[250px] 2xl:w-[300px]'>
         <h2 className='pb-3 text-xl text-white'>Sort By</h2>
         <section className='flex justify-between'>
           <button className='border w-[46%] text-[17px] p-1 bg-[var(--orange)] rounded-md'>
@@ -65,7 +65,7 @@ const Sidemenu = () => {
         <div className={styles.filters}>
           <Salary />
         </div>
-      </form>
+      </div>
     </div>
   );
 };
