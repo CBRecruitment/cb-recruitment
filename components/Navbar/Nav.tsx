@@ -3,21 +3,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-// import Authentication from '../Auth/Authentication';
+import Authentication from '../Auth/Authentication';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  // const { user, error, isLoading } = useUser();
+  const { user, error, isLoading } = useUser();
 
-  // if (isLoading) return <div>Loading...</div>;
-  // if (error) return <div>{error.message}</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
 
   let links = [
     { name: 'Home', link: '/' },
     { name: 'Find Jobs', link: '/candidates' },
     { name: 'Hiring', link: '/companies' },
     { name: 'Learn', link: '/blog' },
-    { name: 'About Us', link: '/aboutus' },
+    { name: 'About Us', link: '/about' },
   ];
 
   return (
@@ -34,10 +34,7 @@ const Nav = () => {
         </Link>
 
         {/* Mobile menu button */}
-        <div
-          onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-3 top-5 cursor-pointer md:hidden text-white'
-        >
+        <div onClick={() => setOpen(!open)} className='text-3xl absolute right-3 top-5 cursor-pointer md:hidden text-white'>
           {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
 
@@ -81,10 +78,7 @@ const Nav = () => {
                   height={40}
                 />
               </Link>
-              <Link
-                href='https://www.linkedin.com/company/80659134'
-                target='_blank'
-              >
+              <Link href='https://www.linkedin.com/company/80659134' target='_blank'>
                 <Image
                   className='hover:scale-110 ease-in-out duration-200'
                   src={'/assets/branding/linkedin-white.png'}
@@ -104,7 +98,7 @@ const Nav = () => {
               </Link>
             </div>
           </ul>
-          {/* <Authentication /> */}
+          <Authentication />
         </div>
       </div>
     </div>

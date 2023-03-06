@@ -5,8 +5,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import clsx from 'clsx';
 import styles from './Partners.module.css';
 
-const handleDragStart = (e: { preventDefault: () => any }) =>
-  e.preventDefault();
+const handleDragStart = (e: { preventDefault: () => any }) => e.preventDefault();
 
 const responsive = {
   0: { items: 1 },

@@ -30,20 +30,14 @@ const Skills = () => {
       <div className={styles.input}>
         <div className={styles.selected_value}>Skills</div>
         <div onClick={handleInputClick} className={styles.tools}>
-          <div className={styles.tool}>
-            {showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}
-          </div>
+          <div className={styles.tool}>{showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}</div>
         </div>
       </div>
       <hr />
       {showMenu && (
         <div className={styles.menu}>
           {options?.map((option: any) => (
-            <div
-              onClick={handleSelectOption}
-              key={option.value}
-              className={styles.item}
-            >
+            <div onClick={handleSelectOption} key={option.value} className={styles.item}>
               {option.label}
             </div>
           ))}

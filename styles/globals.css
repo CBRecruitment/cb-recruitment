@@ -201,13 +201,13 @@ body {
 /*******************
       CAROUSEL
 ********************/
-.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
+/* .alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
   background-color: var(--darkgray) !important; 
 }
 
 .alice-carousel__dots-item:not(.__custom) {
   background-color: #282828a9 !important;
-}
+} */
 
 
 
