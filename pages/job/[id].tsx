@@ -35,7 +35,7 @@ const job = (props: any) => {
               <button
                 className='pb-4'
                 onClick={() => {
-                  router.push(`/candidates`);
+                  router.back();
                 }}
               >
                 <KeyboardReturnIcon className='text-[50px] text-[var(--orange)] hover:text-white relative top-[30px]' />
@@ -75,10 +75,7 @@ const job = (props: any) => {
                 </div>
 
                 <div
-                  className={clsx(
-                    'text-white mt-10 !font-sans space-y-3',
-                    styles.jobdescription
-                  )}
+                  className={clsx('text-white mt-10 !font-sans space-y-3', styles.jobdescription)}
                   dangerouslySetInnerHTML={{
                     __html: jobData?.publicDescription,
                   }}

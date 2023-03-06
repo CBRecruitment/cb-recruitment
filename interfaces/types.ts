@@ -12,6 +12,22 @@ export type Job = {
     _score: number;
 };
 
+export type Fields = {
+    name: string,
+    type: string,
+    dataType: string,
+    maxLength: number,
+    confidential: boolean,
+    label: string,
+    options: OptionsAPIResponse;
+};
+
+export type OptionsAPIResponse = {
+    value: string,
+    label: string
+};
+
+
 export type CategoryAPIResponse = {
     total: number;
     data: {
@@ -43,3 +59,7 @@ export type SearchQueryProps = {
     searchQuery: string;
 }
 
+export type formProps = {
+    value: string;
+    label: string;
+  };

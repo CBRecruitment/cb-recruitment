@@ -1,39 +1,15 @@
 import React, { useState } from 'react';
 import styles from './JobCategory.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import router from 'next/router';
-
-type formProps = {
-  value: string;
-  label: string;
-};
 
 const JobCategory = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [search, setSearch] = useState([]);
-  const [checkedValues, setCheckedValues] = useState([]);
 
-  const options = [
-    { value: 'research / writing', label: 'Research / Writing' },
-    { value: 'sales', label: 'Sales' },
-    { value: 'technical', label: 'Technical' },
-    { value: 'vc', label: 'VC' },
-  ];
+  const options = [];
 
   const handleInputClick = (e: any) => {
     setShowMenu(!showMenu);
   };
-
-  // const handleCheckbox = (e: any) => {
-  //   const { checked, value } = e.target;
-  //   checked ? setCheckedValues((prev) => [...prev, value]) : '';
-  // };
-
-  // const handleSubmit = (e: any) => {
-  //   e.preventDefault();
-  //   setSearch(checkedValues);
-  //   router.push(`candidates/?search=${search}`);
-  // };
 
   return (
     <div className={styles.container}>
@@ -46,15 +22,12 @@ const JobCategory = () => {
       <hr />
       {showMenu && (
         <div className={styles.menu}>
-          {options?.map((option: formProps) => (
+          {/* {options?.map((option: formProps) => (
             <div key={option.value} className={styles.item}>
-              {option.label}
-              <input type='checkbox' onChange={handleCheckbox} value={option.label} />
+              <label>{option.label}</label>
+              <input type='checkbox' name='search' value={option.label} />
             </div>
-          ))}
-          <button className={styles.button} type='submit'>
-            Apply
-          </button>
+          ))} */}
         </div>
       )}
     </div>
@@ -63,7 +36,19 @@ const JobCategory = () => {
 
 export default JobCategory;
 
+// { value: 'solidity', label: 'Solidity' },
+// {
+//   value: 'rust',
+//   label: 'Rust',
+// },
+// { value: 'marketing', label: 'Marketing' },
+// { value: 'developer', label: 'Developer' },
+
 {
+  // { value: 'research / writing', label: 'Research / Writing' },
+  // { value: 'sales', label: 'Sales' },
+  // { value: 'technical', label: 'Technical' },
+  // { value: 'vc', label: 'VC' },
   //   value: 'business development / sales',
   //   label: 'Business Development / Sales',
   // },
@@ -73,3 +58,9 @@ export default JobCategory;
   // { value: 'operations', label: 'Operations' },
   // { value: 'product', label: 'Product' },
 }
+
+// const handleSubmit = (e: any) => {
+//   e.preventDefault();
+//   setSearch(checkedValues);
+//   router.push(`candidates/?search=${search}`);
+// };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Job } from '../../interfaces/types';
+import { Fields, Job } from '../../interfaces/types';
 import { useRouter } from 'next/router';
 import JobSearch from './JobSearch';
 import Pagination from './Pagination';
@@ -14,23 +14,17 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 type Props = {
   jobs: Job[];
   searchQuery: string;
+  fields: Fields[];
 };
 
-const JobOpenings = ({ jobs, searchQuery }: Props) => {
+const JobOpenings = ({ jobs, searchQuery, fields }: Props) => {
   const [search, setSearch] = useState(searchQuery ?? '');
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(12);
   const [showMenu, setShowMenu] = useState(false);
 
-  const router = useRouter();
-
-  const handleInputClick = (e: any) => {
+  const handleInputClick = () => {
     setShowMenu(!showMenu);
-  };
-
-  const handleSubmit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    router.push(`candidates/?search=${search}`);
   };
 
   const lastPostIndex = currentPage * postsPerPage;
@@ -43,7 +37,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
       <div className='bg pt-10 flex flex-col h-full w-full'>
         <div className='md:flex md:space-x-6 md:pl-2'>
           <div className='flex flex-col justify-center pb-10 md:hidden'>
-            {showMenu && <Sidemenu />}
+            {showMenu && <Sidemenu fields={fields} />}
             <section className='flex justify-center'>
               <button
                 onClick={handleInputClick}
@@ -54,7 +48,7 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
             </section>
           </div>
           <div className='hidden md:block'>
-            <Sidemenu />
+            <Sidemenu fields={fields} />
           </div>
           <div className='w-[95%] mx-auto'>
             <div className='grid md:grid-cols-2 md:gap-y-4 md:gap-x-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
@@ -91,41 +85,20 @@ const JobOpenings = ({ jobs, searchQuery }: Props) => {
                         </section>
                         <div className='md:mx-auto'>
                           <section className='space-x-2 xsm:w-[320px] sm:w-[450px] xsm:flex xsm:items-center md:space-x-0 md:flex md:flex-col md:w-[170px]'>
-                            <span
-                              className={clsx(
-                                'md:min-w-full',
-                                styles.jobdetails
-                              )}
-                            >
-                              {job.customText15}
+                            <span className={clsx('md:min-w-full', styles.jobdetails)}>
+                              {job.customText15 || job.salary}
                             </span>
                             {skills.map((skill) => (
-                              <span
-                                key={skill.id}
-                                className={clsx(
-                                  'md:min-w-full',
-                                  styles.jobdetails
-                                )}
-                              >
+                              <span key={skill.id} className={clsx('md:min-w-full', styles.jobdetails)}>
                                 {skill.name}
                               </span>
                             ))}
                             {skills2.map((skill) => (
-                              <span
-                                className={clsx(
-                                  'hidden sm:inline-flex md:min-w-full',
-                                  styles.jobdetails
-                                )}
-                              >
+                              <span className={clsx('hidden sm:inline-flex md:min-w-full', styles.jobdetails)}>
                                 {skill.name}
                               </span>
                             ))}
-                            <span
-                              className={clsx(
-                                'hidden xsm:inline-flex md:min-w-full',
-                                styles.jobdetails
-                              )}
-                            >
+                            <span className={clsx('hidden xsm:inline-flex md:min-w-full', styles.jobdetails)}>
                               {job.customText12}
                             </span>
                           </section>

@@ -1,26 +1,14 @@
 import React, { useState } from 'react';
-import styles from './Industry.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import styles from './Industry.module.css';
 
-const Industry = () => {
+const Industry = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
-  const [selectOption, setSelectOption] = useState(false);
 
-  const options = [
-    { value: 'dapps', label: 'Dapps' },
-    { value: 'defi', label: 'DeFi' },
-    { value: 'blockchain', label: 'Blockchain' },
-    { value: 'evm', label: 'EVM' },
-    { value: 'DevOps', label: 'DevOps' },
-    { value: 'nft', label: 'NFT' },
-  ];
+  const industries = fields[0].options;
 
-  const handleInputClick = (e: any) => {
+  const handleInputClick = () => {
     setShowMenu(!showMenu);
-  };
-
-  const handleSelectOption = (e: any) => {
-    setSelectOption(true);
   };
 
   return (
@@ -28,21 +16,16 @@ const Industry = () => {
       <div className={styles.input}>
         <div className={styles.selected_value}>Industry</div>
         <div onClick={handleInputClick} className={styles.tools}>
-          <div className={styles.tool}>
-            {showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}
-          </div>
+          <div className={styles.tool}>{showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}</div>
         </div>
       </div>
       <hr />
       {showMenu && (
         <div className={styles.menu}>
-          {options?.map((option: any) => (
-            <div
-              onClick={handleSelectOption}
-              key={option.value}
-              className={styles.item}
-            >
-              {option.label}
+          {industries?.map((industry: any) => (
+            <div key={industry.value} className={styles.item}>
+              <label>{industry.label}</label>
+              <input type='checkbox' name='search' value={industry.label}></input>
             </div>
           ))}
         </div>
@@ -52,3 +35,10 @@ const Industry = () => {
 };
 
 export default Industry;
+
+// { value: 'dapps', label: 'Dapps' },
+// { value: 'defi', label: 'DeFi' },
+// { value: 'blockchain', label: 'Blockchain' },
+// { value: 'evm', label: 'EVM' },
+// { value: 'DevOps', label: 'DevOps' },
+// { value: 'nft', label: 'NFT' },
