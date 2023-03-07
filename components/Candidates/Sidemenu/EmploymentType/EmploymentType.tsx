@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import styles from './JobCategory.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import styles from './EmploymentType.module.css';
 
-const JobCategory = ({ categories }: any) => {
+const EmploymentType = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const Categories = categories;
+  const employment_types = fields[1].options;
 
-  const handleInputClick = (e: any) => {
+  const handleInputClick = () => {
     setShowMenu(!showMenu);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.input}>
-        <div className={styles.selected_value}>Job Category</div>
+        <div className={styles.selected_value}>Employment Type</div>
         <div onClick={handleInputClick} className={styles.tools}>
           <div className={styles.tool}>{showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}</div>
         </div>
@@ -22,10 +22,10 @@ const JobCategory = ({ categories }: any) => {
       <hr />
       {showMenu && (
         <div className={styles.menu}>
-          {Categories?.map((category: any) => (
-            <div key={category.value} className={styles.item}>
-              <label>{category.label}</label>
-              <input type='checkbox' name='search' value={category.label} />
+          {employment_types?.map((employment_type: any) => (
+            <div key={employment_type.value} className={styles.item}>
+              <label>{employment_type.label}</label>
+              <input type='checkbox' name='search' value={employment_type.label}></input>
             </div>
           ))}
         </div>
@@ -34,4 +34,4 @@ const JobCategory = ({ categories }: any) => {
   );
 };
 
-export default JobCategory;
+export default EmploymentType;

@@ -1,5 +1,4 @@
 export type Job = {
-    [x: string]: any;
     id: number;
     title: string;
     categories: CategoryAPIResponse;
@@ -9,6 +8,7 @@ export type Job = {
     customText15: string;
     customText12: string;
     dateAdded: number;
+    salary: number;
     _score: number;
 };
 
@@ -22,11 +22,17 @@ export type Fields = {
     options: OptionsAPIResponse;
 };
 
+export type Options = {
+    data: {
+        value: number,
+        label: string
+    }[];
+};
+
 export type OptionsAPIResponse = {
     value: string,
     label: string
 };
-
 
 export type CategoryAPIResponse = {
     total: number;

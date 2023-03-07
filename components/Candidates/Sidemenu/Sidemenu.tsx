@@ -8,8 +8,9 @@ import Industry from './Industry/Industry';
 import Experience from './Experience/Experience';
 import Skills from './Skills/Skills';
 import Location from './Location/Location';
+import EmploymentType from './EmploymentType/EmploymentType';
 
-const Sidemenu = ({ fields }: any) => {
+const Sidemenu = ({ fields, skills, categories }: any) => {
   const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
@@ -37,7 +38,16 @@ const Sidemenu = ({ fields }: any) => {
             <Industry fields={fields} />
           </div>
           <div className={styles.filters}>
-            <JobCategory />
+            <EmploymentType fields={fields} />
+          </div>
+          <div className={styles.filters}>
+            <JobCategory categories={categories} />
+          </div>
+          <div className={styles.filters}>
+            <Skills skills={skills} />
+          </div>
+          <div className={styles.filters}>
+            <Experience fields={fields} />
           </div>
         </div>
         <button className={styles.button} type='submit'>
@@ -51,13 +61,7 @@ const Sidemenu = ({ fields }: any) => {
 export default Sidemenu;
 
 {
-  /* <div className={styles.filters}>
-          <Skills />
-        </div>
-        
-        <div className={styles.filters}>
-          <Experience />
-        </div>
+  /* 
         <div className={styles.filters}>
           <Location />
         </div>

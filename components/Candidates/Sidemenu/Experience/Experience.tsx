@@ -2,18 +2,11 @@ import React, { useState } from 'react';
 import styles from './Experience.module.css';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-const Experience = () => {
+const Experience = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
   const [selectOption, setSelectOption] = useState(false);
 
-  const options = [
-    { value: 'graduate', label: 'Graduate' },
-    { value: 'junior', label: 'Junior' },
-    { value: 'mid-level', label: 'Mid-Level' },
-    { value: 'mid-senior', label: 'Mid-Senior' },
-    { value: 'senior', label: 'Senior' },
-    { value: 'c-level', label: 'C-Level' },
-  ];
+  const Experience = fields[3].options;
 
   const handleInputClick = (e: any) => {
     setShowMenu(!showMenu);
@@ -28,21 +21,16 @@ const Experience = () => {
       <div className={styles.input}>
         <div className={styles.selected_value}>Experience</div>
         <div onClick={handleInputClick} className={styles.tools}>
-          <div className={styles.tool}>
-            {showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}
-          </div>
+          <div className={styles.tool}>{showMenu ? <FiChevronUp size={30} /> : <FiChevronDown size={30} />}</div>
         </div>
       </div>
       <hr />
       {showMenu && (
         <div className={styles.menu}>
-          {options?.map((option: any) => (
-            <div
-              onClick={handleSelectOption}
-              key={option.value}
-              className={styles.item}
-            >
-              {option.label}
+          {Experience?.map((exp: any) => (
+            <div key={exp.value} className={styles.item}>
+              <label>{exp.label}</label>
+              <input type='checkbox' name='search' value={exp.label} />
             </div>
           ))}
         </div>
