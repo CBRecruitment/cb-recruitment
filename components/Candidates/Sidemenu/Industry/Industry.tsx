@@ -5,7 +5,7 @@ import styles from './Industry.module.css';
 const Industry = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const industries = fields[0].options;
+  const industries = fields[0]?.options;
 
   const handleInputClick = () => {
     setShowMenu(!showMenu);

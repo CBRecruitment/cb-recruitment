@@ -5,7 +5,7 @@ import styles from './EmploymentType.module.css';
 const EmploymentType = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const employment_types = fields[1].options;
+  const employment_types = fields[1]?.options;
 
   const handleInputClick = () => {
     setShowMenu(!showMenu);

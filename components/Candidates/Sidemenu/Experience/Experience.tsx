@@ -6,7 +6,7 @@ const Experience = ({ fields }: any) => {
   const [showMenu, setShowMenu] = useState(false);
   const [selectOption, setSelectOption] = useState(false);
 
-  const Experience = fields[3].options;
+  const Experience = fields[3]?.options;
 
   const handleInputClick = (e: any) => {
     setShowMenu(!showMenu);

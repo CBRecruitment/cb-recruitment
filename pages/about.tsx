@@ -1,6 +1,8 @@
 import React from 'react';
 import AboutUs from '../components/AboutUs/AboutUs';
+import MeetTheTeam from '../components/AboutUs/MeetTheTeam';
 import JobSearch from '../components/Candidates/JobSearch';
+import Footer from '../components/General/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 
 type Props = {
@@ -13,6 +15,8 @@ const AboutUsPage = ({ searchQuery }: Props) => {
       <Nav />
       <JobSearch searchQuery={searchQuery} />
       <AboutUs />
+      <MeetTheTeam />
+      <Footer />
     </div>
   );
 };

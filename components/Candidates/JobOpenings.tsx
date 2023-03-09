@@ -31,7 +31,7 @@ const JobOpenings = ({ jobs, searchQuery, fields, skills, categories }: Props) =
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = jobs?.slice(firstPostIndex, lastPostIndex);
-  const jobsFound = `Found ${jobs.length} Jobs`;
+  const jobsFound = `Found ${jobs?.length} Jobs`;
   const currentDate = new Date();
 
   return (
