@@ -13,20 +13,27 @@
   
 @media screen and (min-width: 500px){
     .posts {
-      width: 70%;
+      width: 400px;
     }
 }
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 768px){
     .posts {
-      width: 90%;
+      width: 700px;
     }
 }
   
 @media screen and (min-width: 1280px){
     .posts {
-      width: 85%;
+      width: 900px;
     }
 }
+
+@media screen and (min-width: 1536px){
+  .posts {
+    width: 1200px;
+  }
+}
+
   
   

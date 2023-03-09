@@ -32,10 +32,10 @@ const CareerAdvicePosts = ({
             {title}
           </Link>
         </h3>
-        <div className='text-[10px] xl:text-[16px] flex justify-between w-[95%] m-auto'>
+        <div className='text-[10px] xl:text-[12px] flex justify-between w-[95%] m-auto'>
           <p>Jan Barley</p>
           <DateFormatter dateString={date} />
-          <p className='text-[10px] xl:text-[16px] leading-relaxed mb-4 bg-[var(--orange)] w-fit px-3 rounded-full'>
+          <p className='text-[10px] xl:text-[12px] leading-relaxed mb-4 bg-[var(--orange)] w-fit px-3 rounded-full'>
             {excerpt}
           </p>
         </div>

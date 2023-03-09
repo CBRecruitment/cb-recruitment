@@ -18,13 +18,13 @@ const Hero = () => {
         >
           <h1
             className={clsx(
-              'text-[var(--cream)] w-[30%] md:w-[20%] text-left Anton-Regular leading-[1.1] text-[80px] md:text-[100px] 2xl:text-[115px] 2xl:leading-[1.2]',
+              'text-[var(--cream)] w-[30%] md:w-[20%] text-left Anton-Regular leading-[1.1] text-[80px] md:text-[100px] 2xl:text-[110px]',
               styles.tablet
             )}
           >
             Making Web3 Work
           </h1>
-          <div className='2xl:pt-8'>
+          <div className='xl:pt-2 2xl:pt-4'>
             <HeroSearchBar />
             <SocialMediaIcons />
           </div>
