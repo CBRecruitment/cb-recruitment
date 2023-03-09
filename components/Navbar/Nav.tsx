@@ -1,4 +1,4 @@
-import { useUser } from '@auth0/nextjs-auth0/client';
+// import { useUser } from '@auth0/nextjs-auth0/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -17,7 +17,7 @@ const Nav = () => {
     { name: 'Find Jobs', link: '/candidates' },
     { name: 'Hiring', link: '/companies' },
     { name: 'Learn', link: '/blog' },
-    // { name: 'About Us', link: '/about' },
+    { name: 'About Us', link: '/about' },
   ];
 
   return (
@@ -34,10 +34,7 @@ const Nav = () => {
         </Link>
 
         {/* Mobile menu button */}
-        <div
-          onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-3 top-5 cursor-pointer md:hidden text-white'
-        >
+        <div onClick={() => setOpen(!open)} className='text-3xl absolute right-3 top-5 cursor-pointer md:hidden text-white'>
           {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
 
@@ -81,10 +78,7 @@ const Nav = () => {
                   height={40}
                 />
               </Link>
-              <Link
-                href='https://www.linkedin.com/company/80659134'
-                target='_blank'
-              >
+              <Link href='https://www.linkedin.com/company/80659134' target='_blank'>
                 <Image
                   className='hover:scale-110 ease-in-out duration-200'
                   src={'/assets/branding/linkedin-white.png'}

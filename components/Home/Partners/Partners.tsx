@@ -5,8 +5,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import clsx from 'clsx';
 import styles from './Partners.module.css';
 
-const handleDragStart = (e: { preventDefault: () => any }) =>
-  e.preventDefault();
+const handleDragStart = (e: { preventDefault: () => any }) => e.preventDefault();
 
 const responsive = {
   0: { items: 1 },
@@ -48,7 +47,7 @@ const Partners = () => {
         PARTNERING WITH:
       </h2>
       <div className='p-2 2xl:p-8'>
-        <AliceCarousel
+        {/* <AliceCarousel
           items={items}
           responsive={responsive}
           controlsStrategy='alternate'
@@ -56,7 +55,7 @@ const Partners = () => {
           infinite
           autoPlay
           animationDuration={3200}
-        />
+        /> */}
       </div>
     </div>
   );

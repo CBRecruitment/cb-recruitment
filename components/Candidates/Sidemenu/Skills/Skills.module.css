@@ -17,13 +17,15 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: auto;
-  max-height: 150px;
+  max-height: 140px;
   background-color: #fff;
 }
 
 .item {
   padding: 5px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
 .item:hover {
@@ -33,10 +35,6 @@
 .selected_value {
   font-size: 20px;
   color: white;
-}
-
-.tools {
-
 }
 
 .tool {
