@@ -18,6 +18,7 @@ const Nav = () => {
     { name: 'Hiring', link: '/companies' },
     { name: 'Learn', link: '/blog' },
     { name: 'About Us', link: '/about' },
+    { name: 'Services', link: '/recruitment-services' },
   ];
 
   return (
