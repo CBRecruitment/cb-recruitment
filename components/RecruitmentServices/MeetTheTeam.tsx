@@ -8,7 +8,7 @@ const MeetTheTeam = () => {
   };
 
   return (
-    <div className='lg:pt-[200px] xl:pt-[300px]'>
+    <div>
       <div className='h-full relative pt-4 mt-10'>
         <div className='bg-[#272727] h-[200px] w-[50px] md:w-[100px] absolute top-0 left-0 xl:h-[300px] xl:w-[150px]'></div>
         <div className='bg-[#272727] h-[200px] w-[50px] md:w-[100px] absolute top-0 right-0 xl:h-[300px] xl:w-[150px]'></div>
